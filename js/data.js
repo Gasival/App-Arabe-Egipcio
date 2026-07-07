@@ -690,34 +690,110 @@ const LESSONS = [
   },
   {
     id: "plurales",
-    title: "Plurales comunes (práctica)",
+    title: "Plurales — lista (100)",
     icon: "👥",
     level: "B1",
     items: [
-      { ar: "كتاب ← كتب", fr: "ketaab → kotob", es: "libro → libros" },
-      { ar: "بيت ← بيوت", fr: "beet → beyuut", es: "casa → casas" },
-      { ar: "ولد ← أولاد", fr: "walad → awlaad", es: "niño → niños" },
+      { ar: "راجل ← رجالة", fr: "raagel → riggaala", es: "hombre → hombres" },
+      { ar: "ست ← ستات", fr: "sett → settaat", es: "señora → señoras" },
       { ar: "بنت ← بنات", fr: "bent → banaat", es: "chica → chicas" },
+      { ar: "ولد ← أولاد", fr: "walad → awlaad", es: "niño → niños" },
+      { ar: "أخ ← إخوات", fr: "akh → ekhwaat", es: "hermano → hermanos" },
+      { ar: "أخت ← أخوات", fr: "okht → akhawaat", es: "hermana → hermanas" },
+      { ar: "أب ← آباء", fr: "ab → abaa2", es: "padre → padres" },
+      { ar: "أم ← أمهات", fr: "omm → ommahaat", es: "madre → madres" },
+      { ar: "ابن ← أبناء", fr: "ebn → abnaa2", es: "hijo → hijos" },
+      { ar: "عم ← أعمام", fr: "3amm → a3maam", es: "tío → tíos" },
+      { ar: "جد ← أجداد", fr: "gedd → agdaad", es: "abuelo → abuelos" },
+      { ar: "صاحب ← أصحاب", fr: "saa7eb → as7aab", es: "amigo → amigos" },
+      { ar: "طفل ← أطفال", fr: "tefl → atfaal", es: "niño pequeño → niños" },
+      { ar: "مدرس ← مدرسين", fr: "mudarres → mudarrisiin", es: "profesor → profesores (regular)" },
+      { ar: "مهندس ← مهندسين", fr: "mohandes → mohandisiin", es: "ingeniero → ingenieros (regular)" },
+      { ar: "موظف ← موظفين", fr: "mowazzaf → mowazzafiin", es: "empleado → empleados (regular)" },
+      { ar: "لاعب ← لاعبين", fr: "laa3eb → laa3ebiin", es: "jugador → jugadores (regular)" },
+      { ar: "مصري ← مصريين", fr: "masri → masriyyiin", es: "egipcio → egipcios (regular)" },
+      { ar: "دكتور ← دكاترة", fr: "doktoor → dakatra", es: "médico → médicos" },
+      { ar: "أستاذ ← أساتذة", fr: "ostaaz → asatza", es: "profesor → profesores" },
+      { ar: "طالب ← طلبة", fr: "taaleb → talaba", es: "estudiante → estudiantes" },
       { ar: "يوم ← أيام", fr: "yoom → ayyaam", es: "día → días" },
-      { ar: "كلمة ← كلمات", fr: "kelma → kelmaat", es: "palabra → palabras" },
-      { ar: "لون ← ألوان", fr: "loon → alwaan", es: "color → colores" },
-      { ar: "باب ← أبواب", fr: "baab → abwaab", es: "puerta → puertas" },
+      { ar: "أسبوع ← أسابيع", fr: "osboo3 → asabii3", es: "semana → semanas" },
+      { ar: "شهر ← شهور", fr: "shahr → shohoor", es: "mes → meses" },
+      { ar: "سنة ← سنين", fr: "sana → siniin", es: "año → años" },
+      { ar: "ساعة ← ساعات", fr: "saa3a → saa3aat", es: "hora → horas (regular)" },
+      { ar: "دقيقة ← دقايق", fr: "de2ii2a → da2aaye2", es: "minuto → minutos" },
+      { ar: "كتاب ← كتب", fr: "ketaab → kotob", es: "libro → libros" },
       { ar: "قلم ← أقلام", fr: "2alam → a2laam", es: "bolígrafo → bolígrafos" },
-      { ar: "سوق ← أسواق", fr: "soo2 → aswaa2", es: "mercado → mercados" },
-      { ar: "كلب ← كلاب", fr: "kalb → kilaab", es: "perro → perros" },
-      { ar: "جبل ← جبال", fr: "gabal → gibaal", es: "montaña → montañas" },
+      { ar: "باب ← أبواب", fr: "baab → abwaab", es: "puerta → puertas" },
+      { ar: "شباك ← شبابيك", fr: "shebbaak → shababiik", es: "ventana → ventanas" },
+      { ar: "مفتاح ← مفاتيح", fr: "moftaa7 → mafatii7", es: "llave → llaves" },
+      { ar: "كرسي ← كراسي", fr: "korsi → karaasi", es: "silla → sillas" },
+      { ar: "دولاب ← دواليب", fr: "dolaab → dawaliib", es: "armario → armarios" },
+      { ar: "سرير ← سراير", fr: "seriir → saraayer", es: "cama → camas" },
+      { ar: "طبق ← أطباق", fr: "taba2 → atbaa2", es: "plato → platos" },
+      { ar: "سكينة ← سكاكين", fr: "sekkiina → sakakiin", es: "cuchillo → cuchillos" },
+      { ar: "معلقة ← معالق", fr: "ma3la2a → ma3aale2", es: "cuchara → cucharas" },
+      { ar: "شنطة ← شنط", fr: "shanta → shonat", es: "bolsa → bolsas" },
+      { ar: "قميص ← قمصان", fr: "2amiis → 2omsaan", es: "camisa → camisas" },
+      { ar: "بنطلون ← بناطيل", fr: "bantaloon → banatiil", es: "pantalón → pantalones" },
+      { ar: "جزمة ← جزم", fr: "gazma → gezam", es: "zapatos → (pares de) zapatos" },
+      { ar: "فستان ← فساتين", fr: "fostaan → fasatiin", es: "vestido → vestidos" },
+      { ar: "لون ← ألوان", fr: "loon → alwaan", es: "color → colores" },
+      { ar: "فيلم ← أفلام", fr: "film → aflaam", es: "película → películas" },
+      { ar: "صورة ← صور", fr: "soora → sowar", es: "foto → fotos" },
+      { ar: "بيت ← بيوت", fr: "beet → beyuut", es: "casa → casas" },
+      { ar: "شقة ← شقق", fr: "sha22a → sho2a2", es: "piso → pisos" },
+      { ar: "أوضة ← أوض", fr: "ooda → owad", es: "habitación → habitaciones" },
+      { ar: "مطبخ ← مطابخ", fr: "matbakh → mataabekh", es: "cocina → cocinas" },
       { ar: "مكتب ← مكاتب", fr: "maktab → makaateb", es: "oficina → oficinas" },
       { ar: "مدرسة ← مدارس", fr: "madrasa → madaares", es: "escuela → escuelas" },
-      { ar: "مفتاح ← مفاتيح", fr: "moftaa7 → mafatii7", es: "llave → llaves" },
-      { ar: "شباك ← شبابيك", fr: "shebbaak → shababiik", es: "ventana → ventanas" },
-      { ar: "فندق ← فنادق", fr: "fondo2 → fanaade2", es: "hotel → hoteles" },
       { ar: "مطعم ← مطاعم", fr: "mat3am → mataa3em", es: "restaurante → restaurantes" },
+      { ar: "فندق ← فنادق", fr: "fondo2 → fanaade2", es: "hotel → hoteles" },
+      { ar: "سلم ← سلالم", fr: "sellem → salaalem", es: "escalera → escaleras" },
+      { ar: "حيطة ← حيطان", fr: "7eeta → 7etaan", es: "pared → paredes" },
+      { ar: "سطح ← سطوح", fr: "sat7 → sotoo7", es: "azotea → azoteas" },
+      { ar: "شارع ← شوارع", fr: "shaare3 → shawaare3", es: "calle → calles" },
+      { ar: "ميدان ← ميادين", fr: "midaan → mayadiin", es: "plaza → plazas" },
+      { ar: "كوبري ← كباري", fr: "kobri → kabaari", es: "puente → puentes" },
+      { ar: "بنك ← بنوك", fr: "bank → bonook", es: "banco → bancos" },
+      { ar: "جامع ← جوامع", fr: "gaame3 → gawaame3", es: "mezquita → mezquitas" },
+      { ar: "كنيسة ← كنايس", fr: "keniisa → kanaayes", es: "iglesia → iglesias" },
+      { ar: "مدينة ← مدن", fr: "madiina → modon", es: "ciudad → ciudades" },
+      { ar: "دولة ← دول", fr: "dawla → dowal", es: "país → países" },
+      { ar: "طريق ← طرق", fr: "tarii2 → toro2", es: "camino → caminos" },
+      { ar: "سوق ← أسواق", fr: "soo2 → aswaa2", es: "mercado → mercados" },
+      { ar: "بحر ← بحار", fr: "ba7r → be7aar", es: "mar → mares" },
+      { ar: "جبل ← جبال", fr: "gabal → gibaal", es: "montaña → montañas" },
+      { ar: "نهر ← أنهار", fr: "nahr → anhaar", es: "río → ríos" },
+      { ar: "شجرة ← أشجار", fr: "shagara → ashgaar", es: "árbol → árboles" },
+      { ar: "وردة ← ورود", fr: "warda → woruud", es: "rosa → rosas" },
+      { ar: "نجمة ← نجوم", fr: "negma → negoom", es: "estrella → estrellas" },
+      { ar: "كلب ← كلاب", fr: "kalb → kilaab", es: "perro → perros" },
+      { ar: "قطة ← قطط", fr: "2otta → 2otat", es: "gato → gatos" },
+      { ar: "جمل ← جمال", fr: "gamal → gimaal", es: "camello → camellos" },
+      { ar: "حمار ← حمير", fr: "7omaar → 7omiir", es: "burro → burros" },
+      { ar: "عصفور ← عصافير", fr: "3osfoor → 3asafiir", es: "pájaro → pájaros" },
+      { ar: "تمساح ← تماسيح", fr: "temsaa7 → tamasii7", es: "cocodrilo → cocodrilos" },
+      { ar: "فرخة ← فراخ", fr: "farkha → feraakh", es: "gallina → gallinas / pollos" },
+      { ar: "سمكة ← سمك", fr: "samaka → samak", es: "pez → pescado (colectivo)" },
+      { ar: "بقرة ← بقر", fr: "ba2ara → ba2ar", es: "vaca → vacas (colectivo)" },
       { ar: "عين ← عيون", fr: "3een → 3eyuun", es: "ojo → ojos" },
+      { ar: "قلب ← قلوب", fr: "2alb → 2eluub", es: "corazón → corazones" },
+      { ar: "راس ← روس", fr: "raas → roos", es: "cabeza → cabezas" },
+      { ar: "إيد ← إيدين", fr: "iid → ideen", es: "mano → manos (dual)" },
+      { ar: "رجل ← رجلين", fr: "regl → regleen", es: "pierna → piernas (dual)" },
+      { ar: "كلمة ← كلمات", fr: "kelma → kelmaat", es: "palabra → palabras (regular)" },
+      { ar: "حرف ← حروف", fr: "7arf → 7oroof", es: "letra → letras" },
+      { ar: "رقم ← أرقام", fr: "ra2am → ar2aam", es: "número → números" },
+      { ar: "سؤال ← أسئلة", fr: "so2aal → as2ela", es: "pregunta → preguntas" },
+      { ar: "خبر ← أخبار", fr: "khabar → akhbaar", es: "noticia → noticias" },
+      { ar: "فكرة ← أفكار", fr: "fekra → afkaar", es: "idea → ideas" },
+      { ar: "حلم ← أحلام", fr: "7elm → a7laam", es: "sueño → sueños" },
+      { ar: "مشكلة ← مشاكل", fr: "mushkila → mashaakel", es: "problema → problemas" },
       { ar: "درس ← دروس", fr: "dars → doruus", es: "lección → lecciones" },
-      { ar: "ست ← ستات", fr: "sett → settaat", es: "señora → señoras" },
-      { ar: "راجل ← رجالة", fr: "raagel → riggaala", es: "hombre → hombres" },
-      { ar: "مدرس ← مدرسين", fr: "mudarres → mudarrisiin", es: "profesor → profesores" },
-      { ar: "فيلم ← أفلام", fr: "film → aflaam", es: "película → películas" }
+      { ar: "حاجة ← حاجات", fr: "7aaga → 7agaat", es: "cosa → cosas (regular)" },
+      { ar: "عربية ← عربيات", fr: "3arabeyya → 3arabeyyaat", es: "coche → coches (regular)" },
+      { ar: "جواب ← جوابات", fr: "gawaab → gawabaat", es: "carta → cartas" },
+      { ar: "نوع ← أنواع", fr: "noo3 → anwaa3", es: "tipo → tipos" }
     ]
   },
   {
@@ -1132,8 +1208,8 @@ const GRAMMAR = [
             { pf: "howwa", ar: "كتب", fr: "katab", es: "escribió (él)" },
             { pf: "heyya", ar: "كتبت", fr: "katabet", es: "escribió (ella)" },
             { pf: "e7na", ar: "كتبنا", fr: "katabna", es: "escribimos" },
-            { pf: "entu", ar: "كتبتوا", fr: "katabtu", es: "escribisteis" },
-            { pf: "homma", ar: "كتبوا", fr: "katabu", es: "escribieron" }
+            { pf: "entu", ar: "كتبتو", fr: "katabtu", es: "escribisteis" },
+            { pf: "homma", ar: "كتبو", fr: "katabu", es: "escribieron" }
           ]
         }
       },
@@ -1149,8 +1225,8 @@ const GRAMMAR = [
             { pf: "howwa", ar: "عمل", fr: "3amal", es: "hizo (él)" },
             { pf: "heyya", ar: "عملت", fr: "3amalet", es: "hizo (ella)" },
             { pf: "e7na", ar: "عملنا", fr: "3amalna", es: "hicimos" },
-            { pf: "entu", ar: "عملتوا", fr: "3amaltu", es: "hicisteis" },
-            { pf: "homma", ar: "عملوا", fr: "3amalu", es: "hicieron" }
+            { pf: "entu", ar: "عملتو", fr: "3amaltu", es: "hicisteis" },
+            { pf: "homma", ar: "عملو", fr: "3amalu", es: "hicieron" }
           ]
         }
       },
@@ -1166,8 +1242,8 @@ const GRAMMAR = [
             { pf: "howwa", ar: "راح", fr: "raa7", es: "fue (él)" },
             { pf: "heyya", ar: "راحت", fr: "raa7et", es: "fue (ella)" },
             { pf: "e7na", ar: "رحنا", fr: "ro7na", es: "fuimos" },
-            { pf: "entu", ar: "رحتوا", fr: "ro7tu", es: "fuisteis" },
-            { pf: "homma", ar: "راحوا", fr: "raa7u", es: "fueron" }
+            { pf: "entu", ar: "رحتو", fr: "ro7tu", es: "fuisteis" },
+            { pf: "homma", ar: "راحو", fr: "raa7u", es: "fueron" }
           ]
         }
       },
@@ -1183,13 +1259,25 @@ const GRAMMAR = [
       },
       {
         h: "Marcadores de tiempo pasado",
-        p: "Palabras que suelen acompañar al pasado.",
-        ex: [
-          { ar: "إمبارح", fr: "embaare7", es: "ayer" },
-          { ar: "أول إمبارح", fr: "awwel embaare7", es: "anteayer" },
-          { ar: "الأسبوع اللي فات", fr: "el-osboo3 elli faat", es: "la semana pasada" },
-          { ar: "من شوية", fr: "men shwayya", es: "hace un rato" }
-        ]
+        p: "Palabras que anclan la frase en el pasado. Son muy útiles para hablar con naturalidad: aprende varias.",
+        table: {
+          cols: ["Español", "Árabe", "Franco"],
+          rows: [
+            ["ayer", "<span class='ar' dir='rtl' lang='ar'>إمبارح</span>", "<span class='fr'>embaare7</span>"],
+            ["anteayer", "<span class='ar' dir='rtl' lang='ar'>أول إمبارح</span>", "<span class='fr'>awwel embaare7</span>"],
+            ["hace un rato", "<span class='ar' dir='rtl' lang='ar'>من شوية</span>", "<span class='fr'>men shwayya</span>"],
+            ["hace una hora", "<span class='ar' dir='rtl' lang='ar'>من ساعة</span>", "<span class='fr'>men saa3a</span>"],
+            ["hace unos días", "<span class='ar' dir='rtl' lang='ar'>من كام يوم</span>", "<span class='fr'>men kaam yoom</span>"],
+            ["hace una semana", "<span class='ar' dir='rtl' lang='ar'>من أسبوع</span>", "<span class='fr'>men osboo3</span>"],
+            ["la semana pasada", "<span class='ar' dir='rtl' lang='ar'>الأسبوع اللي فات</span>", "<span class='fr'>el-osboo3 elli faat</span>"],
+            ["el mes pasado", "<span class='ar' dir='rtl' lang='ar'>الشهر اللي فات</span>", "<span class='fr'>esh-shahr elli faat</span>"],
+            ["el año pasado", "<span class='ar' dir='rtl' lang='ar'>السنة اللي فاتت</span>", "<span class='fr'>es-sana elli faatet</span>"],
+            ["hace tiempo", "<span class='ar' dir='rtl' lang='ar'>من زمان</span>", "<span class='fr'>men zamaan</span>"],
+            ["hace mucho tiempo", "<span class='ar' dir='rtl' lang='ar'>من زمان أوي</span>", "<span class='fr'>men zamaan awi</span>"],
+            ["la última vez", "<span class='ar' dir='rtl' lang='ar'>المرة اللي فاتت</span>", "<span class='fr'>el-marra elli faatet</span>"],
+            ["en el pasado", "<span class='ar' dir='rtl' lang='ar'>في الماضي</span>", "<span class='fr'>fel-maadi</span>"]
+          ]
+        }
       }
     ],
     quiz: [
@@ -1234,8 +1322,8 @@ const GRAMMAR = [
             { pf: "howwa", ar: "بيكتب", fr: "biyiktib", es: "escribe (él)" },
             { pf: "heyya", ar: "بتكتب", fr: "bitiktib", es: "escribe (ella)" },
             { pf: "e7na", ar: "بنكتب", fr: "biniktib", es: "escribimos" },
-            { pf: "entu", ar: "بتكتبوا", fr: "bitiktibu", es: "escribís" },
-            { pf: "homma", ar: "بيكتبوا", fr: "biyiktibu", es: "escriben" }
+            { pf: "entu", ar: "بتكتبو", fr: "bitiktibu", es: "escribís" },
+            { pf: "homma", ar: "بيكتبو", fr: "biyiktibu", es: "escriben" }
           ]
         }
       },
@@ -1251,8 +1339,8 @@ const GRAMMAR = [
             { pf: "howwa", ar: "بيعمل", fr: "biyi3mel", es: "hace (él)" },
             { pf: "heyya", ar: "بتعمل", fr: "biti3mel", es: "hace (ella)" },
             { pf: "e7na", ar: "بنعمل", fr: "bini3mel", es: "hacemos" },
-            { pf: "entu", ar: "بتعملوا", fr: "biti3melu", es: "hacéis" },
-            { pf: "homma", ar: "بيعملوا", fr: "biyi3melu", es: "hacen" }
+            { pf: "entu", ar: "بتعملو", fr: "biti3melu", es: "hacéis" },
+            { pf: "homma", ar: "بيعملو", fr: "biyi3melu", es: "hacen" }
           ]
         }
       },
@@ -1268,8 +1356,8 @@ const GRAMMAR = [
             { pf: "howwa", ar: "بيروح", fr: "biyrou7", es: "va (él)" },
             { pf: "heyya", ar: "بتروح", fr: "bitrou7", es: "va (ella)" },
             { pf: "e7na", ar: "بنروح", fr: "binrou7", es: "vamos" },
-            { pf: "entu", ar: "بتروحوا", fr: "bitrou7u", es: "vais" },
-            { pf: "homma", ar: "بيروحوا", fr: "biyrou7u", es: "van" }
+            { pf: "entu", ar: "بتروحو", fr: "bitrou7u", es: "vais" },
+            { pf: "homma", ar: "بيروحو", fr: "biyrou7u", es: "van" }
           ]
         }
       },
@@ -1334,8 +1422,8 @@ const GRAMMAR = [
             { pf: "howwa", ar: "هيكتب", fr: "hayiktib", es: "escribirá (él)" },
             { pf: "heyya", ar: "هتكتب", fr: "hatiktib", es: "escribirá (ella)" },
             { pf: "e7na", ar: "هنكتب", fr: "haniktib", es: "escribiremos" },
-            { pf: "entu", ar: "هتكتبوا", fr: "hatiktibu", es: "escribiréis" },
-            { pf: "homma", ar: "هيكتبوا", fr: "hayiktibu", es: "escribirán" }
+            { pf: "entu", ar: "هتكتبو", fr: "hatiktibu", es: "escribiréis" },
+            { pf: "homma", ar: "هيكتبو", fr: "hayiktibu", es: "escribirán" }
           ]
         }
       },
@@ -1351,8 +1439,8 @@ const GRAMMAR = [
             { pf: "howwa", ar: "هيعمل", fr: "hayi3mel", es: "hará (él)" },
             { pf: "heyya", ar: "هتعمل", fr: "hati3mel", es: "hará (ella)" },
             { pf: "e7na", ar: "هنعمل", fr: "hani3mel", es: "haremos" },
-            { pf: "entu", ar: "هتعملوا", fr: "hati3melu", es: "haréis" },
-            { pf: "homma", ar: "هيعملوا", fr: "hayi3melu", es: "harán" }
+            { pf: "entu", ar: "هتعملو", fr: "hati3melu", es: "haréis" },
+            { pf: "homma", ar: "هيعملو", fr: "hayi3melu", es: "harán" }
           ]
         }
       },
@@ -1368,8 +1456,8 @@ const GRAMMAR = [
             { pf: "howwa", ar: "هيروح", fr: "hayrou7", es: "irá (él)" },
             { pf: "heyya", ar: "هتروح", fr: "hatrou7", es: "irá (ella)" },
             { pf: "e7na", ar: "هنروح", fr: "hanrou7", es: "iremos" },
-            { pf: "entu", ar: "هتروحوا", fr: "hatrou7u", es: "iréis" },
-            { pf: "homma", ar: "هيروحوا", fr: "hayrou7u", es: "irán" }
+            { pf: "entu", ar: "هتروحو", fr: "hatrou7u", es: "iréis" },
+            { pf: "homma", ar: "هيروحو", fr: "hayrou7u", es: "irán" }
           ]
         }
       },
@@ -1744,12 +1832,12 @@ const GRAMMAR = [
     title: "El plural (الجمع)",
     icon: "👥",
     level: "B1",
-    goal: "Reconocer los tres tipos de plural, familiarizarte con los patrones «rotos» más frecuentes y aplicar la concordancia (cosas → femenino singular).",
+    goal: "Reconocer los tres tipos de plural, familiarizarte con los patrones irregulares más frecuentes y aplicar la concordancia (cosas → femenino singular).",
     prereq: ["pronombres"],
-    intro: "El plural egipcio tiene tres tipos: dos «sanos» (terminación fija) y el <b>plural roto</b>, que reestructura la palabra por dentro. Los rotos no son 100% predecibles, pero siguen <b>patrones</b> reconocibles: memorizarlos en grupo es mucho más fácil que uno a uno.",
+    intro: "El plural egipcio tiene tres tipos: dos <b>regulares</b> (terminación fija) y el <b>plural irregular</b> (llamado «roto» en gramática árabe), que reestructura la palabra por dentro. Los irregulares no son 100% predecibles, pero siguen <b>patrones</b> reconocibles: memorizarlos en grupo es mucho más fácil que uno a uno.",
     sections: [
       {
-        h: "Tipo 1 — Femenino sano: ‑ات (‑aat)",
+        h: "Tipo 1 — Femenino regular: ‑ات (‑aat)",
         p: "Se añade <b>‑aat</b>. Muy productivo, sobre todo con palabras terminadas en ‑a y con préstamos.",
         ex: [
           { ar: "كلمة ← كلمات", fr: "kelma → kelmaat", es: "palabra → palabras" },
@@ -1761,7 +1849,7 @@ const GRAMMAR = [
         ]
       },
       {
-        h: "Tipo 2 — Masculino sano: ‑ين (‑iin)",
+        h: "Tipo 2 — Masculino regular: ‑ين (‑iin)",
         p: "Se añade <b>‑iin</b>. Casi siempre <b>personas</b>: profesiones, nacionalidades, adjetivos referidos a gente.",
         ex: [
           { ar: "مدرس ← مدرسين", fr: "mudarres → mudarrisiin", es: "profesor → profesores" },
@@ -1772,7 +1860,7 @@ const GRAMMAR = [
         ]
       },
       {
-        h: "Tipo 3 — El plural roto (por patrones)",
+        h: "Tipo 3 — El plural irregular (por patrones)",
         p: "La palabra cambia por dentro (vocales, a veces consonantes). No hay terminación fija: reconoce el <b>molde</b>. Abajo tienes los cuatro moldes más comunes."
       },
       {
@@ -1844,8 +1932,8 @@ const GRAMMAR = [
         table: {
           cols: ["Patrón", "Ejemplo", "Plural"],
           rows: [
-            ["‑aat (fem. sano)", "<span class='fr'>saa3a</span>", "<span class='fr'>saa3aat</span>"],
-            ["‑iin (masc. sano)", "<span class='fr'>mudarres</span>", "<span class='fr'>mudarrisiin</span>"],
+            ["‑aat (fem. regular)", "<span class='fr'>saa3a</span>", "<span class='fr'>saa3aat</span>"],
+            ["‑iin (masc. regular)", "<span class='fr'>mudarres</span>", "<span class='fr'>mudarrisiin</span>"],
             ["af3aal", "<span class='fr'>yoom</span>", "<span class='fr'>ayyaam</span>"],
             ["fu3uul", "<span class='fr'>beet</span>", "<span class='fr'>beyuut</span>"],
             ["fi3aal", "<span class='fr'>kalb</span>", "<span class='fr'>kilaab</span>"],
@@ -1868,7 +1956,7 @@ const GRAMMAR = [
     quiz: [
       { q: "Plural de كتاب (libro) =", options: ["kotob", "ketabaat", "kitaab", "ketabiin"], answer: 0, note: "Patrón fu3uul: ketaab → kotob." },
       { q: "Plural de بنت (chica) =", options: ["banaat", "bentaat", "banaatiin", "benaat"], answer: 0, note: "Irregular: bent → banaat." },
-      { q: "«coches» (de 3arabeyya) =", options: ["3arabeyyaat", "3arabeyyiin", "3araayeb", "3arabaat"], answer: 0, note: "Femenino sano ‑aat: 3arabeyyaat." },
+      { q: "«coches» (de 3arabeyya) =", options: ["3arabeyyaat", "3arabeyyiin", "3araayeb", "3arabaat"], answer: 0, note: "Femenino regular ‑aat: 3arabeyyaat." },
       { q: "Plural de ولد (niño) =", options: ["awlaad", "weladaat", "awladiin", "wilaad"], answer: 0, note: "Patrón af3aal: walad → awlaad." },
       { q: "Plural de مدرس (profesor) =", options: ["mudarrisiin", "mudarrisaat", "madaares", "mudarresa"], answer: 0, note: "Persona → ‑iin: mudarrisiin." },
       { q: "Plural de بيت (casa) =", options: ["beyuut", "beetaat", "abyaat", "beyutiin"], answer: 0, note: "Patrón fu3uul: beet → beyuut." },
@@ -1898,7 +1986,7 @@ const GRAMMAR = [
         ex: [
           { ar: "اكتب", fr: "iktib", es: "¡escribe! (m)" },
           { ar: "اكتبي", fr: "iktibi", es: "¡escribe! (f)" },
-          { ar: "اكتبوا", fr: "iktibu", es: "¡escribid!" }
+          { ar: "اكتبو", fr: "iktibu", es: "¡escribid!" }
         ]
       },
       {
@@ -2233,7 +2321,7 @@ const GRAMMAR = [
           { ar: "عربية بابا", fr: "3arabeyyet baba", es: "el coche de papá" },
           { ar: "مفتاح البيت", fr: "moftaa7 el-beet", es: "la llave de la casa" }
         ],
-        note: "Al unir, la ‑a femenina final se vuelve ‑et: عربية (3arabeyya) → عربية بابا (3arabeyyet baba)."
+        note: "La <b>ة</b> final (taa marbuta) suena /a/ cuando la palabra va sola (عربية = 3arabey<b>ya</b>), pero en la إضافة se pronuncia <b>/t/</b> (عربية بابا = 3arabey<b>yet</b> baba). Por eso el franco lleva una «t» aunque la letra escrita siga siendo ة (no una ت)."
       },
       {
         h: "2) بتاع (betaa3) — concuerda",
@@ -3512,9 +3600,9 @@ const GRAMMAR_DRILLS = {
     },
     {
       "q": "هما ___ متأخر إمبارح.",
-      "answer": "وصلوا",
+      "answer": "وصلو",
       "options": [
-        "وصلوا",
+        "وصلو",
         "وصلنا",
         "هيوصلوا",
         "بيوصلوا"
@@ -3543,7 +3631,7 @@ const GRAMMAR_DRILLS = {
         "رحنا",
         "بنروح",
         "هنروح",
-        "راحوا"
+        "راحو"
       ],
       "es": "Fuimos a Alejandría el verano pasado.",
       "note": "raa7 (hueco), e7na: ro7na.",
@@ -4117,9 +4205,9 @@ const GRAMMAR_DRILLS = {
     },
     {
       "q": "الأولاد ___ في الجنينة.",
-      "answer": "بيلعبوا",
+      "answer": "بيلعبو",
       "options": [
-        "بيلعبوا",
+        "بيلعبو",
         "بيلعب",
         "لعب",
         "هيلعب"
@@ -4138,7 +4226,7 @@ const GRAMMAR_DRILLS = {
         "عرباية"
       ],
       "es": "En la calle hay muchos coches.",
-      "note": "fem sano ‑aat: 3arabeyyaat.",
+      "note": "fem regular ‑aat: 3arabeyyaat.",
       "fr": "fesh-shaare3 3arabeyyaat keteer."
     }
   ],
@@ -4211,7 +4299,7 @@ const GRAMMAR_DRILLS = {
       "fr": "koll yoom barou7 esh-shoghl."
     },
     {
-      "q": "___ الناس عرفوا الخبر.",
+      "q": "___ الناس عرفو الخبر.",
       "answer": "كل",
       "options": [
         "كل",
@@ -4237,7 +4325,7 @@ const GRAMMAR_DRILLS = {
       "fr": "3aayez shwayyet mayya."
     },
     {
-      "q": "___ الناس بيحبوا القهوة.",
+      "q": "___ الناس بيحبو القهوة.",
       "answer": "بعض",
       "options": [
         "بعض",
@@ -4522,56 +4610,36 @@ const GRAMMAR_DRILLS = {
   ],
   "interrogativos": [
     {
-      "q": "اسمك ___ ؟",
+      "q": "أنا اسمي أحمد، وإنت اسمك ___ ؟",
       "answer": "إيه",
-      "options": [
-        "إيه",
-        "مين",
-        "فين",
-        "إمتى"
-      ],
-      "es": "¿Cómo te llamas?",
-      "note": "«qué» al final: eh.",
-      "fr": "esmak eh?"
+      "options": ["إيه", "مين", "فين", "إمتى"],
+      "es": "Me llamo Ahmad, ¿y tú cómo te llamas?",
+      "note": "El nombre se pregunta con «eh» (qué), y va al final.",
+      "fr": "ana esmi a7mad, we enta esmak eh?"
     },
     {
-      "q": "رايح ___ ؟",
+      "q": "لو سمحت، الحمام ___ في المطعم ده؟",
       "answer": "فين",
-      "options": [
-        "فين",
-        "إيه",
-        "مين",
-        "إزاي"
-      ],
-      "es": "¿A dónde vas?",
-      "note": "feen al final.",
-      "fr": "raaye7 feen?"
+      "options": ["فين", "إيه", "مين", "إمتى"],
+      "es": "Perdona, ¿dónde está el baño en este restaurante?",
+      "note": "Lugar → «feen» (dónde).",
+      "fr": "law sama7t, el-7ammaam feen fel-mat3am da?"
     },
     {
-      "q": "ده ___ ؟",
+      "q": "الراجل اللي واقف هناك ده ___ ؟",
       "answer": "مين",
-      "options": [
-        "مين",
-        "إيه",
-        "فين",
-        "كام"
-      ],
-      "es": "¿Quién es este?",
-      "note": "meen = quién.",
-      "fr": "da meen?"
+      "options": ["مين", "إيه", "فين", "إمتى"],
+      "es": "¿Quién es ese hombre que está ahí de pie?",
+      "note": "Persona → «meen» (quién).",
+      "fr": "er-raagel elli waa2ef henaak da meen?"
     },
     {
-      "q": "هتيجي ___ ؟",
+      "q": "قولي بالظبط، هتخلص الشغل ___ ؟",
       "answer": "إمتى",
-      "options": [
-        "إمتى",
-        "فين",
-        "إيه",
-        "ليه"
-      ],
-      "es": "¿Cuándo vendrás?",
-      "note": "emta = cuándo.",
-      "fr": "hatiigi emta?"
+      "options": ["إمتى", "فين", "إيه", "مين"],
+      "es": "Dime exactamente, ¿cuándo terminarás el trabajo?",
+      "note": "Tiempo → «emta» (cuándo).",
+      "fr": "2olli bezzabt, hatkhallas esh-shoghl emta?"
     }
   ],
   "demostrativos": [
@@ -4602,7 +4670,7 @@ const GRAMMAR_DRILLS = {
       "fr": "el-bent di sa7beti."
     },
     {
-      "q": "العيال ___ بيلعبوا.",
+      "q": "العيال ___ بيلعبو.",
       "answer": "دول",
       "options": [
         "دول",
