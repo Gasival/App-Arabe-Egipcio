@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#0f766e" />
+  <meta name="description" content="Aprende árabe egipcio (A2-B1) con árabe franco y ejercicios interactivos." />
+  <title>مصري · Aprende árabe egipcio</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="icon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="icon.svg" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <button id="backBtn" class="icon-btn" aria-label="Atrás" hidden>‹</button>
+    <h1 id="title" class="brand">مصري<span>Egipcio A2–B1</span></h1>
+  </header>
+
+  <main id="app" class="app"></main>
+
+  <nav class="tabbar" id="tabbar">
+    <button class="tab" data-route="home"><span>🏠</span>Inicio</button>
+    <button class="tab" data-route="learn"><span>📚</span>Léxico</button>
+    <button class="tab" data-route="grammar"><span>📖</span>Gramática</button>
+    <button class="tab" data-route="practice"><span>🎯</span>Práctica</button>
+    <button class="tab" data-route="stats"><span>📈</span>Progreso</button>
+  </nav>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
