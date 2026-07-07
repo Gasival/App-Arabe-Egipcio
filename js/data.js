@@ -1092,7 +1092,7 @@ const GRAMMAR = [
           { ar: "بيته", fr: "beetu", es: "su casa (de él)" },
           { ar: "بيتها", fr: "beetha", es: "su casa (de ella)" },
           { ar: "بيتنا", fr: "beetna", es: "nuestra casa" },
-          { ar: "بيتكم", fr: "beetku", es: "vuestra casa" },
+          { ar: "بيتكو", fr: "beetku", es: "vuestra casa" },
           { ar: "بيتهم", fr: "beethom", es: "su casa (de ellos)" }
         ]
       }
@@ -2198,7 +2198,7 @@ const GRAMMAR = [
           { who: "A", ar: "هتيجي الحفلة؟", fr: "hatiigi el-7afla?", es: "¿vendrás a la fiesta?" },
           { who: "B", ar: "لو خلصت شغلي بدري، هيجي", fr: "law khallast shoghli badri, haagi", es: "si termino pronto, vendré" },
           { who: "A", ar: "ولو ماخلصتش؟", fr: "we law ma khallastesh?", es: "¿y si no terminas?" },
-          { who: "B", ar: "يبقى هشوفكم بكرة", fr: "yeb2a hashoofku bokra", es: "entonces os veo mañana" }
+          { who: "B", ar: "يبقى هشوفكو بكرة", fr: "yeb2a hashoofku bokra", es: "entonces os veo mañana" }
         ]
       }
     ],

@@ -360,7 +360,10 @@ const App = (() => {
         progress.answered++;
         saveProgress();
         idx++;
-        setTimeout(next, ok ? 650 : 1300);
+        const nx = el("button", "btn primary wide next-btn", idx >= queue.length ? "Ver resultado" : "Siguiente ›");
+        nx.onclick = next;
+        root.appendChild(nx);
+        nx.scrollIntoView({ behavior: "smooth", block: "nearest" });
       };
 
       let m = mode;
@@ -1125,7 +1128,13 @@ const App = (() => {
       const prog = el("div", "progress"); prog.innerHTML = `<span style="width:${(idx / items.length) * 100}%"></span>`;
       root.appendChild(prog);
       root.appendChild(el("div", "qcount", `${idx + 1} / ${items.length}`));
-      renderConjug(items[idx], ok => { progress.answered++; if (ok) { correct++; progress.correct++; } saveProgress(); idx++; setTimeout(next, 150); });
+      renderConjug(items[idx], ok => {
+        progress.answered++; if (ok) { correct++; progress.correct++; } saveProgress(); idx++;
+        const nx = el("button", "btn primary wide next-btn", idx >= items.length ? "Ver resultado" : "Siguiente ›");
+        nx.onclick = next;
+        root.appendChild(nx);
+        nx.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      });
     }
     next();
   }
