@@ -1056,15 +1056,15 @@ const GRAMMAR = [
     ],
     quiz: [
       { q: "La raíz de una palabra árabe suele tener…", options: ["3 consonantes", "3 vocales", "2 letras", "una sílaba"], answer: 0, note: "La raíz típica es de 3 consonantes." },
-      { q: "¿Qué comparten katab, ketaab, maktab y kaateb?", options: ["la raíz k-t-b", "el mismo molde", "nada", "el significado exacto"], answer: 0, note: "Comparten la raíz k-t-b (escribir)." },
+      { q: "¿Qué comparten كتب، كتاب، مكتب y كاتب?", options: ["la raíz k-t-b", "el mismo molde", "nada", "el significado exacto"], answer: 0, note: "Comparten la raíz k-t-b (escribir)." },
       { q: "En la raíz, ¿qué se mantiene siempre?", options: ["las consonantes", "las vocales", "los prefijos", "nada"], answer: 0, note: "Las consonantes de la raíz no cambian; sí las vocales." },
       { q: "El molde «faa3el» (كاتب, لاعب) significa…", options: ["el que hace la acción", "un lugar", "un plural", "un tiempo verbal"], answer: 0, note: "faa3el = «el que hace»." },
-      { q: "«madrasa» y «mudarres» comparten la raíz…", options: ["د-ر-س (d-r-s)", "م-د-ر", "b-t-k", "no comparten"], answer: 0, note: "Ambas vienen de d-r-s (estudiar)." },
+      { q: "«مدرسة» y «مدرس» comparten la raíz…", options: ["د-ر-س (d-r-s)", "م-د-ر", "b-t-k", "no comparten"], answer: 0, note: "Ambas vienen de d-r-s (estudiar)." },
       { q: "Cambiar el molde cambia sobre todo…", options: ["la función gramatical", "el significado base", "la raíz", "nada"], answer: 0, note: "El molde da la función; la raíz da el significado base." },
-      { q: "La raíz de «maktaba» (biblioteca) es…", options: ["k-t-b", "m-k-t", "b-t-k", "m-t-b"], answer: 0, note: "maktaba viene de k-t-b." },
+      { q: "La raíz de «مكتبة» (maktaba, biblioteca) es…", options: ["k-t-b", "m-k-t", "b-t-k", "m-t-b"], answer: 0, note: "maktaba viene de k-t-b." },
       { q: "¿Puedes intuir el sentido de una palabra por su raíz?", options: ["Sí, la raíz da el significado base", "No, es imposible", "Solo con vocales", "Solo en plural"], answer: 0, note: "Reconocer la raíz te da el campo de significado." },
       { q: "La letra م delante de una raíz suele marcar…", options: ["lugar / instrumento / participio", "un plural", "el femenino", "el pasado"], answer: 0, note: "م → maktab (lugar), moftaa7 (instrumento), maktoob (participio)." },
-      { q: "«maktoob» (con م + و) es un…", options: ["participio pasivo (maf3uul)", "lugar", "plural", "comparativo"], answer: 0, note: "م…و = molde maf3uul: «escrito»." },
+      { q: "«مكتوب» (maktoob, con م + و) es un…", options: ["participio pasivo (maf3uul)", "lugar", "plural", "comparativo"], answer: 0, note: "م…و = molde maf3uul: «escrito»." },
       { q: "La ة detrás suele marcar…", options: ["femenino o lugar", "plural masculino", "comparativo", "pasado"], answer: 0, note: "ة → maktaba (biblioteca, lugar), kaatba (escritora, fem.)." }
     ]
   },
@@ -1112,12 +1112,12 @@ const GRAMMAR = [
       }
     ],
     quiz: [
-      { q: "«un libro» en árabe =", options: ["ketaab", "waa7ed ketaab", "el-ketaab", "ketaab waa7ed"], answer: 0, note: "No hay «un/una»: solo ketaab." },
+      { q: "«un libro» en árabe =", options: ["ketaab", "waa7ed ketaab", "el-ketaab", "ketaab waa7ed"], ar: ["كتاب", "واحد كتاب", "الكتاب", "كتاب واحد"], answer: 0, note: "No hay «un/una»: solo ketaab." },
       { q: "¿Qué hace definido a un nombre?", options: ["الـ, posesivo, إضافة, propio o demostrativo", "solo el plural", "nada, siempre es indefinido", "el número uno"], answer: 0, note: "Cualquiera de esas marcas lo define." },
       { q: "بيتي (mi casa) es…", options: ["definido", "indefinido", "plural", "colectivo"], answer: 0, note: "El sufijo posesivo lo hace definido." },
-      { q: "¿Existe artículo «un/una» en árabe?", options: ["No: indefinido = ausencia de marcas", "Sí, es «waa7ed»", "Sí, es الـ", "Solo en plural"], answer: 0, note: "La indefinición es la falta de marcas." },
+      { q: "¿Existe artículo «un/una» en árabe?", options: ["No: indefinido = ausencia de marcas", "Sí, es «واحد»", "Sí, es الـ", "Solo en plural"], answer: 0, note: "La indefinición es la falta de marcas." },
       { q: "«el hombre que vino» lleva اللي porque el antecedente es…", options: ["definido", "indefinido", "plural", "femenino"], answer: 0, note: "اللي pide antecedente definido." },
-      { q: "«un hombre que vino» =", options: ["raagel geh", "raagel elli geh", "er-raagel geh", "el-raagel elli geh"], answer: 0, note: "Indefinido → sin اللي: raagel geh." },
+      { q: "«un hombre que vino» =", options: ["raagel geh", "raagel elli geh", "er-raagel geh", "el-raagel elli geh"], ar: ["راجل جه", "راجل اللي جه", "الراجل جه", "الراجل اللي جه"], answer: 0, note: "Indefinido → sin اللي: raagel geh." },
       { q: "بيت أحمد (la casa de Ahmad) es…", options: ["definido (por la إضافة)", "indefinido", "colectivo", "dual"], answer: 0, note: "La إضافة con nombre propio lo hace definido." },
       { q: "البيت ده es…", options: ["definido", "indefinido", "un plural", "un verbo"], answer: 0, note: "Artículo + demostrativo → definido." }
     ]
@@ -1161,13 +1161,13 @@ const GRAMMAR = [
       }
     ],
     quiz: [
-      { q: "«el libro que leí» =", options: ["el-ketaab elli 2areetu", "el-ketaab elli 2areet", "ketaab elli 2areetu", "el-ketaab 2areetu"], answer: 0, note: "Con pronombre de recuerdo ‑u: 2areetu." },
+      { q: "«el libro que leí» =", options: ["el-ketaab elli 2areetu", "el-ketaab elli 2areet", "ketaab elli 2areetu", "el-ketaab 2areetu"], ar: ["الكتاب اللي قريته", "الكتاب اللي قريت", "كتاب اللي قريته", "الكتاب قريته"], answer: 0, note: "Con pronombre de recuerdo ‑u: 2areetu." },
       { q: "El pronombre de recuerdo retoma…", options: ["un nombre ya mencionado", "un verbo", "una preposición sola", "nada"], answer: 0, note: "«Recuerda» al nombre antecedente." },
-      { q: "«la chica que vi» =", options: ["el-bent elli shoftaha", "el-bent elli shoft", "el-bent elli shoftu", "bent elli shoftaha"], answer: 0, note: "Femenino → ‑ha: shoftaha." },
+      { q: "«la chica que vi» =", options: ["el-bent elli shoftaha", "el-bent elli shoft", "el-bent elli shoftu", "bent elli shoftaha"], ar: ["البنت اللي شفتها", "البنت اللي شفت", "البنت اللي شفته", "بنت اللي شفتها"], answer: 0, note: "Femenino → ‑ha: shoftaha." },
       { q: "Concuerda con el nombre; femenino →", options: ["‑ha", "‑u", "‑hom", "‑ak"], answer: 0, note: "‑ha para femenino." },
-      { q: "«la casa en la que vivo» =", options: ["el-beet elli saaken fiih", "el-beet elli saaken", "el-beet elli fiih saaken", "beet elli saaken fiih"], answer: 0, note: "Con preposición: … fiih (en-ella)." },
+      { q: "«la casa en la que vivo» =", options: ["el-beet elli saaken fiih", "el-beet elli saaken", "el-beet elli fiih saaken", "beet elli saaken fiih"], ar: ["البيت اللي ساكن فيه", "البيت اللي ساكن", "البيت اللي فيه ساكن", "بيت اللي ساكن فيه"], answer: 0, note: "Con preposición: … fiih (en-ella)." },
       { q: "¿Cuándo NO hace falta el pronombre?", options: ["cuando el nombre es el sujeto de la relativa", "siempre hace falta", "nunca hace falta", "solo en plural"], answer: 0, note: "Si es el sujeto, no se recuerda." },
-      { q: "«el hombre que vino» =", options: ["er-raagel elli geh", "er-raagel elli gehu", "er-raagel elli geh-ha", "raagel elli geh"], answer: 0, note: "Sujeto → sin pronombre: geh." },
+      { q: "«el hombre que vino» =", options: ["er-raagel elli geh", "er-raagel elli gehu", "er-raagel elli geh-ha", "raagel elli geh"], ar: ["الراجل اللي جه", "الراجل اللي جهه", "الراجل اللي جهها", "راجل اللي جه"], answer: 0, note: "Sujeto → sin pronombre: geh." },
       { q: "Regla práctica: hace falta el pronombre si en español dirías…", options: ["«que LO/LA…»", "«que…» (sujeto)", "«el/la…»", "«y…»"], answer: 0, note: "«que lo/la/les» → pronombre en árabe." }
     ]
   },
@@ -1208,12 +1208,12 @@ const GRAMMAR = [
       }
     ],
     quiz: [
-      { q: "«yo soy estudiante» =", options: ["ana taaleb", "ana bakuun taaleb", "ana kont taaleb", "ana biykuun taaleb"], answer: 0, note: "Presente sin «ser»: ana taaleb." },
+      { q: "«yo soy estudiante» =", options: ["ana taaleb", "ana bakuun taaleb", "ana kont taaleb", "ana biykuun taaleb"], ar: ["أنا طالب", "أنا بكون طالب", "أنا كنت طالب", "أنا بيكون طالب"], answer: 0, note: "Presente sin «ser»: ana taaleb." },
       { q: "En presente, el verbo «ser/estar»…", options: ["no se dice", "es «kaan»", "es «biykuun»", "es «yekuun»"], answer: 0, note: "En presente no aparece." },
-      { q: "«la casa es grande» =", options: ["el-beet kebiir", "el-beet biykuun kebiir", "el-beet kaan kebiir", "el-beet howwa kebiir"], answer: 0, note: "Frase nominal: el-beet kebiir." },
-      { q: "«estaba cansado» (pasado) =", options: ["kont ta3baan", "ana ta3baan", "hakuun ta3baan", "bakuun ta3baan"], answer: 0, note: "Pasado → كان: kont ta3baan." },
+      { q: "«la casa es grande» =", options: ["el-beet kebiir", "el-beet biykuun kebiir", "el-beet kaan kebiir", "el-beet howwa kebiir"], ar: ["البيت كبير", "البيت بيكون كبير", "البيت كان كبير", "البيت هو كبير"], answer: 0, note: "Frase nominal: el-beet kebiir." },
+      { q: "«estaba cansado» (pasado) =", options: ["kont ta3baan", "ana ta3baan", "hakuun ta3baan", "bakuun ta3baan"], ar: ["كنت تعبان", "أنا تعبان", "هكون تعبان", "بكون تعبان"], answer: 0, note: "Pasado → كان: kont ta3baan." },
       { q: "El pasado de «ser» es…", options: ["كان (kaan)", "بيكون (biykuun)", "هيكون (haykuun)", "no existe"], answer: 0, note: "kaan es el pasado de «ser/estar»." },
-      { q: "«él está en casa» =", options: ["howwa fel-beet", "howwa biykuun fel-beet", "howwa kaan fel-beet", "howwa yekuun fel-beet"], answer: 0, note: "Presente sin verbo: howwa fel-beet." }
+      { q: "«él está en casa» =", options: ["howwa fel-beet", "howwa biykuun fel-beet", "howwa kaan fel-beet", "howwa yekuun fel-beet"], ar: ["هو في البيت", "هو بيكون في البيت", "هو كان في البيت", "هو يكون في البيت"], answer: 0, note: "Presente sin verbo: howwa fel-beet." }
     ]
   },
   {
@@ -1255,11 +1255,12 @@ const GRAMMAR = [
       }
     ],
     quiz: [
-      { q: "«el sol» — الشمس se pronuncia…", options: ["esh-shams", "el-shams"], answer: 0, note: "ش es letra solar: la «l» se asimila → esh-shams." },
-      { q: "«la luna» — القمر se pronuncia…", options: ["el-2amar", "e2-2amar"], answer: 0, note: "ق es letra lunar: se oye la «l» → el-2amar." },
-      { q: "«el hombre» — الراجل se pronuncia…", options: ["er-raagel", "el-raagel"], answer: 0, note: "ر es solar → er-raagel." },
-      { q: "«la casa» — البيت se pronuncia…", options: ["el-beet", "eb-beet"], answer: 0, note: "ب es lunar → el-beet." },
-      { q: "¿Cómo se dice «un libro» (indeterminado)?", options: ["ketaab", "el-ketaab"], answer: 0, note: "No hay artículo indeterminado: «un libro» = ketaab (sin الـ)." }
+      { q: "En الشمس (el sol), la ل del artículo…", options: ["se asimila (ش es solar)", "se pronuncia (ش es lunar)"], answer: 0, note: "Letra solar → la «l» se asimila y se duplica: esh-shams." },
+      { q: "En القمر (la luna), la ل del artículo…", options: ["se pronuncia (ق es lunar)", "se asimila (ق es solar)"], answer: 0, note: "Letra lunar → se oye la «l»: el-2amar." },
+      { q: "En الراجل (el hombre), la ل…", options: ["se asimila (ر es solar)", "se pronuncia (ر es lunar)"], answer: 0, note: "ر es letra solar → er-raagel." },
+      { q: "En البيت (la casa), la ل…", options: ["se pronuncia (ب es lunar)", "se asimila (ب es solar)"], answer: 0, note: "ب es letra lunar → el-beet." },
+      { q: "¿Con qué letras se asimila (desaparece) la ل del artículo?", options: ["las solares (ت د ر س ش ن…)", "las lunares (ب م ك ق ه…)"], answer: 0, note: "Con las solares la «l» se asimila y se duplica la consonante siguiente." },
+      { q: "«un libro» (indeterminado) en árabe =", options: ["ketaab", "el-ketaab"], ar: ["كتاب", "الكتاب"], answer: 0, note: "No hay artículo «un/una»: sin الـ → ketaab." }
     ]
   },
   {
@@ -1315,11 +1316,11 @@ const GRAMMAR = [
       }
     ],
     quiz: [
-      { q: "«muy bueno» =", options: ["kwayyes awi", "awi kwayyes"], answer: 0, note: "«awi» (muy) va DETRÁS del adjetivo: kwayyes awi." },
-      { q: "«despacio, por favor» =", options: ["bel-raa7a law sama7t", "be-sor3a law sama7t"], answer: 0, note: "bel-raa7a = despacio; be-sor3a = rápido." },
-      { q: "«todavía» =", options: ["lessa", "dayman"], answer: 0, note: "lessa = todavía; dayman = siempre." },
-      { q: "«fuera hace frío» → «fuera» =", options: ["barra", "gowwa"], answer: 0, note: "barra = fuera; gowwa = dentro." },
-      { q: "«nunca» =", options: ["abadan", "dayman"], answer: 0, note: "abadan = nunca; dayman = siempre." }
+      { q: "«muy bueno» =", options: ["kwayyes awi", "awi kwayyes"], ar: ["كويس قوي", "قوي كويس"], answer: 0, note: "«awi» (muy) va DETRÁS del adjetivo: kwayyes awi." },
+      { q: "«despacio, por favor» =", options: ["bel-raa7a law sama7t", "be-sor3a law sama7t"], ar: ["بالراحة لو سمحت", "بسرعة لو سمحت"], answer: 0, note: "bel-raa7a = despacio; be-sor3a = rápido." },
+      { q: "«todavía» =", options: ["lessa", "dayman"], ar: ["لسه", "دايماً"], answer: 0, note: "lessa = todavía; dayman = siempre." },
+      { q: "«fuera hace frío» → «fuera» =", options: ["barra", "gowwa"], ar: ["برّه", "جوه"], answer: 0, note: "barra = fuera; gowwa = dentro." },
+      { q: "«nunca» =", options: ["abadan", "dayman"], ar: ["أبداً", "دايماً"], answer: 0, note: "abadan = nunca; dayman = siempre." }
     ]
   },
   {
@@ -1380,12 +1381,12 @@ const GRAMMAR = [
       }
     ],
     quiz: [
-      { q: "«desde ayer» =", options: ["men embaare7", "le embaare7"], answer: 0, note: "desde = من (men) → men embaare7." },
-      { q: "«durante una hora» =", options: ["le-moddet saa3a", "fi saa3a"], answer: 0, note: "periodo de tiempo → لمدة (le-moddet)." },
-      { q: "«esto es para ti» =", options: ["da liik", "da minnak"], answer: 0, note: "«para ti» = ليك (liik), de لـ." },
-      { q: "«ve hacia la derecha» =", options: ["rou7 naa7yet el-yemiin", "rou7 men el-yemiin"], answer: 0, note: "hacia = ناحية (naa7yet)." },
-      { q: "«gracias por la ayuda» =", options: ["shukran 3ala el-mosa3da", "shukran be el-mosa3da"], answer: 0, note: "«gracias por» = شكراً على (shukran 3ala)." },
-      { q: "«por teléfono» =", options: ["bet-telefoon", "3an telefoon"], answer: 0, note: "medio / instrumento → بـ (be-) → bet-telefoon." }
+      { q: "«desde ayer» =", options: ["men embaare7", "le embaare7"], ar: ["من إمبارح", "لإمبارح"], answer: 0, note: "desde = من (men) → men embaare7." },
+      { q: "«durante una hora» =", options: ["le-moddet saa3a", "fi saa3a"], ar: ["لمدة ساعة", "في ساعة"], answer: 0, note: "periodo de tiempo → لمدة (le-moddet)." },
+      { q: "«esto es para ti» =", options: ["da liik", "da minnak"], ar: ["ده ليك", "ده منك"], answer: 0, note: "«para ti» = ليك (liik), de لـ." },
+      { q: "«ve hacia la derecha» =", options: ["rou7 naa7yet el-yemiin", "rou7 men el-yemiin"], ar: ["روح ناحية اليمين", "روح من اليمين"], answer: 0, note: "hacia = ناحية (naa7yet)." },
+      { q: "«gracias por la ayuda» =", options: ["shukran 3ala el-mosa3da", "shukran be el-mosa3da"], ar: ["شكراً على المساعدة", "شكراً بالمساعدة"], answer: 0, note: "«gracias por» = شكراً على (shukran 3ala)." },
+      { q: "«por teléfono» =", options: ["bet-telefoon", "3an telefoon"], ar: ["بالتليفون", "عن تليفون"], answer: 0, note: "medio / instrumento → بـ (be-) → bet-telefoon." }
     ]
   },
 
@@ -1427,11 +1428,11 @@ const GRAMMAR = [
       }
     ],
     quiz: [
-      { q: "«ella» =", options: ["heyya", "howwa", "homma", "enti"], answer: 0, note: "heyya = ella; howwa = él; homma = ellos." },
-      { q: "«vosotros» =", options: ["entu", "e7na", "enta", "homma"], answer: 0, note: "entu = vosotros; e7na = nosotros." },
-      { q: "«mi casa» =", options: ["beeti", "beetak", "beetha", "beetna"], answer: 0, note: "El sufijo ‑i = «mi»: beet + i = beeti." },
-      { q: "«su casa (de ella)» =", options: ["beetha", "beetu", "beetak", "beethom"], answer: 0, note: "‑ha = de ella; ‑u = de él." },
-      { q: "«tú (f)» =", options: ["enti", "enta", "heyya", "e7na"], answer: 0, note: "enti (con ‑i) = tú femenino; enta = tú masculino." }
+      { q: "«ella» =", options: ["heyya", "howwa", "homma", "enti"], ar: ["هي", "هو", "هما", "إنتي"], answer: 0, note: "heyya = ella; howwa = él; homma = ellos." },
+      { q: "«vosotros» =", options: ["entu", "e7na", "enta", "homma"], ar: ["إنتوا", "إحنا", "إنت", "هما"], answer: 0, note: "entu = vosotros; e7na = nosotros." },
+      { q: "«mi casa» =", options: ["beeti", "beetak", "beetha", "beetna"], ar: ["بيتي", "بيتك", "بيتها", "بيتنا"], answer: 0, note: "El sufijo ‑i = «mi»: beet + i = beeti." },
+      { q: "«su casa (de ella)» =", options: ["beetha", "beetu", "beetak", "beethom"], ar: ["بيتها", "بيته", "بيتك", "بيتهم"], answer: 0, note: "‑ha = de ella; ‑u = de él." },
+      { q: "«tú (f)» =", options: ["enti", "enta", "heyya", "e7na"], ar: ["إنتي", "إنت", "هي", "إحنا"], answer: 0, note: "enti (con ‑i) = tú femenino; enta = tú masculino." }
     ]
   },
 
@@ -1534,18 +1535,18 @@ const GRAMMAR = [
       }
     ],
     quiz: [
-      { q: "«(yo) escribí» =", options: ["katabt", "baktib", "haktib", "katab"], answer: 0, note: "Pasado + terminación ‑t: katab + t = katabt." },
-      { q: "«(ella) fue» — راح =", options: ["raa7et", "raa7", "ro7t", "harou7"], answer: 0, note: "heyya lleva ‑et: raa7 + et = raa7et." },
-      { q: "«(nosotros) hicimos» =", options: ["3amalna", "bni3mel", "3amaltu", "3amalu"], answer: 0, note: "e7na lleva ‑na: 3amal + na = 3amalna." },
-      { q: "«(ellos) escribieron» =", options: ["katabu", "katab", "biyiktibu", "hayiktibu"], answer: 0, note: "homma lleva ‑u: katab + u = katabu." },
-      { q: "«(tú, f) escribiste» =", options: ["katabti", "katabt", "katabtu", "katabet"], answer: 0, note: "enti lleva ‑ti; enta (m) sería katabt." },
-      { q: "«(vosotros) hicisteis» =", options: ["3amaltu", "3amalna", "3amalu", "3amalt"], answer: 0, note: "entu lleva ‑tu: 3amal + tu = 3amaltu." },
-      { q: "«(ella) hizo» =", options: ["3amalet", "3amal", "3amalt", "3amalna"], answer: 0, note: "heyya → 3amal + et = 3amalet." },
-      { q: "«no fui» (negación) =", options: ["ma ro7tesh", "mesh harou7", "ma barou7sh", "ma raa7sh"], answer: 0, note: "ma + ro7t + sh = ma ro7tesh." },
-      { q: "«(nosotros) fuimos» — راح =", options: ["ro7na", "raa7u", "raa7et", "hanrou7"], answer: 0, note: "Verbo hueco: راح → رحـ + na = ro7na." },
-      { q: "¿Qué palabra pide pasado?", options: ["embaare7", "bokra", "dilwa2ti", "dayman"], answer: 0, note: "embaare7 = ayer (pasado); bokra = mañana (futuro)." },
-      { q: "«(él) escribió» — la forma base es =", options: ["katab", "katabt", "baktib", "biyiktib"], answer: 0, note: "La forma de howwa es la raíz desnuda: katab." },
-      { q: "«(tú, m) hiciste» =", options: ["3amalt", "3amalti", "3amal", "3amaltu"], answer: 0, note: "ana y enta comparten ‑t: 3amalt." }
+      { q: "«(yo) escribí» =", options: ["katabt", "baktib", "haktib", "katab"], ar: ["كتبت", "بكتب", "هكتب", "كتب"], answer: 0, note: "Pasado + terminación ‑t: katab + t = katabt." },
+      { q: "«(ella) fue» — راح =", options: ["raa7et", "raa7", "ro7t", "harou7"], ar: ["راحت", "راح", "رحت", "هروح"], answer: 0, note: "heyya lleva ‑et: raa7 + et = raa7et." },
+      { q: "«(nosotros) hicimos» =", options: ["3amalna", "bni3mel", "3amaltu", "3amalu"], ar: ["عملنا", "بنعمل", "عملتو", "عملو"], answer: 0, note: "e7na lleva ‑na: 3amal + na = 3amalna." },
+      { q: "«(ellos) escribieron» =", options: ["katabu", "katab", "biyiktibu", "hayiktibu"], ar: ["كتبو", "كتب", "بيكتبو", "هيكتبو"], answer: 0, note: "homma lleva ‑u: katab + u = katabu." },
+      { q: "«(tú, f) escribiste» =", options: ["katabti", "katabt", "katabtu", "baktib"], ar: ["كتبتي", "كتبت", "كتبتو", "بكتب"], answer: 0, note: "enti lleva ‑ti; enta (m) sería katabt." },
+      { q: "«(vosotros) hicisteis» =", options: ["3amaltu", "3amalna", "3amalu", "3amalt"], ar: ["عملتو", "عملنا", "عملو", "عملت"], answer: 0, note: "entu lleva ‑tu: 3amal + tu = 3amaltu." },
+      { q: "«(ella) hizo» =", options: ["3amalet", "3amal", "3amalu", "3amalna"], ar: ["عملت", "عمل", "عملو", "عملنا"], answer: 0, note: "heyya → 3amal + et = 3amalet." },
+      { q: "«no fui» (negación) =", options: ["ma ro7tesh", "mesh harou7", "ma barou7sh", "ma raa7sh"], ar: ["ما رحتش", "مش هروح", "ما بروحش", "ما راحش"], answer: 0, note: "ma + ro7t + sh = ma ro7tesh." },
+      { q: "«(nosotros) fuimos» — راح =", options: ["ro7na", "raa7u", "raa7et", "hanrou7"], ar: ["رحنا", "راحو", "راحت", "هنروح"], answer: 0, note: "Verbo hueco: راح → رحـ + na = ro7na." },
+      { q: "¿Qué palabra pide pasado?", options: ["embaare7", "bokra", "dilwa2ti", "dayman"], ar: ["إمبارح", "بكرة", "دلوقتي", "دايماً"], answer: 0, note: "embaare7 = ayer (pasado); bokra = mañana (futuro)." },
+      { q: "«(él) escribió» — la forma base es =", options: ["katab", "katabt", "baktib", "biyiktib"], ar: ["كتب", "كتبت", "بكتب", "بيكتب"], answer: 0, note: "La forma de howwa es la raíz desnuda: katab." },
+      { q: "«(tú, m) hiciste» =", options: ["3amalt", "3amalti", "3amal", "3amaltu"], ar: ["عملت", "عملتي", "عمل", "عملتو"], answer: 0, note: "ana y enta comparten ‑t: 3amalt." }
     ]
   },
 
@@ -1634,18 +1635,18 @@ const GRAMMAR = [
       }
     ],
     quiz: [
-      { q: "«(yo) escribo» =", options: ["baktib", "katabt", "haktib", "aktib"], answer: 0, note: "ana lleva ba‑: ba + ktib = baktib." },
-      { q: "«(él) hace» =", options: ["biyi3mel", "3amal", "hayi3mel", "ba3mel"], answer: 0, note: "howwa lleva biyi‑: biyi3mel." },
-      { q: "«(nosotros) vamos» =", options: ["binrou7", "ro7na", "hanrou7", "barou7"], answer: 0, note: "e7na lleva bni‑: binrou7." },
-      { q: "«(ella) escribe» =", options: ["bitiktib", "katabet", "hatiktib", "biyiktib"], answer: 0, note: "heyya usa el mismo prefijo que enta: bti‑ → bitiktib." },
-      { q: "«(ellos) hacen» =", options: ["biyi3melu", "3amalu", "hayi3melu", "biti3melu"], answer: 0, note: "homma → biyi‑…‑u: biyi3melu." },
-      { q: "«no escribo» (negación) =", options: ["ma baktibsh", "mesh baktib", "ma katabtesh", "mesh haktib"], answer: 0, note: "Se abraza el verbo: ma + baktib + sh." },
-      { q: "«(tú, f) vas» =", options: ["bitrou7i", "bitrou7", "hatrou7i", "barou7"], answer: 0, note: "enti añade ‑i al final: bitrou7i." },
+      { q: "«(yo) escribo» =", options: ["baktib", "katabt", "haktib", "aktib"], ar: ["بكتب", "كتبت", "هكتب", "أكتب"], answer: 0, note: "ana lleva ba‑: ba + ktib = baktib." },
+      { q: "«(él) hace» =", options: ["biyi3mel", "3amal", "hayi3mel", "ba3mel"], ar: ["بيعمل", "عمل", "هيعمل", "بعمل"], answer: 0, note: "howwa lleva biyi‑: biyi3mel." },
+      { q: "«(nosotros) vamos» =", options: ["binrou7", "ro7na", "hanrou7", "barou7"], ar: ["بنروح", "رحنا", "هنروح", "بروح"], answer: 0, note: "e7na lleva bni‑: binrou7." },
+      { q: "«(ella) escribe» =", options: ["bitiktib", "katabet", "hatiktib", "biyiktib"], ar: ["بتكتب", "كتبت", "هتكتب", "بيكتب"], answer: 0, note: "heyya usa el mismo prefijo que enta: bti‑ → bitiktib." },
+      { q: "«(ellos) hacen» =", options: ["biyi3melu", "3amalu", "hayi3melu", "biti3melu"], ar: ["بيعملو", "عملو", "هيعملو", "بتعملو"], answer: 0, note: "homma → biyi‑…‑u: biyi3melu." },
+      { q: "«no escribo» (negación) =", options: ["ma baktibsh", "mesh baktib", "ma katabtesh", "mesh haktib"], ar: ["مبكتبش", "مش بكتب", "ما كتبتش", "مش هكتب"], answer: 0, note: "Se abraza el verbo: ma + baktib + sh." },
+      { q: "«(tú, f) vas» =", options: ["bitrou7i", "bitrou7", "hatrou7i", "barou7"], ar: ["بتروحي", "بتروح", "هتروحي", "بروح"], answer: 0, note: "enti añade ‑i al final: bitrou7i." },
       { q: "¿Qué prefijo marca el presente habitual?", options: ["بـ (bi‑)", "هـ (ha‑)", "ما (ma‑)", "لـ (le‑)"], answer: 0, note: "بـ (bi‑) marca el presente real / habitual." },
-      { q: "«quiero ir» — el verbo va…", options: ["sin بـ: 3aayez arou7", "con بـ: 3aayez barou7", "en pasado: 3aayez ro7t", "con هـ: 3aayez harou7"], answer: 0, note: "Tras «quiero» el verbo pierde el بـ (subjuntivo): 3aayez arou7." },
-      { q: "«(vosotros) escribís» =", options: ["bitiktibu", "katabtu", "hatiktibu", "biyiktibu"], answer: 0, note: "entu → bti‑…‑u: bitiktibu." },
-      { q: "«cada día» (pide presente) =", options: ["kol yoom", "embaare7", "bokra", "el-osboo3 elli faat"], answer: 0, note: "kol yoom = cada día → hábito → presente." },
-      { q: "«(él) va» =", options: ["biyrou7", "raa7", "hayrou7", "barou7"], answer: 0, note: "howwa hueco → biyrou7." }
+      { q: "«quiero ir» — el verbo va…", options: ["sin بـ: عايز أروح", "con بـ: عايز بروح", "en pasado: عايز رحت", "con هـ: عايز هروح"], answer: 0, note: "Tras «quiero» el verbo pierde el بـ (subjuntivo): 3aayez arou7." },
+      { q: "«(vosotros) escribís» =", options: ["bitiktibu", "katabtu", "hatiktibu", "biyiktibu"], ar: ["بتكتبو", "كتبتو", "هتكتبو", "بيكتبو"], answer: 0, note: "entu → bti‑…‑u: bitiktibu." },
+      { q: "«cada día» (pide presente) =", options: ["kol yoom", "embaare7", "bokra", "el-osboo3 elli faat"], ar: ["كل يوم", "إمبارح", "بكرة", "الأسبوع اللي فات"], answer: 0, note: "kol yoom = cada día → hábito → presente." },
+      { q: "«(él) va» =", options: ["biyrou7", "raa7", "hayrou7", "barou7"], ar: ["بيروح", "راح", "هيروح", "بروح"], answer: 0, note: "howwa hueco → biyrou7." }
     ]
   },
 
@@ -1735,18 +1736,18 @@ const GRAMMAR = [
       }
     ],
     quiz: [
-      { q: "«(yo) escribiré» =", options: ["haktib", "baktib", "katabt", "aktib"], answer: 0, note: "ha‑ + ktib = haktib." },
-      { q: "«(nosotros) iremos» =", options: ["hanrou7", "binrou7", "ro7na", "harou7"], answer: 0, note: "e7na → han‑: hanrou7." },
-      { q: "«(ella) hará» =", options: ["hati3mel", "biti3mel", "3amalet", "hayi3mel"], answer: 0, note: "heyya usa hat‑ (como enta): hati3mel." },
+      { q: "«(yo) escribiré» =", options: ["haktib", "baktib", "katabt", "aktib"], ar: ["هكتب", "بكتب", "كتبت", "أكتب"], answer: 0, note: "ha‑ + ktib = haktib." },
+      { q: "«(nosotros) iremos» =", options: ["hanrou7", "binrou7", "ro7na", "harou7"], ar: ["هنروح", "بنروح", "رحنا", "هروح"], answer: 0, note: "e7na → han‑: hanrou7." },
+      { q: "«(ella) hará» =", options: ["hati3mel", "biti3mel", "3amalet", "hayi3mel"], ar: ["هتعمل", "بتعمل", "عملت", "هيعمل"], answer: 0, note: "heyya usa hat‑ (como enta): hati3mel." },
       { q: "El prefijo del futuro es…", options: ["هـ (ha‑)", "بـ (bi‑)", "ما (ma‑)", "‑ت (‑t)"], answer: 0, note: "هـ (ha‑) marca el futuro; بـ es presente." },
-      { q: "«no iré» (negación) =", options: ["mesh harou7", "ma ro7tesh", "ma barou7sh", "mesh barou7"], answer: 0, note: "Futuro negativo = mesh + futuro: mesh harou7." },
-      { q: "«mañana» =", options: ["bokra", "embaare7", "dilwa2ti", "men shwayya"], answer: 0, note: "bokra = mañana (futuro)." },
-      { q: "«(ellos) escribirán» =", options: ["hayiktibu", "biyiktibu", "katabu", "hatiktibu"], answer: 0, note: "homma → hay‑…‑u: hayiktibu." },
-      { q: "«(tú, m) harás» =", options: ["hati3mel", "biti3mel", "3amalt", "ha3mel"], answer: 0, note: "enta → hat‑: hati3mel." },
-      { q: "Del presente «baktib» al futuro se pasa…", options: ["quitando بـ y poniendo هـ", "añadiendo ‑t", "poniendo ما…ش", "no cambia"], answer: 0, note: "baktib → (quito bi, pongo ha) → haktib." },
-      { q: "«la semana que viene» =", options: ["el-osboo3 el-gay", "el-osboo3 elli faat", "dilwa2ti", "kol yoom"], answer: 0, note: "el-gay = que viene; elli faat = pasada." },
-      { q: "«(vosotros) iréis» =", options: ["hatrou7u", "bitrou7u", "ro7tu", "hayrou7u"], answer: 0, note: "entu → hat‑…‑u: hatrou7u." },
-      { q: "«(él) escribirá» =", options: ["hayiktib", "biyiktib", "katab", "haktib"], answer: 0, note: "howwa → hay‑: hayiktib." }
+      { q: "«no iré» (negación) =", options: ["mesh harou7", "ma ro7tesh", "ma barou7sh", "mesh barou7"], ar: ["مش هروح", "ما رحتش", "ما بروحش", "مش بروح"], answer: 0, note: "Futuro negativo = mesh + futuro: mesh harou7." },
+      { q: "«mañana» =", options: ["bokra", "embaare7", "dilwa2ti", "men shwayya"], ar: ["بكرة", "إمبارح", "دلوقتي", "من شوية"], answer: 0, note: "bokra = mañana (futuro)." },
+      { q: "«(ellos) escribirán» =", options: ["hayiktibu", "biyiktibu", "katabu", "hatiktibu"], ar: ["هيكتبو", "بيكتبو", "كتبو", "هتكتبو"], answer: 0, note: "homma → hay‑…‑u: hayiktibu." },
+      { q: "«(tú, m) harás» =", options: ["hati3mel", "biti3mel", "3amalt", "ha3mel"], ar: ["هتعمل", "بتعمل", "عملت", "هعمل"], answer: 0, note: "enta → hat‑: hati3mel." },
+      { q: "Del presente «بكتب» (baktib) al futuro se pasa…", options: ["quitando بـ y poniendo هـ", "añadiendo ‑t", "poniendo ما…ش", "no cambia"], answer: 0, note: "baktib → (quito bi, pongo ha) → haktib." },
+      { q: "«la semana que viene» =", options: ["el-osboo3 el-gay", "el-osboo3 elli faat", "dilwa2ti", "kol yoom"], ar: ["الأسبوع الجاي", "الأسبوع اللي فات", "دلوقتي", "كل يوم"], answer: 0, note: "el-gay = que viene; elli faat = pasada." },
+      { q: "«(vosotros) iréis» =", options: ["hatrou7u", "bitrou7u", "ro7tu", "hayrou7u"], ar: ["هتروحو", "بتروحو", "رحتو", "هيروحو"], answer: 0, note: "entu → hat‑…‑u: hatrou7u." },
+      { q: "«(él) escribirá» =", options: ["hayiktib", "biyiktib", "katab", "haktib"], ar: ["هيكتب", "بيكتب", "كتب", "هكتب"], answer: 0, note: "howwa → hay‑: hayiktib." }
     ]
   },
 
@@ -1774,18 +1775,18 @@ const GRAMMAR = [
       }
     ],
     quiz: [
-      { q: "«katabt» está en…", options: ["pasado", "presente", "futuro", "subjuntivo"], answer: 0, note: "Termina en ‑t sin prefijo b/h → pasado." },
-      { q: "«biyrou7» está en…", options: ["presente", "pasado", "futuro", "imperativo"], answer: 0, note: "Empieza por بـ (bi‑) → presente." },
-      { q: "«hanrou7» está en…", options: ["futuro", "presente", "pasado", "subjuntivo"], answer: 0, note: "Empieza por هـ (ha‑/han‑) → futuro." },
-      { q: "Pon en futuro «baktib» (yo) →", options: ["haktib", "katabt", "biniktib", "aktib"], answer: 0, note: "Quita bi‑, pon ha‑: haktib." },
-      { q: "Pon en pasado «biyi3mel» (él) →", options: ["3amal", "hayi3mel", "ba3mel", "3amalet"], answer: 0, note: "howwa en pasado = raíz desnuda: 3amal." },
-      { q: "«3amalna» significa…", options: ["hicimos", "haremos", "hacemos", "haced"], answer: 0, note: "‑na en pasado = nosotros: hicimos." },
-      { q: "«mesh haktib» significa…", options: ["no escribiré", "no escribí", "no escribo", "no escribas"], answer: 0, note: "mesh + futuro = no escribiré." },
-      { q: "«bitiktibi» se refiere a…", options: ["tú (f)", "tú (m)", "ella", "vosotros"], answer: 0, note: "bti‑…‑i (con ‑i final) = enti, tú femenino." },
-      { q: "Pon en presente «raa7» (él) →", options: ["biyrou7", "hayrou7", "ro7t", "barou7"], answer: 0, note: "Presente de howwa: biyrou7." },
-      { q: "«no fui» (pasado negativo) =", options: ["ma ro7tesh", "mesh harou7", "ma barou7sh", "mesh ro7t"], answer: 0, note: "ma + ro7t + sh = ma ro7tesh." },
-      { q: "«hati3melu» =", options: ["haréis", "hicisteis", "hacéis", "hará"], answer: 0, note: "hat‑…‑u en futuro = entu: haréis." },
-      { q: "«quiero escribir» → el verbo correcto es…", options: ["3aayez aktib", "3aayez baktib", "3aayez katabt", "3aayez haktib"], answer: 0, note: "Tras «quiero», subjuntivo sin بـ: 3aayez aktib." }
+      { q: "«كتبت» (katabt) está en…", options: ["pasado", "presente", "futuro", "subjuntivo"], answer: 0, note: "Termina en ‑t sin prefijo b/h → pasado." },
+      { q: "«بيروح» (biyrou7) está en…", options: ["presente", "pasado", "futuro", "imperativo"], answer: 0, note: "Empieza por بـ (bi‑) → presente." },
+      { q: "«هنروح» (hanrou7) está en…", options: ["futuro", "presente", "pasado", "subjuntivo"], answer: 0, note: "Empieza por هـ (ha‑/han‑) → futuro." },
+      { q: "Pon en futuro «بكتب» (baktib, yo) →", options: ["haktib", "katabt", "biniktib", "aktib"], ar: ["هكتب", "كتبت", "بنكتب", "أكتب"], answer: 0, note: "Quita bi‑, pon ha‑: haktib." },
+      { q: "Pon en pasado «بيعمل» (biyi3mel, él) →", options: ["3amal", "hayi3mel", "ba3mel", "3amalet"], ar: ["عمل", "هيعمل", "بعمل", "عملت"], answer: 0, note: "howwa en pasado = raíz desnuda: 3amal." },
+      { q: "«عملنا» (3amalna) significa…", options: ["hicimos", "haremos", "hacemos", "haced"], answer: 0, note: "‑na en pasado = nosotros: hicimos." },
+      { q: "«مش هكتب» (mesh haktib) significa…", options: ["no escribiré", "no escribí", "no escribo", "no escribas"], answer: 0, note: "mesh + futuro = no escribiré." },
+      { q: "«بتكتبي» (bitiktibi) se refiere a…", options: ["tú (f)", "tú (m)", "ella", "vosotros"], answer: 0, note: "bti‑…‑i (con ‑i final) = enti, tú femenino." },
+      { q: "Pon en presente «راح» (raa7, él) →", options: ["biyrou7", "hayrou7", "ro7t", "barou7"], ar: ["بيروح", "هيروح", "رحت", "بروح"], answer: 0, note: "Presente de howwa: biyrou7." },
+      { q: "«no fui» (pasado negativo) =", options: ["ma ro7tesh", "mesh harou7", "ma barou7sh", "mesh ro7t"], ar: ["ما رحتش", "مش هروح", "ما بروحش", "مش رحت"], answer: 0, note: "ma + ro7t + sh = ma ro7tesh." },
+      { q: "«هتعملو» (hati3melu) =", options: ["haréis", "hicisteis", "hacéis", "hará"], answer: 0, note: "hat‑…‑u en futuro = entu: haréis." },
+      { q: "«quiero escribir» → el verbo correcto es…", options: ["3aayez aktib", "3aayez baktib", "3aayez katabt", "3aayez haktib"], ar: ["عايز أكتب", "عايز بكتب", "عايز كتبت", "عايز هكتب"], answer: 0, note: "Tras «quiero», subjuntivo sin بـ: 3aayez aktib." }
     ]
   },
 
@@ -1907,7 +1908,7 @@ const GRAMMAR = [
     ],
     quiz: [
       { q: "«¿cómo te llamas?» (orden egipcio) =", options: ["esmak eh?", "eh esmak?", "ezzaay esmak?", "esmak meen?"], ar: ["اسمك إيه؟", "إيه اسمك؟", "إزاي اسمك؟", "اسمك مين؟"], answer: 0, note: "La interrogativa va al final: esmak eh?" },
-      { q: "«¿qué haces?» =", options: ["bti3mel eh?", "eh bti3mel?", "bti3mel feen?", "eh bta3mel?"], answer: 0, note: "eh (qué) al final: bti3mel eh?" },
+      { q: "«¿qué haces?» =", options: ["bti3mel eh?", "eh bti3mel?", "bti3mel feen?", "bti3mel emta?"], ar: ["بتعمل إيه؟", "إيه بتعمل؟", "بتعمل فين؟", "بتعمل إمتى؟"], answer: 0, note: "eh (qué) al final: bti3mel eh?" },
       { q: "«¿a dónde vas?» =", options: ["raaye7 feen?", "feen raaye7?", "raaye7 emta?", "feen enta?"], ar: ["رايح فين؟", "فين رايح؟", "رايح إمتى؟", "فين إنت؟"], answer: 0, note: "feen (dónde) al final: raaye7 feen?" },
       { q: "«por qué» =", options: ["leeh", "ezzaay", "feen", "emta"], ar: ["ليه", "إزاي", "فين", "إمتى"], answer: 0, note: "leeh = por qué; ezzaay = cómo." },
       { q: "«cuándo» =", options: ["emta", "feen", "meen", "kaam"], ar: ["إمتى", "فين", "مين", "كام"], answer: 0, note: "emta = cuándo." },
@@ -2012,14 +2013,14 @@ const GRAMMAR = [
       }
     ],
     quiz: [
-      { q: "«tengo» =", options: ["3andi", "3andak", "3andu", "3andena"], answer: 0, note: "3and + i = 3andi." },
-      { q: "«(ella) tiene» =", options: ["3andaha", "3andu", "3andena", "3andak"], answer: 0, note: "‑ha = de ella: 3andaha." },
-      { q: "«no tengo» =", options: ["ma3andiish", "mesh 3andi", "mafiish 3andi", "3andiish"], answer: 0, note: "Se abraza con ma…sh: ma3andiish." },
-      { q: "«tenía» (pasado) =", options: ["kaan 3andi", "3andi", "haykoun 3andi", "kont 3andi"], answer: 0, note: "El pasado lo aporta كان: kaan 3andi." },
-      { q: "«¿tienes (m) tiempo?» → «tienes» =", options: ["3andak", "3andek", "3andu", "3andena"], answer: 0, note: "Masculino: 3andak; femenino: 3andek." },
+      { q: "«tengo» =", options: ["3andi", "3andak", "3andu", "3andena"], ar: ["عندي", "عندك", "عنده", "عندنا"], answer: 0, note: "3and + i = 3andi." },
+      { q: "«(ella) tiene» =", options: ["3andaha", "3andu", "3andena", "3andak"], ar: ["عندها", "عنده", "عندنا", "عندك"], answer: 0, note: "‑ha = de ella: 3andaha." },
+      { q: "«no tengo» =", options: ["ma3andiish", "mesh 3andi", "mafiish 3andi", "3andiish"], ar: ["ما عنديش", "مش عندي", "مفيش عندي", "عنديش"], answer: 0, note: "Se abraza con ma…sh: ma3andiish." },
+      { q: "«tenía» (pasado) =", options: ["kaan 3andi", "3andi", "haykoun 3andi", "kont 3andi"], ar: ["كان عندي", "عندي", "هيكون عندي", "كنت عندي"], answer: 0, note: "El pasado lo aporta كان: kaan 3andi." },
+      { q: "«¿tienes (m) tiempo?» → «tienes» =", options: ["3andak", "3andek", "3andu", "3andena"], ar: ["عندك", "عندِك", "عنده", "عندنا"], answer: 0, note: "Masculino: 3andak; femenino: 3andek." },
       { q: "¿Existe el verbo «tener» en árabe?", options: ["No, se usa عند (3and)", "Sí, es «tanawwal»", "Sí, es «kaan»", "Solo en futuro"], answer: 0, note: "No hay verbo «tener»: se usa la preposición عند." },
-      { q: "«llevo dinero encima» =", options: ["ma3aaya feloos", "3andi feloos bezyaada", "feloos 3andaha", "mesh feloos"], answer: 0, note: "«encima / conmigo» → ma3aaya." },
-      { q: "«tenemos» =", options: ["3andena", "3andoku", "3andohom", "3andi"], answer: 0, note: "‑na = nosotros: 3andena." }
+      { q: "«llevo dinero encima» =", options: ["ma3aaya feloos", "3andi feloos bezyaada", "feloos 3andaha", "mesh feloos"], ar: ["معايا فلوس", "عندي فلوس بزيادة", "فلوس عندها", "مش فلوس"], answer: 0, note: "«encima / conmigo» → ma3aaya." },
+      { q: "«tenemos» =", options: ["3andena", "3andoku", "3andohom", "3andi"], ar: ["عندنا", "عندكو", "عندهم", "عندي"], answer: 0, note: "‑na = nosotros: 3andena." }
     ]
   },
 
@@ -2068,14 +2069,14 @@ const GRAMMAR = [
       }
     ],
     quiz: [
-      { q: "«hay un restaurante» =", options: ["fiih mat3am", "mafiish mat3am", "kaan mat3am", "mat3am fiih"], answer: 0, note: "«hay» = fiih." },
-      { q: "«no hay tiempo» =", options: ["mafiish wa2t", "mesh wa2t", "fiih wa2t", "ma wa2tsh"], answer: 0, note: "«no hay» = mafiish." },
-      { q: "«estaba cansado» =", options: ["kont ta3baan", "ana ta3baan", "hakoun ta3baan", "kaan ta3baan"], answer: 0, note: "«yo estaba» = kont (de kaan)." },
-      { q: "«había atasco» =", options: ["kaan fiih za7ma", "fiih za7ma", "haykoun za7ma", "mafiish za7ma"], answer: 0, note: "había = kaan fiih." },
-      { q: "«estoy cansado» (presente) =", options: ["ana ta3baan", "ana kaan ta3baan", "ana bakoun ta3baan", "kont ta3baan"], answer: 0, note: "En presente NO se dice «ser»: ana ta3baan." },
-      { q: "«habrá una fiesta» =", options: ["haykoun fiih 7afla", "kaan fiih 7afla", "fiih 7afla", "mafiish 7afla"], answer: 0, note: "Futuro de haber → haykoun fiih." },
-      { q: "«solía comer / estaba comiendo» =", options: ["kont baakol", "baakol", "hakoun baakol", "akalt"], answer: 0, note: "كان + presente: kont baakol." },
-      { q: "«(ella) estaba aquí» =", options: ["kaanet hena", "kaan hena", "kont hena", "haykoun hena"], answer: 0, note: "heyya → kaanet." }
+      { q: "«hay un restaurante» =", options: ["fiih mat3am", "mafiish mat3am", "kaan mat3am", "mat3am fiih"], ar: ["فيه مطعم", "مفيش مطعم", "كان مطعم", "مطعم فيه"], answer: 0, note: "«hay» = fiih." },
+      { q: "«no hay tiempo» =", options: ["mafiish wa2t", "mesh wa2t", "fiih wa2t", "ma wa2tsh"], ar: ["مفيش وقت", "مش وقت", "فيه وقت", "ما وقتش"], answer: 0, note: "«no hay» = mafiish." },
+      { q: "«estaba cansado» =", options: ["kont ta3baan", "ana ta3baan", "hakoun ta3baan", "kaan ta3baan"], ar: ["كنت تعبان", "أنا تعبان", "هكون تعبان", "كان تعبان"], answer: 0, note: "«yo estaba» = kont (de kaan)." },
+      { q: "«había atasco» =", options: ["kaan fiih za7ma", "fiih za7ma", "haykoun za7ma", "mafiish za7ma"], ar: ["كان فيه زحمة", "فيه زحمة", "هيكون زحمة", "مفيش زحمة"], answer: 0, note: "había = kaan fiih." },
+      { q: "«estoy cansado» (presente) =", options: ["ana ta3baan", "ana kaan ta3baan", "ana bakoun ta3baan", "kont ta3baan"], ar: ["أنا تعبان", "أنا كان تعبان", "أنا بكون تعبان", "كنت تعبان"], answer: 0, note: "En presente NO se dice «ser»: ana ta3baan." },
+      { q: "«habrá una fiesta» =", options: ["haykoun fiih 7afla", "kaan fiih 7afla", "fiih 7afla", "mafiish 7afla"], ar: ["هيكون فيه حفلة", "كان فيه حفلة", "فيه حفلة", "مفيش حفلة"], answer: 0, note: "Futuro de haber → haykoun fiih." },
+      { q: "«solía comer / estaba comiendo» =", options: ["kont baakol", "baakol", "hakoun baakol", "akalt"], ar: ["كنت باكل", "باكل", "هكون باكل", "أكلت"], answer: 0, note: "كان + presente: kont baakol." },
+      { q: "«(ella) estaba aquí» =", options: ["kaanet hena", "kaan hena", "kont hena", "haykoun hena"], ar: ["كانت هنا", "كان هنا", "كنت هنا", "هيكون هنا"], answer: 0, note: "heyya → kaanet." }
     ]
   },
 
@@ -2209,7 +2210,7 @@ const GRAMMAR = [
     quiz: [
       { q: "Plural de كتاب (libro) =", options: ["kotob", "ketabaat", "kitaab", "ketabiin"], ar: ["كتب", "كتابات", "كتاب", "كتابين"], answer: 0, note: "Patrón fu3uul: ketaab → kotob." },
       { q: "Plural de بنت (chica) =", options: ["banaat", "bentaat", "banaatiin", "benaat"], ar: ["بنات", "بنتات", "بناتين", "بينات"], answer: 0, note: "Irregular: bent → banaat." },
-      { q: "«coches» (de 3arabeyya) =", options: ["3arabeyyaat", "3arabeyyiin", "3araayeb", "3arabaat"], ar: ["عربيات", "عربيين", "عرايب", "عربات"], answer: 0, note: "Femenino regular ‑aat: 3arabeyyaat." },
+      { q: "«coches» (de عربية / 3arabeyya) =", options: ["3arabeyyaat", "3arabeyyiin", "3araayeb", "3arabaat"], ar: ["عربيات", "عربيين", "عرايب", "عربات"], answer: 0, note: "Femenino regular ‑aat: 3arabeyyaat." },
       { q: "Plural de ولد (niño) =", options: ["awlaad", "weladaat", "awladiin", "wilaad"], ar: ["أولاد", "ولدات", "أولادين", "ولاد"], answer: 0, note: "Patrón af3aal: walad → awlaad." },
       { q: "Plural de مدرس (profesor) =", options: ["mudarrisiin", "mudarrisaat", "madaares", "mudarresa"], ar: ["مدرسين", "مدرسات", "مدارس", "مدرسة"], answer: 0, note: "Persona → ‑iin: mudarrisiin." },
       { q: "Plural de بيت (casa) =", options: ["beyuut", "beetaat", "abyaat", "beyutiin"], ar: ["بيوت", "بيتات", "أبيات", "بيوتين"], answer: 0, note: "Patrón fu3uul: beet → beyuut." },
@@ -2265,13 +2266,13 @@ const GRAMMAR = [
       }
     ],
     quiz: [
-      { q: "«¡escribe!» (m) =", options: ["iktib", "baktib", "katabt", "hatiktib"], answer: 0, note: "Presente sin prefijo: iktib." },
-      { q: "«¡ven!» =", options: ["ta3aala", "rou7", "istanna", "khod"], answer: 0, note: "ta3aala = ¡ven!" },
-      { q: "«¡escribe!» a una mujer =", options: ["iktibi", "iktib", "iktibu", "biktibi"], answer: 0, note: "Femenino añade ‑i: iktibi." },
-      { q: "«¡espera!» =", options: ["istanna", "isma3", "khod", "rou7"], answer: 0, note: "istanna = ¡espera!" },
-      { q: "«no vayas» =", options: ["matrou7sh", "mesh rou7", "ma rou7", "mesh harou7"], answer: 0, note: "Imperativo negativo: ma…sh → matrou7sh." },
-      { q: "«¡escuchad!» (plural) =", options: ["isma3u", "isma3", "isma3i", "bitisma3u"], answer: 0, note: "Plural añade ‑u: isma3u." },
-      { q: "«adelante / pasa, por favor» =", options: ["itfaddal", "balaash", "khod", "rou7"], answer: 0, note: "itfaddal = adelante / sírvete." }
+      { q: "«¡escribe!» (m) =", options: ["iktib", "baktib", "katabt", "hatiktib"], ar: ["اكتب", "بكتب", "كتبت", "هتكتب"], answer: 0, note: "Presente sin prefijo: iktib." },
+      { q: "«¡ven!» =", options: ["ta3aala", "rou7", "istanna", "khod"], ar: ["تعالى", "روح", "استنى", "خد"], answer: 0, note: "ta3aala = ¡ven!" },
+      { q: "«¡escribe!» a una mujer =", options: ["iktibi", "iktib", "iktibu", "biktibi"], ar: ["اكتبي", "اكتب", "اكتبو", "بتكتبي"], answer: 0, note: "Femenino añade ‑i: iktibi." },
+      { q: "«¡espera!» =", options: ["istanna", "isma3", "khod", "rou7"], ar: ["استنى", "اسمع", "خد", "روح"], answer: 0, note: "istanna = ¡espera!" },
+      { q: "«no vayas» =", options: ["matrou7sh", "mesh rou7", "ma rou7", "mesh harou7"], ar: ["ماتروحش", "مش روح", "ما روح", "مش هروح"], answer: 0, note: "Imperativo negativo: ma…sh → matrou7sh." },
+      { q: "«¡escuchad!» (plural) =", options: ["isma3u", "isma3", "isma3i", "bitisma3u"], ar: ["اسمعو", "اسمع", "اسمعي", "بتسمعو"], answer: 0, note: "Plural añade ‑u: isma3u." },
+      { q: "«adelante / pasa, por favor» =", options: ["itfaddal", "balaash", "khod", "rou7"], ar: ["اتفضل", "بلاش", "خد", "روح"], answer: 0, note: "itfaddal = adelante / sírvete." }
     ]
   },
 
@@ -2315,7 +2316,7 @@ const GRAMMAR = [
     ],
     quiz: [
       { q: "Comparativo de كبير (grande) =", options: ["akbar", "kebiir", "akbeer", "kbaar"], ar: ["أكبر", "كبير", "أكبير", "كبار"], answer: 0, note: "Patrón af3al: kebiir → akbar." },
-      { q: "«mejor» (de kwayyes) =", options: ["a7san", "akwas", "kwayyes awi", "a7ssan"], answer: 0, note: "Irregular útil: kwayyes → a7san." },
+      { q: "«mejor» (de كويس / kwayyes) =", options: ["a7san", "akwas", "kwayyes awi", "kwayyes aktar"], ar: ["أحسن", "أكوس", "كويس قوي", "كويس أكتر"], answer: 0, note: "Irregular útil: kwayyes → a7san." },
       { q: "«más grande que» =", options: ["akbar men", "akbar fi", "akbar le", "akbar 3an"], ar: ["أكبر من", "أكبر في", "أكبر لـ", "أكبر عن"], answer: 0, note: "«que» = من (men)." },
       { q: "«más pequeño» (de soghayyar) =", options: ["asghar", "soghayyar aktar", "asghaar", "soghar"], ar: ["أصغر", "صغير أكتر", "أصغار", "صغر"], answer: 0, note: "soghayyar → asghar." },
       { q: "«la ciudad más grande» =", options: ["akbar madiina", "madiina akbar", "el-madiina akbar", "madiina el-akbar"], ar: ["أكبر مدينة", "مدينة أكبر", "المدينة أكبر", "مدينة الأكبر"], answer: 0, note: "Superlativo = af3al + nombre: akbar madiina." },
@@ -2399,16 +2400,16 @@ const GRAMMAR = [
       }
     ],
     quiz: [
-      { q: "«(yo) lo sé» (estado) =", options: ["ana 3aaref", "ana ba3raf", "ana 3eref", "ana ha3raf"], answer: 0, note: "Estado mental → participio: 3aaref." },
-      { q: "Participio femenino de راح (ir) =", options: ["rayha", "raaye7", "rayhiin", "raa7et"], answer: 0, note: "faa3el fem: raaye7 → rayha." },
-      { q: "«no entiendo» =", options: ["mesh faahem", "ma bafhamsh", "mesh bafham", "ma faahemsh"], answer: 0, note: "Participio negado con mesh: mesh faahem." },
-      { q: "«voy ahora mismo» (movimiento) =", options: ["ana raaye7 delwa2ti", "ana barou7 delwa2ti", "ana harou7 delwa2ti", "ana ro7t delwa2ti"], answer: 0, note: "Futuro inmediato = participio: raaye7." },
-      { q: "«ya hemos comido» =", options: ["e7na wakliin", "e7na akalna", "e7na binaakol", "e7na hanaakol"], answer: 0, note: "Resultado presente → participio: wakliin." },
-      { q: "Participio plural de عرف (saber) =", options: ["3arfiin", "3aaref", "3arfa", "3arefu"], answer: 0, note: "Plural: 3aaref → 3arfiin." },
-      { q: "«¿qué quieres (f)?» =", options: ["enti 3ayza eh?", "enti 3aayez eh?", "enta 3ayza eh?", "enti 3ayziin eh?"], answer: 0, note: "Concordancia femenina: 3aayez → 3ayza." },
+      { q: "«(yo) lo sé» (estado) =", options: ["ana 3aaref", "ana ba3raf", "ana 3eref", "ana ha3raf"], ar: ["أنا عارف", "أنا بعرف", "أنا عرف", "أنا هعرف"], answer: 0, note: "Estado mental → participio: 3aaref." },
+      { q: "Participio femenino de راح (ir) =", options: ["rayha", "raaye7", "rayhiin", "raa7et"], ar: ["رايحة", "رايح", "رايحين", "راحت"], answer: 0, note: "faa3el fem: raaye7 → rayha." },
+      { q: "«no entiendo» =", options: ["mesh faahem", "ma bafhamsh", "mesh bafham", "ma faahemsh"], ar: ["مش فاهم", "ما بفهمش", "مش بفهم", "ما فاهمش"], answer: 0, note: "Participio negado con mesh: mesh faahem." },
+      { q: "«voy ahora mismo» (movimiento) =", options: ["ana raaye7 delwa2ti", "ana barou7 delwa2ti", "ana harou7 delwa2ti", "ana ro7t delwa2ti"], ar: ["أنا رايح دلوقتي", "أنا بروح دلوقتي", "أنا هروح دلوقتي", "أنا رحت دلوقتي"], answer: 0, note: "Futuro inmediato = participio: raaye7." },
+      { q: "«ya hemos comido» =", options: ["e7na wakliin", "e7na akalna", "e7na binaakol", "e7na hanaakol"], ar: ["إحنا واكلين", "إحنا أكلنا", "إحنا بناكل", "إحنا هناكل"], answer: 0, note: "Resultado presente → participio: wakliin." },
+      { q: "Participio plural de عرف (saber) =", options: ["3arfiin", "3aaref", "3arfa", "3arefu"], ar: ["عارفين", "عارف", "عارفة", "عرفو"], answer: 0, note: "Plural: 3aaref → 3arfiin." },
+      { q: "«¿qué quieres (f)?» =", options: ["enti 3ayza eh?", "enti 3aayez eh?", "enta 3ayza eh?", "enti 3ayziin eh?"], ar: ["إنتي عايزة إيه؟", "إنتي عايز إيه؟", "إنت عايزة إيه؟", "إنتي عايزين إيه؟"], answer: 0, note: "Concordancia femenina: 3aayez → 3ayza." },
       { q: "El participio concuerda en…", options: ["género y número", "solo número", "solo género", "no concuerda"], answer: 0, note: "Como un adjetivo: género y número." },
-      { q: "«viajo mañana» (plan) =", options: ["msaafer bokra", "basaafer bokra", "saafert bokra", "hasaafer embaare7"], answer: 0, note: "Movimiento + plan → participio: msaafer." },
-      { q: "«ana kaateb el-gawaab» =", options: ["he escrito la carta", "escribiré la carta", "escribo cartas", "escribí una carta"], answer: 0, note: "Participio de resultado: la tengo escrita." }
+      { q: "«viajo mañana» (plan) =", options: ["msaafer bokra", "basaafer bokra", "saafert bokra", "hasaafer embaare7"], ar: ["مسافر بكرة", "بسافر بكرة", "سافرت بكرة", "هسافر إمبارح"], answer: 0, note: "Movimiento + plan → participio: msaafer." },
+      { q: "«أنا كاتب الجواب» (ana kaateb el-gawaab) =", options: ["he escrito la carta", "escribiré la carta", "escribo cartas", "escribí una carta"], answer: 0, note: "Participio de resultado: la tengo escrita." }
     ]
   },
 
@@ -2471,16 +2472,16 @@ const GRAMMAR = [
       }
     ],
     quiz: [
-      { q: "«me vio» =", options: ["shaafni", "shaafi", "shaafak", "shaafu"], answer: 0, note: "«me» en el verbo = ‑ni: shaafni." },
-      { q: "«te quiero (m)» =", options: ["ba7ebbak", "ba7ebbik", "ba7ebbu", "ba7ebbni"], answer: 0, note: "‑ak = te (m): ba7ebbak." },
-      { q: "«lo vi» =", options: ["shoftu", "shaaftu", "shoftni", "shoftha"], answer: 0, note: "shoft (vi) + u (lo) = shoftu." },
-      { q: "«la veo cada día» =", options: ["bashoofha kol yoom", "bashoofu kol yoom", "bashoofni kol yoom", "shoftha kol yoom"], answer: 0, note: "‑ha = la: bashoofha." },
-      { q: "«no lo vi» =", options: ["ma shoftohoosh", "mesh shoftu", "ma shoftsh", "ma shoftuu"], answer: 0, note: "ma…sh abraza verbo+objeto: ma shoftohoosh." },
+      { q: "«me vio» =", options: ["shaafni", "shaafi", "shaafak", "shaafu"], ar: ["شافني", "شافي", "شافك", "شافه"], answer: 0, note: "«me» en el verbo = ‑ni: shaafni." },
+      { q: "«te quiero (m)» =", options: ["ba7ebbak", "ba7ebbik", "ba7ebbu", "ba7ebbni"], ar: ["بحبك", "بحبِك", "بحبه", "بحبني"], answer: 0, note: "‑ak = te (m): ba7ebbak." },
+      { q: "«lo vi» =", options: ["shoftu", "shaaftu", "shoftni", "shoftha"], ar: ["شفته", "شافته", "شفتني", "شفتها"], answer: 0, note: "shoft (vi) + u (lo) = shoftu." },
+      { q: "«la veo cada día» =", options: ["bashoofha kol yoom", "bashoofu kol yoom", "bashoofni kol yoom", "shoftha kol yoom"], ar: ["بشوفها كل يوم", "بشوفه كل يوم", "بشوفني كل يوم", "شفتها كل يوم"], answer: 0, note: "‑ha = la: bashoofha." },
+      { q: "«no lo vi» =", options: ["ma shoftohoosh", "mesh shoftu", "ma shoftsh", "ma shoftuu"], ar: ["ماشفتهوش", "مش شفته", "ما شفتش", "ما شفتو"], answer: 0, note: "ma…sh abraza verbo+objeto: ma shoftohoosh." },
       { q: "En el verbo, «me» se dice…", options: ["‑ni", "‑i", "‑na", "‑ne"], answer: 0, note: "Verbo: ‑ni; sustantivo: ‑i." },
-      { q: "«te llamaré mañana» =", options: ["hakallemak bokra", "bakallemak bokra", "kallemtak bokra", "hakallemni bokra"], answer: 0, note: "Futuro ha‑ + objeto ‑ak: hakallemak." },
-      { q: "«quiero verlo» =", options: ["3aayez ashoofu", "3aayez shoftu", "3aayez bashoofu", "3aayez hashoofu"], answer: 0, note: "Subjuntivo sin بـ + objeto: ashoofu." },
-      { q: "«nos vio» =", options: ["shaafna", "shaafhom", "shaafni", "shaafku"], answer: 0, note: "‑na = nos: shaafna." },
-      { q: "«los vio» =", options: ["shaafhom", "shaafha", "shaafku", "shaafu"], answer: 0, note: "‑hom = los/las: shaafhom." }
+      { q: "«te llamaré mañana» =", options: ["hakallemak bokra", "bakallemak bokra", "kallemtak bokra", "hakallemni bokra"], ar: ["هكلمك بكرة", "بكلمك بكرة", "كلمتك بكرة", "هكلمني بكرة"], answer: 0, note: "Futuro ha‑ + objeto ‑ak: hakallemak." },
+      { q: "«quiero verlo» =", options: ["3aayez ashoofu", "3aayez shoftu", "3aayez bashoofu", "3aayez hashoofu"], ar: ["عايز أشوفه", "عايز شفته", "عايز بشوفه", "عايز هشوفه"], answer: 0, note: "Subjuntivo sin بـ + objeto: ashoofu." },
+      { q: "«nos vio» =", options: ["shaafna", "shaafhom", "shaafni", "shaafku"], ar: ["شافنا", "شافهم", "شافني", "شافكو"], answer: 0, note: "‑na = nos: shaafna." },
+      { q: "«los vio» =", options: ["shaafhom", "shaafha", "shaafku", "shaafu"], ar: ["شافهم", "شافها", "شافكو", "شافه"], answer: 0, note: "‑hom = los/las: shaafhom." }
     ]
   },
 
@@ -2544,15 +2545,15 @@ const GRAMMAR = [
       }
     ],
     quiz: [
-      { q: "«si» (el más usado en habla) =", options: ["law", "iza", "lawla", "yeb2a"], answer: 0, note: "law es el «si» coloquial habitual." },
-      { q: "«si quieres, ven» =", options: ["law te7ebb, ta3aala", "iza te7ebb, geet", "law te7ebb, gaay", "lawla te7ebb, ta3aala"], answer: 0, note: "law + presente, respuesta en imperativo." },
+      { q: "«si» (el más usado en habla) =", options: ["law", "iza", "lawla", "yeb2a"], ar: ["لو", "إذا", "لولا", "يبقى"], answer: 0, note: "law es el «si» coloquial habitual." },
+      { q: "«si quieres, ven» =", options: ["law te7ebb, ta3aala", "iza te7ebb, geet", "law te7ebb, gaay", "lawla te7ebb, ta3aala"], ar: ["لو تحب، تعالى", "إذا تحب، جيت", "لو تحب، جاي", "لولا تحب، تعالى"], answer: 0, note: "law + presente, respuesta en imperativo." },
       { q: "La respuesta a la condición suele ir en…", options: ["futuro (هـ) o imperativo", "solo pasado", "presente con بـ", "participio"], answer: 0, note: "Típicamente futuro con ha‑ o una orden." },
-      { q: "«si lo hubiera sabido, habría venido» =", options: ["law kont 3aaref, kont geet", "law 3aaref, haagi", "law kont 3aaref, haagi", "iza 3aaref, geet"], answer: 0, note: "Irreal en pasado: kont en las dos partes." },
+      { q: "«si lo hubiera sabido, habría venido» =", options: ["law kont 3aaref, kont geet", "law 3aaref, haagi", "law kont 3aaref, haagi", "iza 3aaref, geet"], ar: ["لو كنت عارف، كنت جيت", "لو عارف، هاجي", "لو كنت عارف، هاجي", "إذا عارف، جيت"], answer: 0, note: "Irreal en pasado: kont en las dos partes." },
       { q: "En lo irreal del pasado aparece…", options: ["كان (kont/kaan) en las dos partes", "solo mesh", "el participio", "el futuro"], answer: 0, note: "law kont…, kont…" },
-      { q: "«si no fuera por» =", options: ["lawla", "law", "iza", "yeb2a"], answer: 0, note: "lawla = si no fuera por." },
-      { q: "«si tengo tiempo, vendré» =", options: ["law 3andi wa2t, haagi", "law 3andi wa2t, geet", "iza 3andi wa2t, gaay", "lawla 3andi wa2t, haagi"], answer: 0, note: "law + presente, respuesta futuro: haagi." },
-      { q: "«entonces» (consecuencia) =", options: ["yeb2a", "bass", "3ashaan", "kamaan"], answer: 0, note: "yeb2a introduce la consecuencia." },
-      { q: "«si» en registro formal / escrito =", options: ["iza", "law", "yeb2a", "lawla"], answer: 0, note: "iza es más formal que law." }
+      { q: "«si no fuera por» =", options: ["lawla", "law", "iza", "yeb2a"], ar: ["لولا", "لو", "إذا", "يبقى"], answer: 0, note: "lawla = si no fuera por." },
+      { q: "«si tengo tiempo, vendré» =", options: ["law 3andi wa2t, haagi", "law 3andi wa2t, geet", "iza 3andi wa2t, gaay", "lawla 3andi wa2t, haagi"], ar: ["لو عندي وقت، هاجي", "لو عندي وقت، جيت", "إذا عندي وقت، جاي", "لولا عندي وقت، هاجي"], answer: 0, note: "law + presente, respuesta futuro: haagi." },
+      { q: "«entonces» (consecuencia) =", options: ["yeb2a", "bass", "3ashaan", "kamaan"], ar: ["يبقى", "بس", "علشان", "كمان"], answer: 0, note: "yeb2a introduce la consecuencia." },
+      { q: "«si» en registro formal / escrito =", options: ["iza", "law", "yeb2a", "lawla"], ar: ["إذا", "لو", "يبقى", "لولا"], answer: 0, note: "iza es más formal que law." }
     ]
   },
 
@@ -2614,14 +2615,14 @@ const GRAMMAR = [
       }
     ],
     quiz: [
-      { q: "«el libro del niño» (إضافة) =", options: ["ketaab el-walad", "el-ketaab el-walad", "ketaab walad", "el-ketaab walad"], answer: 0, note: "Primer nombre sin artículo: ketaab el-walad." },
+      { q: "«el libro del niño» (إضافة) =", options: ["ketaab el-walad", "el-ketaab el-walad", "ketaab walad", "el-ketaab walad"], ar: ["كتاب الولد", "الكتاب الولد", "كتاب ولد", "الكتاب ولد"], answer: 0, note: "Primer nombre sin artículo: ketaab el-walad." },
       { q: "En la إضافة, el primer nombre lleva artículo…", options: ["no, nunca", "sí, siempre", "solo si es femenino", "solo en plural"], answer: 0, note: "La definición la da el segundo nombre." },
-      { q: "betaa3 en femenino =", options: ["betaa3et", "betaa3", "betoo3", "betaa3a"], answer: 0, note: "f: betaa3et." },
-      { q: "«el coche de papá» con betaa3 =", options: ["el-3arabeyya betaa3et baba", "el-3arabeyya betaa3 baba", "3arabeyya betoo3 baba", "el-3arabeyya betaa3i baba"], answer: 0, note: "Coche es femenino → betaa3et." },
-      { q: "«esto es mío» =", options: ["da betaa3i", "da betaa3ak", "betaa3i da", "da betoo3i"], answer: 0, note: "betaa3 + i = betaa3i." },
-      { q: "betaa3 en plural =", options: ["betoo3", "betaa3iin", "betaa3aat", "betaa3et"], answer: 0, note: "pl: betoo3." },
-      { q: "«¿de quién es esta bolsa?» =", options: ["esh-shanta di betaa3et meen?", "esh-shanta di betaa3 meen?", "esh-shanta di betoo3 meen?", "esh-shanta di betaa3i meen?"], answer: 0, note: "Bolsa (shanta) es femenina → betaa3et." },
-      { q: "«3arabeyyet baba» muestra que la ‑a femenina pasa a…", options: ["‑et", "‑a", "‑i", "‑ha"], answer: 0, note: "En la إضافة: ‑a → ‑et." },
+      { q: "«بتاع» (betaa3) en femenino =", options: ["betaa3et", "betaa3", "betoo3", "betaa3a"], ar: ["بتاعت", "بتاع", "بتوع", "بتاعة"], answer: 0, note: "f: betaa3et." },
+      { q: "«el coche de papá» con betaa3 =", options: ["el-3arabeyya betaa3et baba", "el-3arabeyya betaa3 baba", "3arabeyya betoo3 baba", "el-3arabeyya betaa3i baba"], ar: ["العربية بتاعت بابا", "العربية بتاع بابا", "عربية بتوع بابا", "العربية بتاعي بابا"], answer: 0, note: "Coche es femenino → betaa3et." },
+      { q: "«esto es mío» =", options: ["da betaa3i", "da betaa3ak", "betaa3i da", "da betoo3i"], ar: ["ده بتاعي", "ده بتاعك", "بتاعي ده", "ده بتوعي"], answer: 0, note: "betaa3 + i = betaa3i." },
+      { q: "«بتاع» (betaa3) en plural =", options: ["betoo3", "betaa3iin", "betaa3aat", "betaa3et"], ar: ["بتوع", "بتاعين", "بتاعات", "بتاعت"], answer: 0, note: "pl: betoo3." },
+      { q: "«¿de quién es esta bolsa?» =", options: ["esh-shanta di betaa3et meen?", "esh-shanta di betaa3 meen?", "esh-shanta di betoo3 meen?", "esh-shanta di betaa3i meen?"], ar: ["الشنطة دي بتاعت مين؟", "الشنطة دي بتاع مين؟", "الشنطة دي بتوع مين؟", "الشنطة دي بتاعي مين؟"], answer: 0, note: "Bolsa (shanta) es femenina → betaa3et." },
+      { q: "«عربية بابا» (3arabeyyet baba) muestra que la ‑a femenina pasa a…", options: ["‑et", "‑a", "‑i", "‑ha"], answer: 0, note: "En la إضافة: ‑a → ‑et." },
       { q: "بتاع se prefiere cuando…", options: ["enfatizas la propiedad o el poseedor es largo", "siempre, la إضافة no existe", "el nombre es plural", "hablas en pasado"], answer: 0, note: "Uso analítico más flexible." }
     ]
   },
@@ -2691,7 +2692,7 @@ const GRAMMAR = [
     quiz: [
       { q: "«¿qué hora es?» =", options: ["es-saa3a kaam?", "kaam es-saa3a?", "es-saa3a feen?", "kaam saa3a?"], ar: ["الساعة كام؟", "كام الساعة؟", "الساعة فين؟", "كام ساعة؟"], answer: 0, note: "Interrogativo al final: es-saa3a kaam?" },
       { q: "«y media» =", options: ["we-noss", "we-rob3", "we-telt", "illa noss"], ar: ["ونص", "وربع", "وتلت", "إلا نص"], answer: 0, note: "noss = mitad." },
-      { q: "El «tercio» (telt) equivale a…", options: ["20 minutos", "30 minutos", "15 minutos", "10 minutos"], answer: 0, note: "telt = un tercio de hora = 20 min." },
+      { q: "El «تلت» (telt) equivale a…", options: ["20 minutos", "30 minutos", "15 minutos", "10 minutos"], answer: 0, note: "telt = un tercio de hora = 20 min." },
       { q: "«las 3 y media» =", options: ["es-saa3a talaata we-noss", "es-saa3a talaata we-rob3", "es-saa3a talaata illa noss", "es-saa3a talaata we-telt"], ar: ["الساعة تلاتة ونص", "الساعة تلاتة وربع", "الساعة تلاتة إلا نص", "الساعة تلاتة وتلت"], answer: 0, note: "talaata we-noss." },
       { q: "Para restar minutos se usa…", options: ["illa (menos)", "we (y)", "naa2es", "min"], ar: ["إلا", "و", "ناقص", "من"], answer: 0, note: "illa = menos; we = y." },
       { q: "«las 5 menos 20» =", options: ["khamsa illa telt", "khamsa illa noss", "khamsa we-telt", "khamsa illa rob3"], ar: ["خمسة إلا تلت", "خمسة إلا نص", "خمسة وتلت", "خمسة إلا ربع"], answer: 0, note: "menos 20 = illa telt." },
@@ -2766,15 +2767,15 @@ const GRAMMAR = [
       }
     ],
     quiz: [
-      { q: "«dos días» =", options: ["yomeen", "itneen yoom", "yomaat", "talat ayyaam"], answer: 0, note: "Dual: yoom → yomeen (no se dice el número)." },
-      { q: "«dos veces» (de marra) =", options: ["marriteen", "marrateen", "itneen marra", "maraat"], answer: 0, note: "La ‑a pasa a ‑t: marra → marriteen." },
-      { q: "«tres libros» =", options: ["talat kotob", "talaata ketaab", "talat ketaab", "talaata kotob"], answer: 0, note: "3–10 → plural + forma corta: talat kotob." },
+      { q: "«dos días» =", options: ["yomeen", "itneen yoom", "yomaat", "talat ayyaam"], ar: ["يومين", "اتنين يوم", "يومات", "تلات أيام"], answer: 0, note: "Dual: yoom → yomeen (no se dice el número)." },
+      { q: "«dos veces» (de مرة / marra) =", options: ["marriteen", "itneen marra", "maraat", "marra"], ar: ["مرتين", "اتنين مرة", "مرات", "مرة"], answer: 0, note: "La ‑a pasa a ‑t: marra → marriteen." },
+      { q: "«tres libros» =", options: ["talat kotob", "talaata ketaab", "talat ketaab", "talaata kotob"], ar: ["تلات كتب", "تلاتة كتاب", "تلات كتاب", "تلاتة كتب"], answer: 0, note: "3–10 → plural + forma corta: talat kotob." },
       { q: "Con los números 3–10, el sustantivo va en…", options: ["plural", "singular", "dual", "femenino"], answer: 0, note: "3–10 piden plural: khamas da2aaye2." },
-      { q: "«veinte años» =", options: ["3eshriin sana", "3eshriin siniin", "3eshriin santeen", "3eshriin sanaat"], answer: 0, note: "11+ → singular: 3eshriin sana." },
+      { q: "«veinte años» =", options: ["3eshriin sana", "3eshriin siniin", "3eshriin santeen", "3eshriin sanaat"], ar: ["عشرين سنة", "عشرين سنين", "عشرين سنتين", "عشرين سنوات"], answer: 0, note: "11+ → singular: 3eshriin sana." },
       { q: "A partir de 11, el sustantivo va en…", options: ["singular", "plural", "dual", "no cambia"], answer: 0, note: "11+ → singular (al revés que en español)." },
       { q: "El dual se forma añadiendo…", options: ["‑een", "‑aat", "‑iin", "‑a"], answer: 0, note: "Dual = ‑een: ketaab → ketabeen." },
-      { q: "«cinco minutos» =", options: ["khamas da2aaye2", "khamsa de2ii2a", "khamas de2ii2a", "khamsa da2aaye2"], answer: 0, note: "3–10 + plural: khamas da2aaye2." },
-      { q: "«dos semanas» =", options: ["osbo3een", "itneen osboo3", "asabii3", "osboo3aat"], answer: 0, note: "Dual: osboo3 → osbo3een." }
+      { q: "«cinco minutos» =", options: ["khamas da2aaye2", "khamsa de2ii2a", "khamas de2ii2a", "khamsa da2aaye2"], ar: ["خمس دقايق", "خمسة دقيقة", "خمس دقيقة", "خمسة دقايق"], answer: 0, note: "3–10 + plural: khamas da2aaye2." },
+      { q: "«dos semanas» =", options: ["osbo3een", "itneen osboo3", "asabii3", "osboo3aat"], ar: ["أسبوعين", "اتنين أسبوع", "أسابيع", "أسبوعات"], answer: 0, note: "Dual: osboo3 → osbo3een." }
     ]
   },
 
@@ -2832,13 +2833,13 @@ const GRAMMAR = [
     ],
     quiz: [
       { q: "Tras un modal, el segundo verbo va…", options: ["sin بـ (subjuntivo)", "con بـ", "en pasado", "en futuro con هـ"], answer: 0, note: "El verbo pierde el بـ: 3aayez arou7." },
-      { q: "«quiero dormir» =", options: ["3aayez anaam", "3aayez banaam", "3aayez nemt", "3aayez hanaam"], answer: 0, note: "Subjuntivo sin بـ: anaam." },
-      { q: "«tengo que ir» =", options: ["laazem arou7", "laazem barou7", "laazem harou7", "laazem ro7t"], answer: 0, note: "laazem + arou7 (sin بـ)." },
-      { q: "«¿puedo ayudarte?» =", options: ["mumken asaa3dak", "mumken basaa3dak", "mumken hasaa3dak", "mumken saa3edt"], answer: 0, note: "mumken + asaa3dak." },
-      { q: "«no hace falta» =", options: ["mesh laazem", "ma laazemsh", "laazem la2", "mafiish laazem"], answer: 0, note: "Se niega con mesh: mesh laazem." },
-      { q: "«me gustaría visitar Egipto» =", options: ["nefsi azuur masr", "nefsi bazuur masr", "nefsi hazuur masr", "nefsi zort masr"], answer: 0, note: "nefsi + azuur (sin بـ)." },
-      { q: "«imposible / no se puede» =", options: ["mesh mumken", "mafiish mumken", "ma mumkensh", "mumken la2"], answer: 0, note: "mesh mumken." },
-      { q: "«no quiero» =", options: ["mesh 3aayez", "ma 3aayezsh", "3aayez mesh", "la2 3aayez"], answer: 0, note: "mesh + participio 3aayez." }
+      { q: "«quiero dormir» =", options: ["3aayez anaam", "3aayez banaam", "3aayez nemt", "3aayez hanaam"], ar: ["عايز أنام", "عايز بنام", "عايز نمت", "عايز هنام"], answer: 0, note: "Subjuntivo sin بـ: anaam." },
+      { q: "«tengo que ir» =", options: ["laazem arou7", "laazem barou7", "laazem harou7", "laazem ro7t"], ar: ["لازم أروح", "لازم بروح", "لازم هروح", "لازم رحت"], answer: 0, note: "laazem + arou7 (sin بـ)." },
+      { q: "«¿puedo ayudarte?» =", options: ["mumken asaa3dak", "mumken basaa3dak", "mumken hasaa3dak", "mumken saa3edt"], ar: ["ممكن أساعدك", "ممكن بساعدك", "ممكن هساعدك", "ممكن ساعدت"], answer: 0, note: "mumken + asaa3dak." },
+      { q: "«no hace falta» =", options: ["mesh laazem", "ma laazemsh", "laazem la2", "mafiish laazem"], ar: ["مش لازم", "ما لازمش", "لازم لأ", "مفيش لازم"], answer: 0, note: "Se niega con mesh: mesh laazem." },
+      { q: "«me gustaría visitar Egipto» =", options: ["nefsi azuur masr", "nefsi bazuur masr", "nefsi hazuur masr", "nefsi zort masr"], ar: ["نفسي أزور مصر", "نفسي بزور مصر", "نفسي هزور مصر", "نفسي زرت مصر"], answer: 0, note: "nefsi + azuur (sin بـ)." },
+      { q: "«imposible / no se puede» =", options: ["mesh mumken", "mafiish mumken", "ma mumkensh", "mumken la2"], ar: ["مش ممكن", "مفيش ممكن", "ما ممكنش", "ممكن لأ"], answer: 0, note: "mesh mumken." },
+      { q: "«no quiero» =", options: ["mesh 3aayez", "ma 3aayezsh", "3aayez mesh", "la2 3aayez"], ar: ["مش عايز", "ما عايزش", "عايز مش", "لأ عايز"], answer: 0, note: "mesh + participio 3aayez." }
     ]
   },
 
@@ -2889,14 +2890,14 @@ const GRAMMAR = [
       }
     ],
     quiz: [
-      { q: "«que / quien» en egipcio =", options: ["elli", "da", "eh", "meen"], answer: 0, note: "El relativo es اللي (elli)." },
-      { q: "¿elli cambia según género y número?", options: ["No, es invariable", "Sí, tiene 3 formas", "Solo en plural", "Solo en femenino"], answer: 0, note: "elli es invariable." },
-      { q: "«el hombre que vino» =", options: ["el-raagel elli geh", "raagel elli geh", "el-raagel da geh", "raagel geh elli"], answer: 0, note: "Antecedente definido + elli." },
-      { q: "«un libro bonito» (indefinido) =", options: ["ketaab 7elw", "ketaab elli 7elw", "el-ketaab elli 7elw", "ketaab da 7elw"], answer: 0, note: "Indefinido → sin elli." },
-      { q: "«la chica que vi» =", options: ["el-bent elli shoftaha", "el-bent elli shoft", "el-bent shoftaha", "bent elli shoftaha"], answer: 0, note: "Objeto → pronombre de recuerdo ‑ha." },
-      { q: "elli se usa con un nombre…", options: ["definido (con الـ)", "indefinido", "solo propio", "solo plural"], answer: 0, note: "Solo con antecedente definido." },
-      { q: "«la casa en que vivo» =", options: ["el-beet elli saaken fiih", "el-beet elli saaken", "el-beet saaken fiih", "beet elli saaken fiih"], answer: 0, note: "Con preposición: … fiih." },
-      { q: "«la gente que está aquí» =", options: ["en-naas elli hena", "en-naas di hena", "naas elli hena", "en-naas elli homma hena"], answer: 0, note: "elli invariable también en plural." }
+      { q: "«que / quien» en egipcio =", options: ["elli", "da", "eh", "meen"], ar: ["اللي", "ده", "إيه", "مين"], answer: 0, note: "El relativo es اللي (elli)." },
+      { q: "¿«اللي» (elli) cambia según género y número?", options: ["No, es invariable", "Sí, tiene 3 formas", "Solo en plural", "Solo en femenino"], answer: 0, note: "elli es invariable." },
+      { q: "«el hombre que vino» =", options: ["el-raagel elli geh", "raagel elli geh", "el-raagel da geh", "raagel geh elli"], ar: ["الراجل اللي جه", "راجل اللي جه", "الراجل ده جه", "راجل جه اللي"], answer: 0, note: "Antecedente definido + elli." },
+      { q: "«un libro bonito» (indefinido) =", options: ["ketaab 7elw", "ketaab elli 7elw", "el-ketaab elli 7elw", "ketaab da 7elw"], ar: ["كتاب حلو", "كتاب اللي حلو", "الكتاب اللي حلو", "كتاب ده حلو"], answer: 0, note: "Indefinido → sin elli." },
+      { q: "«la chica que vi» =", options: ["el-bent elli shoftaha", "el-bent elli shoft", "el-bent shoftaha", "bent elli shoftaha"], ar: ["البنت اللي شفتها", "البنت اللي شفت", "البنت شفتها", "بنت اللي شفتها"], answer: 0, note: "Objeto → pronombre de recuerdo ‑ha." },
+      { q: "«اللي» (elli) se usa con un nombre…", options: ["definido (con الـ)", "indefinido", "solo propio", "solo plural"], answer: 0, note: "Solo con antecedente definido." },
+      { q: "«la casa en que vivo» =", options: ["el-beet elli saaken fiih", "el-beet elli saaken", "el-beet saaken fiih", "beet elli saaken fiih"], ar: ["البيت اللي ساكن فيه", "البيت اللي ساكن", "البيت ساكن فيه", "بيت اللي ساكن فيه"], answer: 0, note: "Con preposición: … fiih." },
+      { q: "«la gente que está aquí» =", options: ["en-naas elli hena", "en-naas di hena", "naas elli hena", "en-naas elli homma hena"], ar: ["الناس اللي هنا", "الناس دي هنا", "ناس اللي هنا", "الناس اللي هما هنا"], answer: 0, note: "elli invariable también en plural." }
     ]
   },
 
@@ -2957,14 +2958,14 @@ const GRAMMAR = [
       }
     ],
     quiz: [
-      { q: "«le dijo (a él)» =", options: ["2allu", "2aalu", "2alli", "2allak"], answer: 0, note: "2aal + lu = 2allu." },
-      { q: "«dile» (imperativo) =", options: ["2ollu", "2allu", "2olli", "2oltellu"], answer: 0, note: "Imperativo + lu: 2ollu." },
-      { q: "«dame» =", options: ["eddiini", "eddiik", "2olli", "eddiina"], answer: 0, note: "eddi + ni = eddiini." },
+      { q: "«le dijo (a él)» =", options: ["2allu", "2aalu", "2alli", "2allak"], ar: ["قاله", "قالوا", "قالي", "قالك"], answer: 0, note: "2aal + lu = 2allu." },
+      { q: "«dile» (imperativo) =", options: ["2ollu", "2allu", "2olli", "2oltellu"], ar: ["قوله", "قاله", "قوللي", "قلتله"], answer: 0, note: "Imperativo + lu: 2ollu." },
+      { q: "«dame» =", options: ["eddiini", "eddiik", "2olli", "eddiina"], ar: ["إديني", "إديك", "قوللي", "إدينا"], answer: 0, note: "eddi + ni = eddiini." },
       { q: "El objeto indirecto se pega con…", options: ["‑l‑", "‑n‑", "‑b‑", "‑h‑"], answer: 0, note: "La marca es ‑l‑ (de لـ)." },
-      { q: "«te diré una cosa» =", options: ["ha2ollak 7aaga", "ba2ollak 7aaga", "2oltellak 7aaga", "2ollak 7aaga"], answer: 0, note: "Futuro ha‑ + ‑lak: ha2ollak." },
-      { q: "«me dijo» =", options: ["2alli", "2allu", "2allak", "2allena"], answer: 0, note: "2aal + li = 2alli." },
-      { q: "«dámelo» =", options: ["eddihuuli", "eddiini", "2ollu", "eddiihaa"], answer: 0, note: "directo ‑hu + indirecto ‑li: eddihuuli." },
-      { q: "«nos dijo» =", options: ["2allena", "2allohom", "2allaha", "2alli"], answer: 0, note: "‑lena = a nosotros: 2allena." }
+      { q: "«te diré una cosa» =", options: ["ha2ollak 7aaga", "ba2ollak 7aaga", "2oltellak 7aaga", "2ollak 7aaga"], ar: ["هقوللك حاجة", "بقوللك حاجة", "قلتلك حاجة", "قوللك حاجة"], answer: 0, note: "Futuro ha‑ + ‑lak: ha2ollak." },
+      { q: "«me dijo» =", options: ["2alli", "2allu", "2allak", "2allena"], ar: ["قالي", "قاله", "قالك", "قالنا"], answer: 0, note: "2aal + li = 2alli." },
+      { q: "«dámelo» =", options: ["eddihuuli", "eddiini", "2ollu", "eddiihaa"], ar: ["إدهولي", "إديني", "قوله", "إديها"], answer: 0, note: "directo ‑hu + indirecto ‑li: eddihuuli." },
+      { q: "«nos dijo» =", options: ["2allena", "2allohom", "2allaha", "2alli"], ar: ["قالنا", "قالهم", "قالها", "قالي"], answer: 0, note: "‑lena = a nosotros: 2allena." }
     ]
   },
 
@@ -3068,14 +3069,14 @@ const GRAMMAR = [
       }
     ],
     quiz: [
-      { q: "Femenino de kebiir (grande) =", options: ["kebiira", "kebiir", "kobaar", "kebiiro"], answer: 0, note: "Regla general: +a → kebiira." },
-      { q: "Femenino de a7mar (rojo) =", options: ["7amra", "a7mara", "7amraa", "a7mra"], answer: 0, note: "Colores: af3al → fa3la: 7amra." },
-      { q: "«un coche rojo» =", options: ["3arabeyya 7amra", "3arabeyya a7mar", "3arabeyya 7amraa", "a7mar 3arabeyya"], answer: 0, note: "Coche es femenino → 7amra, y detrás." },
-      { q: "Femenino de azra2 (azul) =", options: ["zar2a", "azra2a", "zar2aa", "azra2"], answer: 0, note: "Color: azra2 → zar2a." },
+      { q: "Femenino de kebiir (grande) =", options: ["kebiira", "kebiir", "kobaar", "kebiiro"], ar: ["كبيرة", "كبير", "كبار", "كبيرو"], answer: 0, note: "Regla general: +a → kebiira." },
+      { q: "Femenino de أحمر (a7mar, rojo) =", options: ["7amra", "a7mara", "7amraa", "7amraat"], ar: ["حمرا", "أحمرة", "حمراء", "حمرات"], answer: 0, note: "Colores: af3al → fa3la: 7amra." },
+      { q: "«un coche rojo» =", options: ["3arabeyya 7amra", "3arabeyya a7mar", "3arabeyya 7amraa", "a7mar 3arabeyya"], ar: ["عربية حمرا", "عربية أحمر", "عربية حمراء", "أحمر عربية"], answer: 0, note: "Coche es femenino → 7amra, y detrás." },
+      { q: "Femenino de أزرق (azra2, azul) =", options: ["zar2a", "azra2a", "zar2aa", "azra2"], ar: ["زرقا", "أزرقة", "زرقاء", "أزرق"], answer: 0, note: "Color: azra2 → zar2a." },
       { q: "El femenino general se forma…", options: ["añadiendo ‑a", "añadiendo ‑iin", "añadiendo ‑et", "no cambia"], answer: 0, note: "+a: kebiir → kebiira." },
-      { q: "«una chica cansada» =", options: ["bent ta3baana", "bent ta3baan", "ta3baana bent", "bent ta3baaniin"], answer: 0, note: "Femenino + detrás: ta3baana." },
-      { q: "Femenino de eswed (negro) =", options: ["sooda", "eswda", "sawda", "aswad"], answer: 0, note: "eswed → sooda." },
-      { q: "Femenino de akhdar (verde) =", options: ["khadra", "akhdara", "khadraa", "akhdra"], answer: 0, note: "akhdar → khadra." }
+      { q: "«una chica cansada» =", options: ["bent ta3baana", "bent ta3baan", "ta3baana bent", "bent ta3baaniin"], ar: ["بنت تعبانة", "بنت تعبان", "تعبانة بنت", "بنت تعبانين"], answer: 0, note: "Femenino + detrás: ta3baana." },
+      { q: "Femenino de إسود (eswed, negro) =", options: ["sooda", "eswda", "sawda", "aswad"], ar: ["سودا", "إسودة", "سودة", "أسود"], answer: 0, note: "eswed → sooda." },
+      { q: "Femenino de أخضر (akhdar, verde) =", options: ["khadra", "akhdara", "khadraa", "khadraat"], ar: ["خضرا", "أخضرة", "خضراء", "خضرات"], answer: 0, note: "akhdar → khadra." }
     ]
   },
 
@@ -3178,13 +3179,13 @@ const GRAMMAR = [
     ],
     quiz: [
       { q: "El pasivo se forma con el prefijo…", options: ["it‑ (اتـ)", "bi‑ (بـ)", "ha‑ (هـ)", "ma‑ (ما)"], answer: 0, note: "El pasivo/reflexivo usa it‑." },
-      { q: "«fue escrito» =", options: ["itkatab", "katab", "biyiktib", "hayiktib"], answer: 0, note: "it‑ + katab = itkatab." },
-      { q: "«se abrió / fue abierto» =", options: ["itfata7", "fata7", "hayefta7", "biyefta7"], answer: 0, note: "it‑ + fata7 = itfata7." },
-      { q: "«¿cómo se hace?» =", options: ["biyet3emel ezzaay?", "bi3mel ezzaay?", "it3amal ezzaay?", "ha3mel ezzaay?"], answer: 0, note: "Presente pasivo: biyet3emel." },
-      { q: "«la ventana se rompió» =", options: ["esh-shebbaak itkasar", "esh-shebbaak kasar", "esh-shebbaak byekser", "esh-shebbaak hayekser"], answer: 0, note: "itkasar = se rompió." },
-      { q: "«fue vendido» =", options: ["itbaa3", "baa3", "hayebii3", "biybii3"], answer: 0, note: "it‑ + baa3 = itbaa3." },
+      { q: "«fue escrito» =", options: ["itkatab", "katab", "biyiktib", "hayiktib"], ar: ["اتكتب", "كتب", "بيكتب", "هيكتب"], answer: 0, note: "it‑ + katab = itkatab." },
+      { q: "«se abrió / fue abierto» =", options: ["itfata7", "fata7", "hayefta7", "biyefta7"], ar: ["اتفتح", "فتح", "هيفتح", "بيفتح"], answer: 0, note: "it‑ + fata7 = itfata7." },
+      { q: "«¿cómo se hace?» =", options: ["biyet3emel ezzaay?", "bi3mel ezzaay?", "it3amal ezzaay?", "ha3mel ezzaay?"], ar: ["بيتعمل إزاي؟", "بعمل إزاي؟", "اتعمل إزاي؟", "هعمل إزاي؟"], answer: 0, note: "Presente pasivo: biyet3emel." },
+      { q: "«la ventana se rompió» =", options: ["esh-shebbaak itkasar", "esh-shebbaak kasar", "esh-shebbaak byekser", "esh-shebbaak hayekser"], ar: ["الشباك اتكسر", "الشباك كسر", "الشباك بيكسر", "الشباك هيكسر"], answer: 0, note: "itkasar = se rompió." },
+      { q: "«fue vendido» =", options: ["itbaa3", "baa3", "hayebii3", "biybii3"], ar: ["اتباع", "باع", "هيبيع", "بيبيع"], answer: 0, note: "it‑ + baa3 = itbaa3." },
       { q: "El presente del pasivo empieza por…", options: ["biyet‑", "biye‑", "ha‑", "it‑ solo"], answer: 0, note: "bi + it → biyet‑." },
-      { q: "«la comida se hace aquí» =", options: ["el-akl biyet3emel hena", "el-akl 3amal hena", "el-akl byi3mel hena", "el-akl it3amal hena"], answer: 0, note: "Presente pasivo: biyet3emel." }
+      { q: "«la comida se hace aquí» =", options: ["el-akl biyet3emel hena", "el-akl 3amal hena", "el-akl byi3mel hena", "el-akl it3amal hena"], ar: ["الأكل بيتعمل هنا", "الأكل عمل هنا", "الأكل بيعمل هنا", "الأكل اتعمل هنا"], answer: 0, note: "Presente pasivo: biyet3emel." }
     ]
   }
 ];
@@ -5003,6 +5004,76 @@ const GRAMMAR_DRILLS = {
       "note": "3ashaan = para / porque.",
       "fr": "geet 3ashaan ashoofak."
     }
+  ],
+  "definido": [
+    { "q": "عايز ___ اللي اشتريته إمبارح.", "answer": "الكتاب", "options": ["الكتاب", "كتاب", "كتابين", "كتب"], "es": "Quiero el libro que compré ayer.", "note": "اللي pide antecedente definido → el-ketaab.", "fr": "3aayez el-ketaab elli ishtareetu embaare7." },
+    { "q": "معايا ___ بس، مش أكتر.", "answer": "كتاب", "options": ["كتاب", "الكتاب", "كتابي", "الكتب"], "es": "Llevo un libro solo, no más.", "note": "Indefinido = sin marcas: ketaab.", "fr": "ma3aaya ketaab bass, mesh aktar." },
+    { "q": "___ ده بتاعي أنا.", "answer": "البيت", "options": ["البيت", "بيت", "بيتين", "بيوت"], "es": "Esta casa es mía.", "note": "Demostrativo → definido: el-beet da.", "fr": "el-beet da betaa3i ana." },
+    { "q": "عندي ___ حلوة قوي.", "answer": "عربية", "options": ["عربية", "العربية", "عربيتي", "عربيات"], "es": "Tengo un coche muy bonito.", "note": "Indefinido: 3arabeyya.", "fr": "3andi 3arabeyya 7elwa awi." },
+    { "q": "___ أحمد كبير قوي.", "answer": "بيت", "options": ["بيت", "البيت", "بيوت", "بيتي"], "es": "La casa de Ahmad es muy grande.", "note": "إضافة: primer nombre sin artículo → beet a7mad.", "fr": "beet a7mad kebiir awi." }
+  ],
+  "resumptivo": [
+    { "q": "الكتاب اللي ___ إمبارح حلو.", "answer": "قريته", "options": ["قريته", "قريت", "قريتها", "بقرا"], "es": "El libro que leí ayer es bonito.", "note": "Objeto masc → ‑u: 2areetu.", "fr": "el-ketaab elli 2areetu embaare7 7elw." },
+    { "q": "البنت اللي ___ في الشارع صاحبتي.", "answer": "شفتها", "options": ["شفتها", "شفت", "شفته", "بشوف"], "es": "La chica que vi en la calle es mi amiga.", "note": "Objeto fem → ‑ha: shoftaha.", "fr": "el-bent elli shoftaha fesh-shaare3 sa7bti." },
+    { "q": "البيت اللي ساكن ___ قريب.", "answer": "فيه", "options": ["فيه", "في", "فيها", "منه"], "es": "La casa en la que vivo está cerca.", "note": "Con preposición: … fiih.", "fr": "el-beet elli saaken fiih 2orayyeb." },
+    { "q": "الراجل اللي ___ إمبارح صاحبي.", "answer": "جه", "options": ["جه", "جاه", "جالي", "بيجي"], "es": "El hombre que vino ayer es mi amigo.", "note": "Sujeto → sin pronombre de recuerdo: geh.", "fr": "er-raagel elli geh embaare7 saa7bi." },
+    { "q": "الأكل اللي ___ كان لذيذ.", "answer": "عملته", "options": ["عملته", "عملت", "عملتها", "بعمل"], "es": "La comida que hice estaba rica.", "note": "Objeto masc → ‑u: 3ameltu.", "fr": "el-akl elli 3ameltu kaan laziiz." }
+  ],
+  "nominal": [
+    { "q": "الجو ___ النهارده.", "answer": "حلو", "options": ["حلو", "بيكون", "كان", "هيكون"], "es": "El tiempo está bueno hoy.", "note": "Presente = sin «ser»: el-gaww 7elw.", "fr": "el-gaww 7elw en-naharda." },
+    { "q": "إمبارح ___ تعبان.", "answer": "كنت", "options": ["كنت", "أنا", "بكون", "هكون"], "es": "Ayer estaba cansado.", "note": "Pasado → kaan: kont ta3baan.", "fr": "embaare7 kont ta3baan." },
+    { "q": "هو ___ البيت دلوقتي.", "answer": "في", "options": ["في", "بيكون", "كان", "هو"], "es": "Él está en casa ahora.", "note": "Presente: sin verbo, howwa fel-beet.", "fr": "howwa fel-beet delwa2ti." },
+    { "q": "بكرة ___ الجو حلو.", "answer": "هيكون", "options": ["هيكون", "كان", "بيكون", "حلو"], "es": "Mañana el tiempo estará bueno.", "note": "Futuro → haykuun.", "fr": "bokra haykoun el-gaww 7elw." },
+    { "q": "___ طالب في الجامعة.", "answer": "أنا", "options": ["أنا", "بكون", "كنت", "هكون"], "es": "Soy estudiante en la universidad.", "note": "Frase nominal: ana taaleb.", "fr": "ana taaleb fel-gam3a." }
+  ],
+  "articulo": [
+    { "q": "شفت ___ في السما.", "answer": "القمر", "options": ["القمر", "قمر", "قمرين", "أقمار"], "es": "Vi la luna en el cielo.", "note": "Definido con الـ: el-2amar.", "fr": "shoft el-2amar fes-sama." },
+    { "q": "___ طالعة النهارده.", "answer": "الشمس", "options": ["الشمس", "شمس", "شموس", "شمسين"], "es": "El sol ha salido hoy.", "note": "ش es letra solar: esh-shams.", "fr": "esh-shams tal3a en-naharda." },
+    { "q": "عايز ___ ، أي واحد.", "answer": "كتاب", "options": ["كتاب", "الكتاب", "الكتب", "كتابي"], "es": "Quiero un libro, cualquiera.", "note": "Indefinido: sin الـ → ketaab.", "fr": "3aayez ketaab, ayy waa7ed." },
+    { "q": "___ اللي جه صاحبي.", "answer": "الراجل", "options": ["الراجل", "راجل", "رجالة", "راجلين"], "es": "El hombre que vino es mi amigo.", "note": "ر es letra solar: er-raagel.", "fr": "er-raagel elli geh saa7bi." },
+    { "q": "قفلت ___ .", "answer": "الباب", "options": ["الباب", "باب", "أبواب", "بابين"], "es": "Cerré la puerta.", "note": "ب es letra lunar: el-baab.", "fr": "2afalt el-baab." }
+  ],
+  "adverbios": [
+    { "q": "استنى، أنا جاي ___ .", "answer": "دلوقتي", "options": ["دلوقتي", "إمبارح", "بكرة", "بدري"], "es": "Espera, vengo ahora.", "note": "delwa2ti = ahora.", "fr": "istanna, ana gaay delwa2ti." },
+    { "q": "لو سمحت، اتكلم ___ .", "answer": "بالراحة", "options": ["بالراحة", "بسرعة", "كتير", "هنا"], "es": "Por favor, habla despacio.", "note": "bel-raa7a = despacio.", "fr": "law sama7t, itkallem bel-raa7a." },
+    { "q": "الأكل حلو ___ .", "answer": "قوي", "options": ["قوي", "شوية", "برّه", "لسه"], "es": "La comida está muy buena.", "note": "awi (muy) va detrás: 7elw awi.", "fr": "el-akl 7elw awi." },
+    { "q": "هو ___ في الشغل.", "answer": "دايماً", "options": ["دايماً", "أبداً", "بكرة", "تحت"], "es": "Él siempre está en el trabajo.", "note": "dayman = siempre.", "fr": "howwa dayman fesh-shoghl." },
+    { "q": "الكتاب ___ الترابيزة.", "answer": "تحت", "options": ["تحت", "فوق", "دلوقتي", "بسرعة"], "es": "El libro está debajo de la mesa.", "note": "ta7t = debajo.", "fr": "el-ketaab ta7t et-tarabeeza." }
+  ],
+  "pronombres": [
+    { "q": "___ راجل كويس.", "answer": "هو", "options": ["هو", "هي", "هما", "إحنا"], "es": "Él es un buen hombre.", "note": "howwa = él.", "fr": "howwa raagel kwayyes." },
+    { "q": "___ كبير قوي.", "answer": "بيتي", "options": ["بيتي", "بيتك", "بيتها", "بيتهم"], "es": "Mi casa es muy grande.", "note": "‑i = mi: beeti.", "fr": "beeti kebiir awi." },
+    { "q": "___ عايزة إيه؟", "answer": "إنتي", "options": ["إنتي", "إنت", "هي", "إحنا"], "es": "¿Tú (f) qué quieres?", "note": "enti = tú femenino.", "fr": "enti 3ayza eh?" },
+    { "q": "شفت ___ إمبارح.", "answer": "بيته", "options": ["بيته", "بيتها", "بيتك", "بيتي"], "es": "Vi su casa (de él) ayer.", "note": "‑u = de él: beetu.", "fr": "shoft beetu embaare7." },
+    { "q": "___ رايحين فين؟", "answer": "إنتوا", "options": ["إنتوا", "إحنا", "هما", "إنت"], "es": "¿A dónde vais?", "note": "entu = vosotros.", "fr": "entu rayhiin feen?" }
+  ],
+  "tiempos-repaso": [
+    { "q": "إمبارح ___ فيلم حلو.", "answer": "شفت", "options": ["شفت", "بشوف", "هشوف", "شايف"], "es": "Ayer vi una película buena.", "note": "Pasado: shoft.", "fr": "embaare7 shoft film 7elw." },
+    { "q": "كل يوم ___ الساعة سبعة.", "answer": "بصحى", "options": ["بصحى", "صحيت", "هصحى", "اصحى"], "es": "Cada día me despierto a las siete.", "note": "Hábito → presente bi‑: bas7a.", "fr": "koll yoom bas7a es-saa3a sab3a." },
+    { "q": "بكرة ___ إسكندرية.", "answer": "هروح", "options": ["هروح", "رحت", "بروح", "روح"], "es": "Mañana iré a Alejandría.", "note": "Futuro ha‑: harou7.", "fr": "bokra harou7 eskenderiyya." },
+    { "q": "دلوقتي هو ___ في المكتب.", "answer": "بيشتغل", "options": ["بيشتغل", "اشتغل", "هيشتغل", "اشتغلت"], "es": "Ahora él está trabajando en la oficina.", "note": "Presente continuo bi‑: biyshtaghal.", "fr": "delwa2ti howwa biyshtaghal fel-maktab." },
+    { "q": "الأسبوع اللي فات ___ صحابي.", "answer": "زرت", "options": ["زرت", "بزور", "هزور", "أزور"], "es": "La semana pasada visité a mis amigos.", "note": "Pasado: zort.", "fr": "el-osboo3 elli faat zort so7aabi." }
+  ],
+  "haber": [
+    { "q": "___ مطعم كويس جنب البيت.", "answer": "فيه", "options": ["فيه", "مفيش", "كان", "هيكون"], "es": "Hay un buen restaurante al lado de casa.", "note": "hay = fiih.", "fr": "fiih mat3am kwayyes ganb el-beet." },
+    { "q": "___ وقت خالص النهارده.", "answer": "مفيش", "options": ["مفيش", "فيه", "كان", "هيكون"], "es": "No hay nada de tiempo hoy.", "note": "no hay = mafiish.", "fr": "mafiish wa2t khaales en-naharda." },
+    { "q": "إمبارح ___ فيه زحمة.", "answer": "كان", "options": ["كان", "هيكون", "بيكون", "مفيش"], "es": "Ayer había atasco.", "note": "había = kaan fiih.", "fr": "embaare7 kaan fiih za7ma." },
+    { "q": "بكرة ___ فيه حفلة.", "answer": "هيكون", "options": ["هيكون", "كان", "فيه", "مفيش"], "es": "Mañana habrá una fiesta.", "note": "habrá = haykuun fiih.", "fr": "bokra haykoun fiih 7afla." },
+    { "q": "أنا ___ تعبان إمبارح.", "answer": "كنت", "options": ["كنت", "بكون", "هكون", "أنا"], "es": "Yo estaba cansado ayer.", "note": "estaba = kont.", "fr": "ana kont ta3baan embaare7." }
+  ],
+  "imperativo": [
+    { "q": "___ الباب من فضلك.", "answer": "افتح", "options": ["افتح", "بتفتح", "هتفتح", "فتحت"], "es": "Abre la puerta, por favor.", "note": "Imperativo m: ifta7.", "fr": "ifta7 el-baab min fadlak." },
+    { "q": "___ بسرعة، إحنا متأخرين!", "answer": "تعالى", "options": ["تعالى", "جه", "بيجي", "هيجي"], "es": "¡Ven rápido, vamos tarde!", "note": "ta3aala = ¡ven!", "fr": "ta3aala bsor3a, e7na met2akhariin!" },
+    { "q": "يا بنت، ___ هنا!", "answer": "اسمعي", "options": ["اسمعي", "اسمع", "اسمعو", "بتسمعي"], "es": "¡Niña, escucha aquí!", "note": "Femenino añade ‑i: isma3i.", "fr": "ya bent, isma3i hena!" },
+    { "q": "___ ، الدنيا خطر!", "answer": "استنى", "options": ["استنى", "استنيت", "هستنى", "بستنى"], "es": "¡Espera, es peligroso!", "note": "istanna = ¡espera!", "fr": "istanna, ed-donya khatar!" },
+    { "q": "___ معايا الشنطة.", "answer": "خد", "options": ["خد", "خدت", "هتاخد", "بتاخد"], "es": "Toma la bolsa conmigo.", "note": "khod = ¡toma!", "fr": "khod ma3aaya esh-shanta." }
+  ],
+  "la-hora": [
+    { "q": "الساعة ___ ونص.", "answer": "تلاتة", "options": ["تلاتة", "تالت", "تلت", "نص"], "es": "Son las tres y media.", "note": "es-saa3a talaata we-noss.", "fr": "es-saa3a talaata we-noss." },
+    { "q": "الساعة خمسة ___ ربع.", "answer": "إلا", "options": ["إلا", "و", "ناقص", "نص"], "es": "Las cinco menos cuarto.", "note": "menos = illa.", "fr": "es-saa3a khamsa illa rob3." },
+    { "q": "بحب أمشي ___ .", "answer": "بالليل", "options": ["بالليل", "الصبح", "الضهر", "بدري"], "es": "Me gusta pasear por la noche.", "note": "bel-leel = de noche.", "fr": "ba7ebb amshi bel-leel." },
+    { "q": "الساعة اتنين و___ .", "answer": "ربع", "options": ["ربع", "نص", "تلت", "إلا"], "es": "Las dos y cuarto.", "note": "we-rob3 = y cuarto.", "fr": "es-saa3a itneen we-rob3." },
+    { "q": "الساعة ___ دلوقتي؟", "answer": "كام", "options": ["كام", "إيه", "فين", "إمتى"], "es": "¿Qué hora es ahora?", "note": "es-saa3a kaam?", "fr": "es-saa3a kaam delwa2ti?" }
   ]
 };
 
