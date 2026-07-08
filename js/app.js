@@ -718,16 +718,18 @@ const App = (() => {
     root.appendChild(msg);
 
     const acts = el("div", "roots-actions");
-    const btnCheck = el("button", "btn primary", "Comprobar");
+    const btnHint = el("button", "btn ghost", "💡 Pista");
     const btnClear = el("button", "btn ghost", "Limpiar");
-    acts.appendChild(btnClear); acts.appendChild(btnCheck);
+    const btnCheck = el("button", "btn primary", "Comprobar");
+    acts.appendChild(btnHint); acts.appendChild(btnClear); acts.appendChild(btnCheck);
     root.appendChild(acts);
 
     const tray = el("div", "roots-tray");
     root.appendChild(tray);
-    root.appendChild(sectionTitle("Familia descubierta"));
+    root.appendChild(sectionTitle("Palabras a formar"));
     const list = el("div", "roots-found");
     root.appendChild(list);
+    root.appendChild(el("p", "roots-disc center", 'Es una simplificación: una raíz puede dar más palabras. Explóralas en <a href="http://quest.ms.mff.cuni.cz/cgi-bin/elixir/index.fcgi?mode=lookup" target="_blank" rel="noopener">ElixirFM</a>.'));
 
     const TRAY = (typeof ROOTS_TRAY !== "undefined") ? ROOTS_TRAY : ["ا", "م", "و", "ي", "ة"];
 
@@ -769,17 +771,37 @@ const App = (() => {
         tray.appendChild(b);
       });
     }
-    function addFound(f) {
-      const c = el("div", "rf-card");
-      c.innerHTML = `<div class="ar" dir="rtl" lang="ar">${esc(f.ar)}</div>
-        <div class="mid"><span class="fr">${esc(f.fr)}</span><span class="es">${esc(f.es)}</span></div>
-        <div class="pat-lbl">${esc(f.pat)}</div>`;
-      list.appendChild(c);
+    const objCards = {};
+    const SLOT_ES = { front: "delante", mid1: "en el 1er hueco (medio)", mid2: "en el 2º hueco (medio)", back: "detrás" };
+    function recipe(f) { return Object.entries(f.slots).map(([s, l]) => `«${esc(l)}» ${SLOT_ES[s]}`).join(" + "); }
+    function objHTML(f, disc) {
+      return disc
+        ? `<div class="ar" dir="rtl" lang="ar">${esc(f.ar)}</div><div class="mid"><span class="fr">${esc(f.fr)}</span><span class="es">${esc(f.es)}</span></div><div class="pat-lbl">${esc(f.pat)}</div>`
+        : `<div class="ar locked-ar">•••</div><div class="mid"><span class="es">${esc(f.es)}</span></div><div class="pat-lbl">${esc(f.pat)}</div>`;
+    }
+    function renderObjectives() {
+      list.innerHTML = "";
+      R.forms.forEach(f => {
+        const c = el("div", "rf-card locked");
+        c.innerHTML = objHTML(f, false);
+        objCards[f.ar] = c;
+        list.appendChild(c);
+      });
+    }
+    function markDiscovered(f) {
+      const c = objCards[f.ar];
+      if (c) { c.className = "rf-card"; c.innerHTML = objHTML(f, true); }
     }
     function slotsMatch(fs) { return ROOT_SLOTS.every(s => (fs[s] || null) === placed[s]); }
     function clearBoard() { ROOT_SLOTS.forEach(s => placed[s] = null); clearSel(); renderBubble(); }
 
     btnClear.onclick = () => { clearBoard(); msg.className = "roots-msg center"; msg.textContent = "Toca una letra y luego un hueco."; };
+    btnHint.onclick = () => {
+      const f = R.forms.find(f => !found[f.ar]);
+      if (!f) { msg.className = "roots-msg center"; msg.textContent = "¡Ya las tienes todas! 🎉"; return; }
+      msg.className = "roots-msg center";
+      msg.innerHTML = `💡 Para <b>${esc(f.es)}</b>: coloca ${recipe(f)}.`;
+    };
     btnCheck.onclick = () => {
       if (ROOT_SLOTS.every(s => !placed[s])) { msg.className = "roots-msg center"; msg.textContent = "Coloca alguna letra primero."; return; }
       const f = R.forms.find(f => slotsMatch(f.slots));
@@ -788,7 +810,7 @@ const App = (() => {
         bubble.classList.add("win");
         msg.className = "roots-msg good center";
         msg.innerHTML = `✓ <b dir="rtl" lang="ar">${esc(f.ar)}</b> · <span class="fr">${esc(f.fr)}</span> — ${esc(f.es)}`;
-        addFound(f); updateCounter();
+        markDiscovered(f); updateCounter();
         setTimeout(() => {
           bubble.classList.remove("win"); clearBoard();
           if (Object.keys(found).length < total) { msg.className = "roots-msg center"; msg.textContent = "¡Sigue! Busca otra palabra."; }
@@ -832,7 +854,7 @@ const App = (() => {
       }, 1100);
     }
 
-    updateCounter(); renderBubble(); renderTray();
+    updateCounter(); renderBubble(); renderTray(); renderObjectives();
   }
 
   const GUIDE = (typeof GRAMMAR_GUIDE !== "undefined")

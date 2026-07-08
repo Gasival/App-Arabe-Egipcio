@@ -430,6 +430,12 @@ button { font-family: inherit; cursor: pointer; color: inherit; }
 .rf-card .fr { color: var(--gold); font-size: 13px; direction: ltr; }
 .rf-card .es { color: var(--mut); font-size: 12.5px; }
 .rf-card .pat-lbl { font-size: 10px; color: var(--teal); background: rgba(20,184,166,.12); padding: 3px 8px; border-radius: 20px; white-space: nowrap; }
+.rf-card.locked { border-left-color: var(--line); opacity: .82; }
+.rf-card.locked .pat-lbl { color: var(--mut); background: rgba(159,176,204,.1); }
+.rf-card .locked-ar { font-size: 22px; color: var(--mut); letter-spacing: 3px; opacity: .6; }
+.roots-actions .btn { flex: 1; max-width: none; padding: 11px 6px; font-size: 14px; }
+.roots-disc { font-size: 11.5px; color: var(--mut); line-height: 1.5; margin: 10px 4px 0; }
+.roots-disc a { color: var(--teal); }
 
 /* ===== Conjugación ===== */
 .conj-prompt {

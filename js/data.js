@@ -1031,7 +1031,8 @@ const GRAMMAR = [
             ["<b>أ</b>", "delante", "af3al · comparativo", "<span class='fr'>akbar</span> más grande"]
           ]
         },
-        note: "No hace falta memorizar los nombres de los moldes; basta con reconocer que «ا en medio = el que hace» o «م delante = lugar»."
+        note: "No hace falta memorizar los nombres de los moldes; basta con reconocer que «ا en medio = el que hace» o «م delante = lugar».",
+        warn: "Esto es una <b>simplificación</b>. El sistema real es más rico: hay más moldes, hasta 10 «formas» verbales, y una misma raíz puede dar muchas más palabras (a veces la misma letra da varias). Para explorar raíces a fondo, usa un diccionario como <a href=\"http://quest.ms.mff.cuni.cz/cgi-bin/elixir/index.fcgi?mode=lookup\" target=\"_blank\" rel=\"noopener\">ElixirFM</a>."
       },
       {
         h: "El prefijo م en detalle",
