@@ -641,6 +641,26 @@ const App = (() => {
    * ========================================================= */
   const GRAM_BY_ID = {};
   GRAMMAR.forEach(g => { GRAM_BY_ID[g.id] = g; });
+  const PLURS = (typeof PLURALS !== "undefined") ? PLURALS : [];
+
+  routes.plurals = () => {
+    titleEl.querySelector("span").textContent = "Plurales";
+    const hero = el("div", "guide-hero");
+    hero.innerHTML = `<h2>👥 Tabla de plurales</h2>
+      <p>${PLURS.length} plurales del árabe egipcio para leer y consultar. La mayoría son <b>irregulares</b> (se memorizan); también hay regulares, colectivos y duales.</p>`;
+    root.appendChild(hero);
+    const wrap = el("div", "g-table-wrap plur-wrap");
+    const rows = PLURS.map(p => `<tr>
+        <td><span class="pl-ar" dir="rtl" lang="ar">${esc(p.sg)}</span><span class="pl-fr">${esc(p.sgf)}</span></td>
+        <td><span class="pl-ar plr" dir="rtl" lang="ar">${esc(p.pl)}</span><span class="pl-fr">${esc(p.plf)}</span></td>
+        <td class="pl-es">${esc(p.es)}</td>
+        <td><span class="pat pat-${esc(p.pat)}">${esc(p.pat)}</span></td>
+      </tr>`).join("");
+    const t = el("table", "g-table plur-table");
+    t.innerHTML = `<thead><tr><th>Singular</th><th>Plural</th><th>Significado</th><th>Tipo</th></tr></thead><tbody>${rows}</tbody>`;
+    wrap.appendChild(t);
+    root.appendChild(wrap);
+  };
   const GUIDE = (typeof GRAMMAR_GUIDE !== "undefined")
     ? GRAMMAR_GUIDE
     : [{ group: "Clases", desc: "", ids: GRAMMAR.map(g => g.id) }];
@@ -719,6 +739,12 @@ const App = (() => {
       const d = el("button", "btn ghost wide g-drill", `📝 Practicar en frases (${DRILLS[id].length})`);
       d.onclick = () => runGrammarDrill(g);
       root.appendChild(d);
+    }
+
+    if (id === "plural" && PLURS.length) {
+      const pv = el("button", "btn ghost wide g-table-btn", `📋 Ver tabla de plurales (${PLURS.length})`);
+      pv.onclick = () => go("plurals");
+      root.appendChild(pv);
     }
 
     const i = GRAM_ORDER.indexOf(id);

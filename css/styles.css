@@ -362,6 +362,22 @@ button { font-family: inherit; cursor: pointer; color: inherit; }
 .model .fr { font-size: 13.5px; color: var(--gold); direction: ltr; margin-top: 4px; }
 .model .es { font-size: 13.5px; color: var(--mut); margin-top: 6px; }
 
+/* ===== Tabla de plurales ===== */
+.plur-wrap { margin-bottom: 20px; }
+.plur-table { min-width: 340px; font-size: 13px; }
+.plur-table th { position: sticky; top: 0; z-index: 1; }
+.plur-table td { vertical-align: middle; }
+.plur-table .pl-ar { display: block; font-size: 18px; font-weight: 700; direction: rtl; }
+.plur-table .pl-ar.plr { color: var(--teal); }
+.plur-table .pl-fr { display: block; font-size: 11.5px; color: var(--gold); direction: ltr; }
+.plur-table .pl-es { color: var(--mut); font-size: 12.5px; }
+.pat { display: inline-block; font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 20px; text-transform: uppercase; letter-spacing: .3px; white-space: nowrap; }
+.pat-irregular { background: rgba(246,196,83,.15); color: var(--gold); border: 1px solid #6b551f; }
+.pat-regular { background: rgba(20,184,166,.15); color: var(--teal); border: 1px solid var(--teal-d); }
+.pat-colectivo { background: rgba(159,176,204,.14); color: var(--mut); border: 1px solid var(--line); }
+.pat-dual { background: rgba(239,68,68,.12); color: #ff9b9b; border: 1px solid #5a2a30; }
+.g-table-btn { margin-top: 10px; color: var(--teal); }
+
 /* ===== Conjugación ===== */
 .conj-prompt {
   background: linear-gradient(160deg, var(--card2), var(--card));
