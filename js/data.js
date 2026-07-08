@@ -1049,7 +1049,7 @@ const GRAMMAR = [
       },
       {
         h: "Por qué te importa",
-        p: "Con la raíz entiendes de golpe: la <b>conjugación</b> (misma raíz, distintos moldes por persona y tiempo), los <b>plurales irregulares</b> (reordenan las vocales de la raíz), los <b>participios</b> (molde faa3el)… e incluso puedes <b>adivinar</b> palabras nuevas. Es la llave de todo el idioma. Y para practicarlo, prueba el <b>Juego de raíces</b> 🌱 (en Práctica).",
+        p: "Con la raíz entiendes de golpe: la <b>conjugación</b> (misma raíz, distintos moldes por persona y tiempo), los <b>plurales irregulares</b> (reordenan las vocales de la raíz), los <b>participios</b> (molde faa3el)… e incluso puedes <b>adivinar</b> palabras nuevas. Es la llave de todo el idioma. Y para practicarlo, prueba la <b>Fábrica de palabras</b> 🏭 (en Práctica).",
         refs: [{ id: "presente" }, { id: "plural" }, { id: "participios" }]
       }
     ],
@@ -5356,6 +5356,179 @@ const ROOTS_GAME = [
     forms: [
       { slots: { front: "م", mid2: "و" }, ar: "مشغول", fr: "mashghool", es: "ocupado", pat: "maf3uul · participio pasivo" },
       { slots: { mid2: "ا" }, ar: "شغال", fr: "shaghghaal", es: "que funciona / trabajando", pat: "fa33aal" }
+    ]
+  },
+  {
+    root: ["ق", "ت", "ل"], rootf: "2 · t · l", meaning: "matar", icon: "⚔️",
+    forms: [
+      { slots: { mid1: "ا" }, ar: "قاتل", fr: "2aatel", es: "asesino", pat: "faa3el · el que hace" },
+      { slots: { front: "م", mid2: "و" }, ar: "مقتول", fr: "ma2tool", es: "matado / muerto", pat: "maf3uul · participio pasivo" }
+    ]
+  },
+  {
+    root: ["د", "ف", "ع"], rootf: "d · f · 3", meaning: "pagar / empujar", icon: "💳",
+    forms: [
+      { slots: { mid1: "ا" }, ar: "دافع", fr: "daafe3", es: "el que paga", pat: "faa3el · el que hace" },
+      { slots: { front: "م", mid2: "و" }, ar: "مدفوع", fr: "madfoo3", es: "pagado", pat: "maf3uul · participio pasivo" }
+    ]
+  },
+  {
+    root: ["ح", "م", "ل"], rootf: "7 · m · l", meaning: "llevar / cargar", icon: "📦",
+    forms: [
+      { slots: { mid1: "ا" }, ar: "حامل", fr: "7aamel", es: "que lleva / embarazada", pat: "faa3el · el que hace" },
+      { slots: { front: "م", mid2: "و" }, ar: "محمول", fr: "ma7mool", es: "llevado / móvil", pat: "maf3uul · participio pasivo" }
+    ]
+  },
+  {
+    root: ["ق", "ر", "ب"], rootf: "2 · r · b", meaning: "acercar / cerca", icon: "📍",
+    forms: [
+      { slots: { mid2: "ي" }, ar: "قريب", fr: "2ariib", es: "cercano / pariente", pat: "fa3iil · adjetivo" },
+      { slots: { front: "أ" }, ar: "أقرب", fr: "a2rab", es: "más cercano", pat: "af3al · comparativo" }
+    ]
+  },
+  {
+    root: ["ب", "ع", "د"], rootf: "b · 3 · d", meaning: "alejar / lejos", icon: "🏝️",
+    forms: [
+      { slots: { mid2: "ي" }, ar: "بعيد", fr: "be3iid", es: "lejano", pat: "fa3iil · adjetivo" },
+      { slots: { front: "أ" }, ar: "أبعد", fr: "ab3ad", es: "más lejos", pat: "af3al · comparativo" }
+    ]
+  },
+  {
+    root: ["ق", "ف", "ل"], rootf: "2 · f · l", meaning: "cerrar", icon: "🔒",
+    forms: [
+      { slots: { mid1: "ا" }, ar: "قافل", fr: "2aafel", es: "el que cierra", pat: "faa3el · el que hace" },
+      { slots: { front: "م", mid2: "و" }, ar: "مقفول", fr: "ma2fool", es: "cerrado", pat: "maf3uul · participio pasivo" }
+    ]
+  },
+  {
+    root: ["ر", "س", "م"], rootf: "r · s · m", meaning: "dibujar", icon: "🎨",
+    forms: [
+      { slots: { mid1: "ا" }, ar: "راسم", fr: "raasem", es: "el que dibuja", pat: "faa3el · el que hace" },
+      { slots: { mid2: "ا" }, ar: "رسام", fr: "rassaam", es: "dibujante", pat: "fa33aal · oficio" },
+      { slots: { front: "م", mid2: "و" }, ar: "مرسوم", fr: "marsoom", es: "dibujado / decreto", pat: "maf3uul · participio pasivo" }
+    ]
+  },
+  {
+    root: ["ح", "ر", "ق"], rootf: "7 · r · 2", meaning: "quemar", icon: "🔥",
+    forms: [
+      { slots: { mid1: "ا" }, ar: "حارق", fr: "7aare2", es: "el que quema", pat: "faa3el · el que hace" },
+      { slots: { front: "م", mid2: "و" }, ar: "محروق", fr: "ma7roo2", es: "quemado", pat: "maf3uul · participio pasivo" },
+      { slots: { mid2: "ي", back: "ة" }, ar: "حريقة", fr: "7arii2a", es: "incendio", pat: "fa3iila" }
+    ]
+  },
+  {
+    root: ["م", "ل", "ك"], rootf: "m · l · k", meaning: "poseer / reinar", icon: "👑",
+    forms: [
+      { slots: { mid1: "ا" }, ar: "مالك", fr: "maalek", es: "dueño / propietario", pat: "faa3el · el que hace" },
+      { slots: { front: "م", mid2: "و" }, ar: "مملوك", fr: "mamlook", es: "poseído / mameluco", pat: "maf3uul · participio pasivo" }
+    ]
+  },
+  {
+    root: ["ح", "ك", "م"], rootf: "7 · k · m", meaning: "gobernar / juzgar", icon: "🏛️",
+    forms: [
+      { slots: { mid1: "ا" }, ar: "حاكم", fr: "7aakem", es: "gobernante", pat: "faa3el · el que hace" },
+      { slots: { mid2: "ي" }, ar: "حكيم", fr: "7akiim", es: "sabio", pat: "fa3iil · adjetivo" },
+      { slots: { front: "م", mid2: "و" }, ar: "محكوم", fr: "ma7koom", es: "condenado / gobernado", pat: "maf3uul · participio pasivo" },
+      { slots: { front: "م", back: "ة" }, ar: "محكمة", fr: "ma7kama", es: "tribunal", pat: "maf3ala · lugar" }
+    ]
+  },
+  {
+    root: ["ق", "س", "م"], rootf: "2 · s · m", meaning: "dividir / repartir", icon: "➗",
+    forms: [
+      { slots: { mid1: "ا" }, ar: "قاسم", fr: "2aasem", es: "el que divide", pat: "faa3el · el que hace" },
+      { slots: { front: "م", mid2: "و" }, ar: "مقسوم", fr: "ma2soom", es: "dividido", pat: "maf3uul · participio pasivo" }
+    ]
+  },
+  {
+    root: ["ك", "س", "ب"], rootf: "k · s · b", meaning: "ganar", icon: "🏆",
+    forms: [
+      { slots: { mid1: "ا" }, ar: "كاسب", fr: "kaaseb", es: "el que gana", pat: "faa3el · el que hace" },
+      { slots: { front: "م", mid2: "و" }, ar: "مكسوب", fr: "maksoob", es: "ganado", pat: "maf3uul · participio pasivo" }
+    ]
+  },
+  {
+    root: ["س", "ر", "ق"], rootf: "s · r · 2", meaning: "robar", icon: "🦹",
+    forms: [
+      { slots: { mid1: "ا" }, ar: "سارق", fr: "saare2", es: "ladrón", pat: "faa3el · el que hace" },
+      { slots: { front: "م", mid2: "و" }, ar: "مسروق", fr: "masroo2", es: "robado", pat: "maf3uul · participio pasivo" }
+    ]
+  },
+  {
+    root: ["ق", "ب", "ل"], rootf: "2 · b · l", meaning: "aceptar / recibir", icon: "🤝",
+    forms: [
+      { slots: { mid1: "ا" }, ar: "قابل", fr: "2aabel", es: "el que recibe", pat: "faa3el · el que hace" },
+      { slots: { front: "م", mid2: "و" }, ar: "مقبول", fr: "ma2bool", es: "aceptado", pat: "maf3uul · participio pasivo" }
+    ]
+  },
+  {
+    root: ["ش", "ع", "ر"], rootf: "sh · 3 · r", meaning: "sentir / poesía", icon: "📝",
+    forms: [
+      { slots: { mid1: "ا" }, ar: "شاعر", fr: "shaa3er", es: "poeta / que siente", pat: "faa3el · el que hace" },
+      { slots: { mid2: "و" }, ar: "شعور", fr: "sho3oor", es: "sentimiento", pat: "fu3uul" }
+    ]
+  },
+  {
+    root: ["ر", "ب", "ط"], rootf: "r · b · t", meaning: "atar / enlazar", icon: "🔗",
+    forms: [
+      { slots: { mid1: "ا" }, ar: "رابط", fr: "raabet", es: "enlace / que ata", pat: "faa3el · el que hace" },
+      { slots: { front: "م", mid2: "و" }, ar: "مربوط", fr: "marboot", es: "atado", pat: "maf3uul · participio pasivo" }
+    ]
+  },
+  {
+    root: ["ت", "ر", "ك"], rootf: "t · r · k", meaning: "dejar / abandonar", icon: "✋",
+    forms: [
+      { slots: { mid1: "ا" }, ar: "تارك", fr: "taarek", es: "el que deja", pat: "faa3el · el que hace" },
+      { slots: { front: "م", mid2: "و" }, ar: "متروك", fr: "matrook", es: "abandonado", pat: "maf3uul · participio pasivo" }
+    ]
+  },
+  {
+    root: ["ع", "د", "ل"], rootf: "3 · d · l", meaning: "justicia / ajustar", icon: "⚖️",
+    forms: [
+      { slots: { mid1: "ا" }, ar: "عادل", fr: "3aadel", es: "justo", pat: "faa3el · el que hace" },
+      { slots: { mid2: "ا", back: "ة" }, ar: "عدالة", fr: "3adaala", es: "justicia", pat: "fa3aala" }
+    ]
+  },
+  {
+    root: ["ح", "ر", "س"], rootf: "7 · r · s", meaning: "vigilar / guardar", icon: "💂",
+    forms: [
+      { slots: { mid1: "ا" }, ar: "حارس", fr: "7aares", es: "guardia / portero", pat: "faa3el · el que hace" },
+      { slots: { front: "م", mid2: "و" }, ar: "محروس", fr: "ma7roos", es: "vigilado / protegido", pat: "maf3uul · participio pasivo" }
+    ]
+  },
+  {
+    root: ["د", "ف", "ن"], rootf: "d · f · n", meaning: "enterrar", icon: "⚰️",
+    forms: [
+      { slots: { mid1: "ا" }, ar: "دافن", fr: "daafen", es: "el que entierra", pat: "faa3el · el que hace" },
+      { slots: { front: "م", mid2: "و" }, ar: "مدفون", fr: "madfoon", es: "enterrado", pat: "maf3uul · participio pasivo" }
+    ]
+  },
+  {
+    root: ["ز", "ر", "ع"], rootf: "z · r · 3", meaning: "sembrar / cultivar", icon: "🌾",
+    forms: [
+      { slots: { mid1: "ا" }, ar: "زارع", fr: "zaare3", es: "agricultor", pat: "faa3el · el que hace" },
+      { slots: { front: "م", mid2: "و" }, ar: "مزروع", fr: "mazroo3", es: "plantado / cultivado", pat: "maf3uul · participio pasivo" },
+      { slots: { front: "م", back: "ة" }, ar: "مزرعة", fr: "mazra3a", es: "granja", pat: "maf3ala · lugar" }
+    ]
+  },
+  {
+    root: ["ر", "ف", "ع"], rootf: "r · f · 3", meaning: "levantar / subir", icon: "🙋",
+    forms: [
+      { slots: { mid1: "ا" }, ar: "رافع", fr: "raafe3", es: "el que levanta", pat: "faa3el · el que hace" },
+      { slots: { front: "م", mid2: "و" }, ar: "مرفوع", fr: "marfoo3", es: "levantado / elevado", pat: "maf3uul · participio pasivo" }
+    ]
+  },
+  {
+    root: ["ق", "ع", "د"], rootf: "2 · 3 · d", meaning: "sentarse", icon: "🪑",
+    forms: [
+      { slots: { mid1: "ا" }, ar: "قاعد", fr: "2aa3ed", es: "sentado", pat: "faa3el · el que hace" },
+      { slots: { front: "م" }, ar: "مقعد", fr: "ma23ad", es: "asiento", pat: "maf3al · lugar" }
+    ]
+  },
+  {
+    root: ["ش", "ك", "ر"], rootf: "sh · k · r", meaning: "agradecer", icon: "🙏",
+    forms: [
+      { slots: { mid1: "ا" }, ar: "شاكر", fr: "shaaker", es: "agradecido", pat: "faa3el · el que hace" },
+      { slots: { front: "م", mid2: "و" }, ar: "مشكور", fr: "mashkoor", es: "agradecido / digno de gracias", pat: "maf3uul · participio pasivo" }
     ]
   }
 ];

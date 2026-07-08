@@ -200,7 +200,7 @@ const App = (() => {
     gtr.appendChild(bigBtn("🔵", "Traducir B2–C1", "Frases avanzadas", () => openTranslate("b2c1")));
     root.appendChild(gtr);
 
-    const rgame = bigBtn("🌱", "Juego de raíces", "Forma palabras de una raíz", () => reset("roots"));
+    const rgame = bigBtn("🏭", "Fábrica de palabras", "Forma palabras de una raíz", () => reset("roots"));
     rgame.classList.add("solo");
     root.appendChild(rgame);
 
@@ -294,7 +294,7 @@ const App = (() => {
     g4.appendChild(bigBtn("🧱", "Ordenar frases", "Coloca las palabras", () => reset("builder")));
     g4.appendChild(bigBtn("🔁", "Repaso", "Lo más flojo", () => runReview()));
     root.appendChild(g4);
-    const rb = bigBtn("🌱", "Juego de raíces", "Forma palabras de una raíz", () => reset("roots"));
+    const rb = bigBtn("🏭", "Fábrica de palabras", "Forma palabras de una raíz", () => reset("roots"));
     rb.classList.add("solo");
     root.appendChild(rb);
     root.appendChild(sectionTitle("Elige un ejercicio"));
@@ -675,9 +675,9 @@ const App = (() => {
   const ROOTS = (typeof ROOTS_GAME !== "undefined") ? ROOTS_GAME : [];
 
   routes.roots = () => {
-    titleEl.querySelector("span").textContent = "Juego de raíces";
+    titleEl.querySelector("span").textContent = "Fábrica de palabras";
     const hero = el("div", "guide-hero");
-    hero.innerHTML = `<h2>🌱 Juego de raíces</h2>
+    hero.innerHTML = `<h2>🏭 Fábrica de palabras</h2>
       <p>Toca una letra y colócala <b>delante</b>, <b>en medio</b> o <b>detrás</b> de la raíz. Si forma palabra, descubres su significado y su patrón. ¡Encuentra toda la familia!</p>`;
     root.appendChild(hero);
     if (!ROOTS.length) { root.appendChild(el("p", "hint center", "No hay raíces cargadas.")); return; }
