@@ -200,6 +200,10 @@ const App = (() => {
     gtr.appendChild(bigBtn("🔵", "Traducir B2–C1", "Frases avanzadas", () => openTranslate("b2c1")));
     root.appendChild(gtr);
 
+    const rgame = bigBtn("🌱", "Juego de raíces", "Forma palabras de una raíz", () => reset("roots"));
+    rgame.classList.add("solo");
+    root.appendChild(rgame);
+
     root.appendChild(sectionTitle("Tipos de ejercicio"));
     root.appendChild(go2("practice"));
   };
@@ -681,9 +685,9 @@ const App = (() => {
     ROOTS.forEach(R => {
       const row = el("button", "row");
       row.innerHTML = `
-        <span class="row-ic">🌱</span>
-        <span class="row-tx"><b><span dir="rtl" lang="ar">${esc(R.root.join(" "))}</span> · ${esc(R.rootf)}</b>
-          <i>raíz «${esc(R.meaning)}» · ${R.forms.length} palabras</i></span>
+        <span class="row-ic">${R.icon || "🌱"}</span>
+        <span class="row-tx"><b><span class="rt-ar" dir="rtl" lang="ar">${esc(R.root.join(" "))}</span><span class="rt-fr">${esc(R.rootf)}</span></b>
+          <i>«${esc(R.meaning)}» · ${R.forms.length} palabras</i></span>
         <span class="row-go">›</span>`;
       row.onclick = () => runRoots(R);
       list.appendChild(row);

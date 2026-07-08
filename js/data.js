@@ -1018,8 +1018,38 @@ const GRAMMAR = [
         }
       },
       {
+        h: "Las letras que forman patrones",
+        p: "Ciertas letras «añadidas» a la raíz marcan casi siempre el mismo tipo de palabra. Estas son las más útiles:",
+        table: {
+          cols: ["Letra", "Dónde", "Suele marcar", "Ejemplo"],
+          rows: [
+            ["<b>ا</b>", "en medio (1º)", "faa3el · «el que hace»", "<span class='fr'>kaateb</span> escritor"],
+            ["<b>م</b>", "delante", "lugar / instrumento / participio", "<span class='fr'>maktab</span> oficina"],
+            ["<b>و</b>", "en medio (2º), con م", "maf3uul · participio pasivo", "<span class='fr'>maktoob</span> escrito"],
+            ["<b>ة</b>", "detrás", "femenino / lugar", "<span class='fr'>maktaba</span> biblioteca"],
+            ["<b>ي</b>", "en medio (2º)", "fa3iil · adjetivo / gentilicio", "<span class='fr'>kebiir</span> grande"],
+            ["<b>أ</b>", "delante", "af3al · comparativo", "<span class='fr'>akbar</span> más grande"]
+          ]
+        },
+        note: "No hace falta memorizar los nombres de los moldes; basta con reconocer que «ا en medio = el que hace» o «م delante = lugar»."
+      },
+      {
+        h: "El prefijo م en detalle",
+        p: "La <b>م</b> delante de una raíz es de lo más productivo. Según el molde exacto marca tres cosas:",
+        table: {
+          cols: ["Tipo", "Molde", "Ejemplos"],
+          rows: [
+            ["Lugar", "maf3al / maf3ala", "<span class='fr'>maktab</span> oficina · <span class='fr'>matbakh</span> cocina · <span class='fr'>madrasa</span> escuela"],
+            ["Instrumento", "mif3aal", "<span class='fr'>moftaa7</span> llave · <span class='fr'>miknesa</span> escoba"],
+            ["Participio pasivo", "maf3uul", "<span class='fr'>maktoob</span> escrito · <span class='fr'>mashghool</span> ocupado"]
+          ]
+        },
+        note: "Regla mental: si una palabra empieza por م y no es un verbo, casi seguro es un lugar, un instrumento o un participio de alguna raíz.",
+        refs: [{ id: "participios" }]
+      },
+      {
         h: "Por qué te importa",
-        p: "Con la raíz entiendes de golpe: la <b>conjugación</b> (misma raíz, distintos moldes por persona y tiempo), los <b>plurales irregulares</b> (reordenan las vocales de la raíz), los <b>participios</b> (molde faa3el)… e incluso puedes <b>adivinar</b> palabras nuevas. Es la llave de todo el idioma.",
+        p: "Con la raíz entiendes de golpe: la <b>conjugación</b> (misma raíz, distintos moldes por persona y tiempo), los <b>plurales irregulares</b> (reordenan las vocales de la raíz), los <b>participios</b> (molde faa3el)… e incluso puedes <b>adivinar</b> palabras nuevas. Es la llave de todo el idioma. Y para practicarlo, prueba el <b>Juego de raíces</b> 🌱 (en Práctica).",
         refs: [{ id: "presente" }, { id: "plural" }, { id: "participios" }]
       }
     ],
@@ -1031,7 +1061,10 @@ const GRAMMAR = [
       { q: "«madrasa» y «mudarres» comparten la raíz…", options: ["د-ر-س (d-r-s)", "م-د-ر", "b-t-k", "no comparten"], answer: 0, note: "Ambas vienen de d-r-s (estudiar)." },
       { q: "Cambiar el molde cambia sobre todo…", options: ["la función gramatical", "el significado base", "la raíz", "nada"], answer: 0, note: "El molde da la función; la raíz da el significado base." },
       { q: "La raíz de «maktaba» (biblioteca) es…", options: ["k-t-b", "m-k-t", "b-t-k", "m-t-b"], answer: 0, note: "maktaba viene de k-t-b." },
-      { q: "¿Puedes intuir el sentido de una palabra por su raíz?", options: ["Sí, la raíz da el significado base", "No, es imposible", "Solo con vocales", "Solo en plural"], answer: 0, note: "Reconocer la raíz te da el campo de significado." }
+      { q: "¿Puedes intuir el sentido de una palabra por su raíz?", options: ["Sí, la raíz da el significado base", "No, es imposible", "Solo con vocales", "Solo en plural"], answer: 0, note: "Reconocer la raíz te da el campo de significado." },
+      { q: "La letra م delante de una raíz suele marcar…", options: ["lugar / instrumento / participio", "un plural", "el femenino", "el pasado"], answer: 0, note: "م → maktab (lugar), moftaa7 (instrumento), maktoob (participio)." },
+      { q: "«maktoob» (con م + و) es un…", options: ["participio pasivo (maf3uul)", "lugar", "plural", "comparativo"], answer: 0, note: "م…و = molde maf3uul: «escrito»." },
+      { q: "La ة detrás suele marcar…", options: ["femenino o lugar", "plural masculino", "comparativo", "pasado"], answer: 0, note: "ة → maktaba (biblioteca, lugar), kaatba (escritora, fem.)." }
     ]
   },
   {
@@ -5129,7 +5162,7 @@ const PLURALS = [
 const ROOTS_TRAY = ["ا", "م", "و", "ي", "ة", "أ", "ت", "ن"];
 const ROOTS_GAME = [
   {
-    root: ["ك", "ت", "ب"], rootf: "k · t · b", meaning: "escribir",
+    root: ["ك", "ت", "ب"], rootf: "k · t · b", meaning: "escribir", icon: "✍️",
     forms: [
       { slots: { mid1: "ا" }, ar: "كاتب", fr: "kaateb", es: "escritor", pat: "faa3el · el que hace" },
       { slots: { mid2: "ا" }, ar: "كتاب", fr: "ketaab", es: "libro", pat: "fi3aal" },
@@ -5140,7 +5173,7 @@ const ROOTS_GAME = [
     ]
   },
   {
-    root: ["د", "ر", "س"], rootf: "d · r · s", meaning: "estudiar",
+    root: ["د", "ر", "س"], rootf: "d · r · s", meaning: "estudiar", icon: "📚",
     forms: [
       { slots: { mid1: "ا" }, ar: "دارس", fr: "daares", es: "el que estudia", pat: "faa3el · el que hace" },
       { slots: { front: "م" }, ar: "مدرس", fr: "mudarres", es: "profesor", pat: "persona (م‑)" },
@@ -5149,7 +5182,7 @@ const ROOTS_GAME = [
     ]
   },
   {
-    root: ["ل", "ع", "ب"], rootf: "l · 3 · b", meaning: "jugar",
+    root: ["ل", "ع", "ب"], rootf: "l · 3 · b", meaning: "jugar", icon: "⚽",
     forms: [
       { slots: { mid1: "ا" }, ar: "لاعب", fr: "laa3eb", es: "jugador", pat: "faa3el · el que hace" },
       { slots: { front: "م" }, ar: "ملعب", fr: "mal3ab", es: "campo / estadio", pat: "maf3al · lugar" },
@@ -5158,7 +5191,7 @@ const ROOTS_GAME = [
     ]
   },
   {
-    root: ["ع", "م", "ل"], rootf: "3 · m · l", meaning: "trabajar / hacer",
+    root: ["ع", "م", "ل"], rootf: "3 · m · l", meaning: "trabajar / hacer", icon: "🛠️",
     forms: [
       { slots: { mid1: "ا" }, ar: "عامل", fr: "3aamel", es: "obrero", pat: "faa3el · el que hace" },
       { slots: { front: "م" }, ar: "معمل", fr: "ma3mal", es: "taller / laboratorio", pat: "maf3al · lugar" },
@@ -5167,7 +5200,7 @@ const ROOTS_GAME = [
     ]
   },
   {
-    root: ["س", "ك", "ن"], rootf: "s · k · n", meaning: "vivir / habitar",
+    root: ["س", "ك", "ن"], rootf: "s · k · n", meaning: "vivir / habitar", icon: "🏠",
     forms: [
       { slots: { mid1: "ا" }, ar: "ساكن", fr: "saaken", es: "habitante", pat: "faa3el · el que hace" },
       { slots: { front: "م" }, ar: "مسكن", fr: "maskan", es: "vivienda", pat: "maf3al · lugar" },
@@ -5175,7 +5208,7 @@ const ROOTS_GAME = [
     ]
   },
   {
-    root: ["ك", "ب", "ر"], rootf: "k · b · r", meaning: "grande / crecer",
+    root: ["ك", "ب", "ر"], rootf: "k · b · r", meaning: "grande / crecer", icon: "📈",
     forms: [
       { slots: { mid2: "ي" }, ar: "كبير", fr: "kebiir", es: "grande", pat: "fa3iil · adjetivo" },
       { slots: { mid2: "ا" }, ar: "كبار", fr: "kobaar", es: "grandes (plural)", pat: "fi3aal" },
@@ -5183,19 +5216,71 @@ const ROOTS_GAME = [
     ]
   },
   {
-    root: ["س", "ف", "ر"], rootf: "s · f · r", meaning: "viajar",
+    root: ["س", "ف", "ر"], rootf: "s · f · r", meaning: "viajar", icon: "✈️",
     forms: [
       { slots: { front: "م", mid1: "ا" }, ar: "مسافر", fr: "msaafer", es: "viajero", pat: "mufaa3el" },
       { slots: { mid2: "ا", back: "ة" }, ar: "سفارة", fr: "sefaara", es: "embajada", pat: "fi3aala · lugar" }
     ]
   },
   {
-    root: ["ع", "ل", "م"], rootf: "3 · l · m", meaning: "saber / ciencia",
+    root: ["ع", "ل", "م"], rootf: "3 · l · m", meaning: "saber / ciencia", icon: "🔬",
     forms: [
       { slots: { mid1: "ا" }, ar: "عالم", fr: "3aalem", es: "sabio / científico", pat: "faa3el · el que hace" },
       { slots: { front: "م" }, ar: "معلم", fr: "mo3allem", es: "maestro", pat: "persona (م‑)" },
       { slots: { front: "م", mid2: "و" }, ar: "معلوم", fr: "ma3loom", es: "sabido / conocido", pat: "maf3uul · participio pasivo" },
       { slots: { mid2: "ا", back: "ة" }, ar: "علامة", fr: "3alaama", es: "señal / marca", pat: "fa3aala" }
+    ]
+  },
+  {
+    root: ["ف", "ت", "ح"], rootf: "f · t · 7", meaning: "abrir", icon: "🔓",
+    forms: [
+      { slots: { mid1: "ا" }, ar: "فاتح", fr: "faate7", es: "el que abre", pat: "faa3el · el que hace" },
+      { slots: { front: "م", mid2: "ا" }, ar: "مفتاح", fr: "moftaa7", es: "llave", pat: "mif3aal · instrumento" },
+      { slots: { front: "م", mid2: "و" }, ar: "مفتوح", fr: "maftoo7", es: "abierto", pat: "maf3uul · participio pasivo" }
+    ]
+  },
+  {
+    root: ["ع", "ر", "ف"], rootf: "3 · r · f", meaning: "conocer / saber", icon: "💡",
+    forms: [
+      { slots: { mid1: "ا" }, ar: "عارف", fr: "3aaref", es: "que sabe", pat: "faa3el · el que hace" },
+      { slots: { front: "م", mid2: "و" }, ar: "معروف", fr: "ma3roof", es: "conocido", pat: "maf3uul · participio pasivo" },
+      { slots: { front: "م", back: "ة" }, ar: "معرفة", fr: "ma3refa", es: "conocimiento", pat: "maf3ala" }
+    ]
+  },
+  {
+    root: ["ن", "ز", "ل"], rootf: "n · z · l", meaning: "bajar", icon: "⬇️",
+    forms: [
+      { slots: { mid1: "ا" }, ar: "نازل", fr: "naazel", es: "que baja / bajando", pat: "faa3el · el que hace" },
+      { slots: { front: "م" }, ar: "منزل", fr: "manzel", es: "casa / hogar", pat: "maf3al · lugar" }
+    ]
+  },
+  {
+    root: ["د", "خ", "ل"], rootf: "d · kh · l", meaning: "entrar", icon: "🚪",
+    forms: [
+      { slots: { mid1: "ا" }, ar: "داخل", fr: "daakhel", es: "el que entra / dentro", pat: "faa3el · el que hace" },
+      { slots: { front: "م" }, ar: "مدخل", fr: "madkhal", es: "entrada", pat: "maf3al · lugar" }
+    ]
+  },
+  {
+    root: ["خ", "ر", "ج"], rootf: "kh · r · g", meaning: "salir", icon: "🚶",
+    forms: [
+      { slots: { mid1: "ا" }, ar: "خارج", fr: "khaarej", es: "el que sale / fuera", pat: "faa3el · el que hace" },
+      { slots: { front: "م" }, ar: "مخرج", fr: "makhrag", es: "salida", pat: "maf3al · lugar" }
+    ]
+  },
+  {
+    root: ["ط", "ب", "خ"], rootf: "t · b · kh", meaning: "cocinar", icon: "🍳",
+    forms: [
+      { slots: { front: "م" }, ar: "مطبخ", fr: "matbakh", es: "cocina", pat: "maf3al · lugar" },
+      { slots: { mid2: "ا" }, ar: "طباخ", fr: "tabbaakh", es: "cocinero", pat: "fa33aal · oficio" },
+      { slots: { front: "م", mid2: "و" }, ar: "مطبوخ", fr: "matbookh", es: "cocinado", pat: "maf3uul · participio pasivo" }
+    ]
+  },
+  {
+    root: ["ف", "ه", "م"], rootf: "f · h · m", meaning: "entender", icon: "🧠",
+    forms: [
+      { slots: { mid1: "ا" }, ar: "فاهم", fr: "faahem", es: "que entiende", pat: "faa3el · el que hace" },
+      { slots: { front: "م", mid2: "و" }, ar: "مفهوم", fr: "mafhoom", es: "entendido / concepto", pat: "maf3uul · participio pasivo" }
     ]
   }
 ];

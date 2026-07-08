@@ -378,6 +378,10 @@ button { font-family: inherit; cursor: pointer; color: inherit; }
 .pat-dual { background: rgba(239,68,68,.12); color: #ff9b9b; border: 1px solid #5a2a30; }
 .g-table-btn { margin-top: 10px; color: var(--teal); }
 
+/* ===== Índice de raíces ===== */
+.rt-ar { font-size: 20px; font-weight: 700; }
+.rt-fr { margin-inline-start: 14px; color: var(--gold); font-weight: 600; font-size: 13px; letter-spacing: 1.5px; }
+
 /* ===== Juego de raíces ===== */
 .roots-head { text-align: center; margin: 6px 0 2px; }
 .roots-title { font-size: 22px; font-weight: 800; }
