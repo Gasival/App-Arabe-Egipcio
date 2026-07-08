@@ -775,9 +775,9 @@ const App = (() => {
     const SLOT_ES = { front: "delante", mid1: "en el 1er hueco (medio)", mid2: "en el 2º hueco (medio)", back: "detrás" };
     function recipe(f) { return Object.entries(f.slots).map(([s, l]) => `«${esc(l)}» ${SLOT_ES[s]}`).join(" + "); }
     function objHTML(f, disc) {
-      return disc
-        ? `<div class="ar" dir="rtl" lang="ar">${esc(f.ar)}</div><div class="mid"><span class="fr">${esc(f.fr)}</span><span class="es">${esc(f.es)}</span></div><div class="pat-lbl">${esc(f.pat)}</div>`
-        : `<div class="ar locked-ar">•••</div><div class="mid"><span class="es">${esc(f.es)}</span></div><div class="pat-lbl">${esc(f.pat)}</div>`;
+      if (!disc) return `<div class="ar locked-ar">•••</div><div class="mid"><span class="es">${esc(f.es)}</span></div><div class="pat-lbl">${esc(f.pat)}</div>`;
+      const ctx = f.ctx ? `<span class="rf-ctx"><b dir="rtl" lang="ar">${esc(f.ctx.ar)}</b> — ${esc(f.ctx.es)}</span>` : "";
+      return `<div class="ar" dir="rtl" lang="ar">${esc(f.ar)}</div><div class="mid"><span class="fr">${esc(f.fr)}</span><span class="es">${esc(f.es)}</span>${ctx}</div><div class="pat-lbl">${esc(f.pat)}</div>`;
     }
     function renderObjectives() {
       list.innerHTML = "";
@@ -835,9 +835,7 @@ const App = (() => {
         const l2 = el("div", "roots-found");
         R.forms.forEach(f => {
           const c = el("div", "rf-card");
-          c.innerHTML = `<div class="ar" dir="rtl" lang="ar">${esc(f.ar)}</div>
-            <div class="mid"><span class="fr">${esc(f.fr)}</span><span class="es">${esc(f.es)}</span></div>
-            <div class="pat-lbl">${esc(f.pat)}</div>`;
+          c.innerHTML = objHTML(f, true);
           l2.appendChild(c);
         });
         root.appendChild(l2);

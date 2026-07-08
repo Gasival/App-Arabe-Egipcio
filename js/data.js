@@ -5465,7 +5465,7 @@ const ROOTS_GAME = [
     root: ["ش", "ع", "ر"], rootf: "sh · 3 · r", meaning: "sentir / poesía", icon: "📝",
     forms: [
       { slots: { mid1: "ا" }, ar: "شاعر", fr: "shaa3er", es: "poeta / que siente", pat: "faa3el · el que hace" },
-      { slots: { mid2: "و" }, ar: "شعور", fr: "sho3oor", es: "sentimiento", pat: "fu3uul" }
+      { slots: { mid2: "و" }, ar: "شعور", fr: "sho3oor", es: "sentimiento", pat: "fu3uul", ctx: { ar: "عندي شعور غريب", fr: "3andi sho3oor ghariib", es: "tengo un sentimiento raro" } }
     ]
   },
   {
@@ -5486,7 +5486,7 @@ const ROOTS_GAME = [
     root: ["ع", "د", "ل"], rootf: "3 · d · l", meaning: "justicia / ajustar", icon: "⚖️",
     forms: [
       { slots: { mid1: "ا" }, ar: "عادل", fr: "3aadel", es: "justo", pat: "faa3el · el que hace" },
-      { slots: { mid2: "ا", back: "ة" }, ar: "عدالة", fr: "3adaala", es: "justicia", pat: "fa3aala" }
+      { slots: { mid2: "ا", back: "ة" }, ar: "عدالة", fr: "3adaala", es: "justicia", pat: "fa3aala", ctx: { ar: "لازم يكون فيه عدالة", fr: "laazem yekoon fiih 3adaala", es: "tiene que haber justicia" } }
     ]
   },
   {
@@ -5530,6 +5530,70 @@ const ROOTS_GAME = [
     forms: [
       { slots: { mid1: "ا" }, ar: "شاكر", fr: "shaaker", es: "agradecido", pat: "faa3el · el que hace" },
       { slots: { front: "م", mid2: "و" }, ar: "مشكور", fr: "mashkoor", es: "agradecido / digno de gracias", pat: "maf3uul · participio pasivo" }
+    ]
+  },
+  {
+    root: ["خ", "د", "م"], rootf: "kh · d · m", meaning: "servir", icon: "🛎️",
+    forms: [
+      { slots: { mid1: "ا" }, ar: "خادم", fr: "khaadem", es: "sirviente / criado", pat: "faa3el · el que hace" },
+      { slots: { back: "ة" }, ar: "خدمة", fr: "khedma", es: "servicio / favor", pat: "fo3la" },
+      { slots: { front: "م", mid2: "و" }, ar: "مخدوم", fr: "makhdoom", es: "servido / jefe", pat: "maf3uul · participio pasivo", ctx: { ar: "المخدوم مبسوط من الشغل", fr: "el-makhdoom mabsoot men esh-shoghl", es: "el jefe está contento con el trabajo" } }
+    ]
+  },
+  {
+    root: ["س", "ع", "د"], rootf: "s · 3 · d", meaning: "feliz / ayudar", icon: "😊",
+    forms: [
+      { slots: { mid2: "ي" }, ar: "سعيد", fr: "sa3iid", es: "feliz", pat: "fa3iil · adjetivo" },
+      { slots: { front: "م", mid2: "و" }, ar: "مسعود", fr: "mas3ood", es: "afortunado", pat: "maf3uul · participio pasivo", ctx: { ar: "هو راجل مسعود", fr: "howwa raagel mas3ood", es: "es un hombre afortunado" } }
+    ]
+  },
+  {
+    root: ["ض", "ر", "ب"], rootf: "d · r · b", meaning: "golpear", icon: "🥊",
+    forms: [
+      { slots: { mid1: "ا" }, ar: "ضارب", fr: "daareb", es: "el que golpea", pat: "faa3el · el que hace" },
+      { slots: { front: "م", mid2: "و" }, ar: "مضروب", fr: "madroob", es: "golpeado / multiplicado", pat: "maf3uul · participio pasivo", ctx: { ar: "اتنين مضروب في تلاتة يساوي ستة", fr: "etneen madroob fi talaata yesaawi setta", es: "dos multiplicado por tres es seis" } }
+    ]
+  },
+  {
+    root: ["ك", "ش", "ف"], rootf: "k · sh · f", meaning: "descubrir / revisar", icon: "🔦",
+    forms: [
+      { slots: { mid1: "ا" }, ar: "كاشف", fr: "kaashef", es: "el que descubre", pat: "faa3el · el que hace" },
+      { slots: { front: "م", mid2: "و" }, ar: "مكشوف", fr: "makshoof", es: "descubierto / expuesto", pat: "maf3uul · participio pasivo" }
+    ]
+  },
+  {
+    root: ["ف", "ق", "د"], rootf: "f · 2 · d", meaning: "perder", icon: "🔍",
+    forms: [
+      { slots: { mid1: "ا" }, ar: "فاقد", fr: "faa2ed", es: "que carece / que ha perdido", pat: "faa3el · el que hace" },
+      { slots: { front: "م", mid2: "و" }, ar: "مفقود", fr: "mafqood", es: "perdido / desaparecido", pat: "maf3uul · participio pasivo", ctx: { ar: "الطفل مفقود من إمبارح", fr: "et-tefl mafqood men embaare7", es: "el niño está desaparecido desde ayer" } }
+    ]
+  },
+  {
+    root: ["و", "ل", "د"], rootf: "w · l · d", meaning: "nacer / engendrar", icon: "👶",
+    forms: [
+      { slots: { mid1: "ا" }, ar: "والد", fr: "waaled", es: "padre / progenitor", pat: "faa3el · el que hace" },
+      { slots: { front: "م", mid2: "و" }, ar: "مولود", fr: "mawlood", es: "recién nacido", pat: "maf3uul · participio pasivo" }
+    ]
+  },
+  {
+    root: ["ق", "د", "ر"], rootf: "2 · d · r", meaning: "poder / capacidad", icon: "💪",
+    forms: [
+      { slots: { mid1: "ا" }, ar: "قادر", fr: "2aader", es: "capaz", pat: "faa3el · el que hace" },
+      { slots: { front: "م", mid2: "و" }, ar: "مقدور", fr: "ma2door", es: "posible / al alcance", pat: "maf3uul · participio pasivo", ctx: { ar: "عملت كل اللي في مقدوري", fr: "3amalt koll elli fi ma2doori", es: "hice todo lo que estaba en mi mano" } }
+    ]
+  },
+  {
+    root: ["ن", "ق", "ل"], rootf: "n · 2 · l", meaning: "transportar / mover", icon: "🚚",
+    forms: [
+      { slots: { mid1: "ا" }, ar: "ناقل", fr: "naa2el", es: "transportador / conductor", pat: "faa3el · el que hace" },
+      { slots: { front: "م", mid2: "و" }, ar: "منقول", fr: "man2ool", es: "transferido / citado", pat: "maf3uul · participio pasivo", ctx: { ar: "الخبر ده منقول عن جريدة", fr: "el-khabar da man2ool 3an gariida", es: "esta noticia está tomada de un periódico" } }
+    ]
+  },
+  {
+    root: ["ع", "م", "ر"], rootf: "3 · m · r", meaning: "construir / poblar", icon: "🏢",
+    forms: [
+      { slots: { mid1: "ا" }, ar: "عامر", fr: "3aamer", es: "habitado / lleno", pat: "faa3el · el que hace", ctx: { ar: "البيت عامر بالضيوف", fr: "el-beet 3aamer bel-deyoof", es: "la casa está llena de invitados" } },
+      { slots: { mid2: "ا", back: "ة" }, ar: "عمارة", fr: "3emaara", es: "edificio", pat: "fi3aala" }
     ]
   }
 ];
