@@ -186,7 +186,7 @@ const App = (() => {
 
     const quick = el("div", "grid2");
     quick.appendChild(bigBtn("🎲", "Práctica rápida", "10 preguntas (producción)", () =>
-      go("session", { pool: "all", modes: ["choiceEsAr", "typing", "write"], count: 10 })));
+      go("session", { pool: "all", modes: ["choiceEsAr", "write"], count: 10 })));
     quick.appendChild(bigBtn("🗂️", "Tarjetas", "Repasa vocabulario", () =>
       go("session", { pool: "all", modes: ["flash"], count: 12 })));
     root.appendChild(quick);
@@ -203,9 +203,6 @@ const App = (() => {
     const rgame = bigBtn("🏭", "Fábrica de palabras", "Forma palabras de una raíz", () => reset("roots"));
     rgame.classList.add("solo");
     root.appendChild(rgame);
-
-    root.appendChild(sectionTitle("Tipos de ejercicio"));
-    root.appendChild(go2("practice"));
   };
 
   function go2(route) {
@@ -214,8 +211,7 @@ const App = (() => {
       ["🗂️", "Tarjetas", "Mira, voltea y memoriza", ["flash"]],
       ["✍️", "Escribe en árabe", "Teclea en árabe (móvil) — difícil", ["write"]],
       ["🇪🇸→🇪🇬", "Español → Árabe", "Elige la palabra correcta", ["choiceEsAr"]],
-      ["⌨️", "Escribe en franco", "Teclea la transcripción", ["typing"]],
-      ["🇪🇬→🇪🇸", "Árabe → Español", "Reconoce el significado (fácil)", ["choiceArEs"]],
+      ["🇪🇬→🇪🇸", "Árabe → Español", "Reconoce el significado", ["choiceArEs"]],
       ["🔗", "Parejas", "Une árabe y español", ["match"]]
     ];
     modes.forEach(([ic, t, d, m]) => {
@@ -262,7 +258,7 @@ const App = (() => {
 
     const acts = el("div", "grid2");
     acts.appendChild(bigBtn("🗂️", "Tarjetas", "Estudiar", () => go("session", { pool: id, modes: ["flash"], count: items.length })));
-    acts.appendChild(bigBtn("🎯", "Ejercicios", "Producción (elige/escribe)", () => go("session", { pool: id, modes: ["choiceEsAr", "typing", "write"], count: Math.min(12, items.length * 2) })));
+    acts.appendChild(bigBtn("🎯", "Ejercicios", "Producción (elige/escribe)", () => go("session", { pool: id, modes: ["choiceEsAr", "write"], count: Math.min(12, items.length * 2) })));
     root.appendChild(acts);
 
     root.appendChild(sectionTitle("Vocabulario"));
@@ -377,7 +373,6 @@ const App = (() => {
       if (m === "write" && !canWriteArabic(it)) m = "choiceEsAr";
       if (m === "choiceArEs") renderChoiceArEs(it, pool, onAnswer);
       else if (m === "choiceEsAr") renderChoiceEsAr(it, pool, onAnswer);
-      else if (m === "typing") renderTyping(it, onAnswer);
       else if (m === "write") renderWrite(it, onAnswer);
       else renderChoiceArEs(it, pool, onAnswer);
     }
@@ -407,6 +402,8 @@ const App = (() => {
     const q = el("div", "qhead");
     q.innerHTML = `<p class="qlabel">¿Qué significa?</p>`;
     const card = wordCard(it, true);
+    const frEl = card.querySelector(".fr");
+    frEl.classList.add("fr-hidden");           // franco oculto hasta responder
     card.onclick = () => speak(it.ar);
     q.appendChild(card);
     root.appendChild(q);
@@ -414,7 +411,7 @@ const App = (() => {
 
     const distract = sample(pool.filter(x => x.es !== it.es), 3).map(x => x.es);
     const opts = shuffle([it.es, ...distract]);
-    root.appendChild(choiceGrid(opts, it.es, o => esc(o), onAnswer));
+    root.appendChild(choiceGrid(opts, it.es, o => esc(o), ok => { frEl.classList.remove("fr-hidden"); onAnswer(ok); }));
   }
 
   function renderChoiceEsAr(it, pool, onAnswer) {
@@ -427,7 +424,7 @@ const App = (() => {
     const grid = el("div", "options");
     opts.forEach(o => {
       const b = el("button", "opt opt-ar");
-      b.innerHTML = `<span class="ar" dir="rtl" lang="ar">${esc(o.ar)}</span><span class="fr">${esc(o.fr)}</span>`;
+      b.innerHTML = `<span class="ar" dir="rtl" lang="ar">${esc(o.ar)}</span><span class="fr fr-hidden">${esc(o.fr)}</span>`;
       b.dataset.v = o.ar;
       b.onclick = () => {
         if (grid.classList.contains("locked")) return;
@@ -435,6 +432,7 @@ const App = (() => {
         const ok = o.ar === it.ar;
         b.classList.add(ok ? "good" : "bad");
         if (!ok) [...grid.children].find(x => x.dataset.v === it.ar)?.classList.add("good");
+        grid.querySelectorAll(".fr-hidden").forEach(x => x.classList.remove("fr-hidden")); // revela el franco
         speak(it.ar);
         onAnswer(ok);
       };
@@ -443,43 +441,6 @@ const App = (() => {
     root.appendChild(grid);
   }
 
-
-  function renderTyping(it, onAnswer) {
-    const q = el("div", "qhead");
-    q.innerHTML = `<p class="qlabel">Escribe en árabe franco</p>`;
-    const card = wordCard(it, true);
-    card.querySelector(".fr").textContent = "·····";   // oculta la respuesta
-    card.appendChild(el("div", "es", esc(it.es)));
-    card.onclick = () => speak(it.ar);
-    q.appendChild(card);
-    root.appendChild(q);
-    speak(it.ar);
-
-    const form = el("form", "type-form");
-    const input = el("input", "type-input");
-    input.type = "text"; input.autocomplete = "off"; input.autocapitalize = "off";
-    input.spellcheck = false; input.placeholder = "p. ej. ezzayyak";
-    const submit = el("button", "btn primary", "Comprobar");
-    submit.type = "submit";
-    form.appendChild(input); form.appendChild(submit);
-    const fb = el("div", "type-fb");
-    root.appendChild(form); root.appendChild(fb);
-    setTimeout(() => input.focus(), 50);
-
-    form.onsubmit = e => {
-      e.preventDefault();
-      if (form.classList.contains("locked")) return;
-      form.classList.add("locked");
-      input.disabled = true;
-      const ok = francoMatch(input.value, it.fr);
-      fb.className = "type-fb " + (ok ? "good" : "bad");
-      fb.innerHTML = ok
-        ? `✓ ¡Correcto! <b>${esc(it.fr)}</b>`
-        : `✗ La respuesta es <b>${esc(it.fr)}</b>`;
-      card.querySelector(".fr").textContent = it.fr;
-      onAnswer(ok);
-    };
-  }
 
   /* ---------- ESCRIBIR EN ÁRABE (producción, teclado árabe) ---------- */
   function renderWrite(it, onAnswer) {
@@ -1483,7 +1444,7 @@ const App = (() => {
   function runReview() {
     const weak = weakItems();
     const chosen = (weak.length ? weak : shuffle(ALL_ITEMS)).slice(0, 12);
-    const modes = ["choiceEsAr", "typing", "write"];
+    const modes = ["choiceEsAr", "write"];
     runQuiz(chosen.map(it => ({ it, mode: pick(modes) })), ALL_ITEMS);
   }
 
