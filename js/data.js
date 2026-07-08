@@ -5282,5 +5282,80 @@ const ROOTS_GAME = [
       { slots: { mid1: "ا" }, ar: "فاهم", fr: "faahem", es: "que entiende", pat: "faa3el · el que hace" },
       { slots: { front: "م", mid2: "و" }, ar: "مفهوم", fr: "mafhoom", es: "entendido / concepto", pat: "maf3uul · participio pasivo" }
     ]
+  },
+  {
+    root: ["ش", "ر", "ب"], rootf: "sh · r · b", meaning: "beber", icon: "🥤",
+    forms: [
+      { slots: { mid1: "ا" }, ar: "شارب", fr: "shaareb", es: "el que bebe", pat: "faa3el · el que hace" },
+      { slots: { front: "م", mid2: "و" }, ar: "مشروب", fr: "mashroob", es: "bebida", pat: "maf3uul · participio pasivo" }
+    ]
+  },
+  {
+    root: ["ح", "س", "ب"], rootf: "7 · s · b", meaning: "calcular / contar", icon: "🧮",
+    forms: [
+      { slots: { mid1: "ا" }, ar: "حاسب", fr: "7aaseb", es: "el que calcula / ordenador", pat: "faa3el · el que hace" },
+      { slots: { mid2: "ا" }, ar: "حساب", fr: "7esaab", es: "cuenta", pat: "fi3aal" },
+      { slots: { front: "م", mid2: "و" }, ar: "محسوب", fr: "ma7soob", es: "calculado", pat: "maf3uul · participio pasivo" }
+    ]
+  },
+  {
+    root: ["ل", "ب", "س"], rootf: "l · b · s", meaning: "vestir", icon: "👕",
+    forms: [
+      { slots: { mid1: "ا" }, ar: "لابس", fr: "laabes", es: "vestido / que lleva puesto", pat: "faa3el · el que hace" },
+      { slots: { front: "م", mid2: "و" }, ar: "ملبوس", fr: "malboos", es: "llevado puesto", pat: "maf3uul · participio pasivo" }
+    ]
+  },
+  {
+    root: ["غ", "س", "ل"], rootf: "gh · s · l", meaning: "lavar", icon: "🧼",
+    forms: [
+      { slots: { mid1: "ا" }, ar: "غاسل", fr: "ghaasel", es: "el que lava", pat: "faa3el · el que hace" },
+      { slots: { front: "م", mid2: "و" }, ar: "مغسول", fr: "maghsool", es: "lavado", pat: "maf3uul · participio pasivo" },
+      { slots: { front: "م", back: "ة" }, ar: "مغسلة", fr: "maghsala", es: "lavabo / lavandería", pat: "maf3ala · lugar" }
+    ]
+  },
+  {
+    root: ["ن", "ظ", "ر"], rootf: "n · z · r", meaning: "mirar / ver", icon: "👀",
+    forms: [
+      { slots: { front: "م" }, ar: "منظر", fr: "manzar", es: "vista / paisaje", pat: "maf3al · lugar / cosa" },
+      { slots: { front: "م", mid2: "و" }, ar: "منظور", fr: "manzoor", es: "visto / perspectiva", pat: "maf3uul · participio pasivo" },
+      { slots: { mid2: "ا", back: "ة" }, ar: "نظارة", fr: "nazzaara", es: "gafas", pat: "fa33aala · instrumento" }
+    ]
+  },
+  {
+    root: ["س", "م", "ع"], rootf: "s · m · 3", meaning: "oír / escuchar", icon: "👂",
+    forms: [
+      { slots: { mid1: "ا" }, ar: "سامع", fr: "saame3", es: "el que oye", pat: "faa3el · el que hace" },
+      { slots: { front: "م", mid2: "و" }, ar: "مسموع", fr: "masmoo3", es: "oído / audible", pat: "maf3uul · participio pasivo" },
+      { slots: { mid2: "ا", back: "ة" }, ar: "سماعة", fr: "sammaa3a", es: "auricular / altavoz", pat: "fa33aala · instrumento" }
+    ]
+  },
+  {
+    root: ["ح", "ف", "ظ"], rootf: "7 · f · z", meaning: "guardar / memorizar", icon: "👛",
+    forms: [
+      { slots: { mid1: "ا" }, ar: "حافظ", fr: "7aafez", es: "el que guarda / memoriza", pat: "faa3el · el que hace" },
+      { slots: { front: "م", mid2: "و" }, ar: "محفوظ", fr: "ma7fooz", es: "guardado", pat: "maf3uul · participio pasivo" },
+      { slots: { front: "م", back: "ة" }, ar: "محفظة", fr: "ma7fazza", es: "cartera / monedero", pat: "maf3ala · instrumento" }
+    ]
+  },
+  {
+    root: ["ك", "س", "ر"], rootf: "k · s · r", meaning: "romper", icon: "🔨",
+    forms: [
+      { slots: { mid1: "ا" }, ar: "كاسر", fr: "kaaser", es: "el que rompe", pat: "faa3el · el que hace" },
+      { slots: { front: "م", mid2: "و" }, ar: "مكسور", fr: "maksoor", es: "roto", pat: "maf3uul · participio pasivo" }
+    ]
+  },
+  {
+    root: ["ر", "ك", "ب"], rootf: "r · k · b", meaning: "montar / subir", icon: "🚢",
+    forms: [
+      { slots: { mid1: "ا" }, ar: "راكب", fr: "raakeb", es: "pasajero / que monta", pat: "faa3el · el que hace" },
+      { slots: { front: "م" }, ar: "مركب", fr: "markab", es: "barco", pat: "maf3al · medio / lugar" }
+    ]
+  },
+  {
+    root: ["ش", "غ", "ل"], rootf: "sh · gh · l", meaning: "trabajar / ocupar", icon: "💼",
+    forms: [
+      { slots: { front: "م", mid2: "و" }, ar: "مشغول", fr: "mashghool", es: "ocupado", pat: "maf3uul · participio pasivo" },
+      { slots: { mid2: "ا" }, ar: "شغال", fr: "shaghghaal", es: "que funciona / trabajando", pat: "fa33aal" }
+    ]
   }
 ];
