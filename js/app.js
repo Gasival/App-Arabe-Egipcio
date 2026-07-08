@@ -691,12 +691,14 @@ const App = (() => {
     root.appendChild(list);
   };
 
+  const ROOT_SLOTS = ["front", "mid1", "mid2", "back"];
   function runRoots(R) {
     titleEl.querySelector("span").textContent = "Raíz " + R.rootf;
     root.innerHTML = "";
-    const found = new Array(R.forms.length).fill(false);
     const total = R.forms.length;
-    let sel = null;
+    const found = {};                 // ar -> true
+    const placed = { front: null, mid1: null, mid2: null, back: null };
+    let sel = null;                   // letra seleccionada
 
     const head = el("div", "roots-head");
     head.innerHTML = `<div class="roots-title">🌱 <b dir="rtl" lang="ar">${esc(R.root.join(" "))}</b></div>
@@ -705,85 +707,98 @@ const App = (() => {
 
     const counter = el("div", "roots-counter");
     root.appendChild(counter);
-    const bubble = el("div", "roots-bubble");
+    const bubble = el("div", "roots-bubble"); bubble.dir = "rtl"; bubble.lang = "ar";
     root.appendChild(bubble);
-    root.appendChild(el("p", "hint center", "← delante · en medio · detrás →"));
+    root.appendChild(el("p", "hint center", "👈 El árabe se lee de derecha a izquierda. Coloca letras y pulsa Comprobar."));
     const msg = el("div", "roots-msg center", "Toca una letra y luego un hueco.");
     root.appendChild(msg);
+
+    const acts = el("div", "roots-actions");
+    const btnCheck = el("button", "btn primary", "Comprobar");
+    const btnClear = el("button", "btn ghost", "Limpiar");
+    acts.appendChild(btnClear); acts.appendChild(btnCheck);
+    root.appendChild(acts);
+
     const tray = el("div", "roots-tray");
     root.appendChild(tray);
     root.appendChild(sectionTitle("Familia descubierta"));
     const list = el("div", "roots-found");
     root.appendChild(list);
-    const foundCards = {};
+
+    const TRAY = (typeof ROOTS_TRAY !== "undefined") ? ROOTS_TRAY : ["ا", "م", "و", "ي", "ة"];
 
     function updateCounter() {
-      counter.innerHTML = `Descubiertas <b>${found.filter(Boolean).length}</b> / ${total}`;
+      counter.innerHTML = `Descubiertas <b>${Object.keys(found).length}</b> / ${total}`;
     }
+    function clearSel() { if (sel) { sel.elem.classList.remove("sel"); sel = null; } }
     function renderBubble() {
       bubble.innerHTML = "";
-      const seq = [
+      // orden lógico: [front] c1 [mid1] c2 [mid2] c3 [back]; el contenedor es RTL, así se lee bien
+      [
         { slot: "front" }, { ch: R.root[0] }, { slot: "mid1" },
         { ch: R.root[1] }, { slot: "mid2" }, { ch: R.root[2] }, { slot: "back" }
-      ];
-      seq.forEach(s => {
-        if (s.ch) { bubble.appendChild(el("span", "root-cons", esc(s.ch))); }
-        else {
-          const sl = el("button", "root-slot", "+");
-          sl.onclick = () => placeInSlot(s.slot, sl);
-          bubble.appendChild(sl);
-        }
+      ].forEach(s => {
+        if (s.ch) { bubble.appendChild(el("span", "root-cons", esc(s.ch))); return; }
+        const filled = placed[s.slot];
+        const sl = el("button", "root-slot" + (filled ? " filled" : ""), filled ? esc(filled) : "+");
+        sl.onclick = () => onSlot(s.slot);
+        bubble.appendChild(sl);
       });
+    }
+    function onSlot(slot) {
+      if (sel) { placed[slot] = sel.letter; clearSel(); }
+      else if (placed[slot]) { placed[slot] = null; }        // toca hueco lleno sin letra → lo vacía
+      else { msg.className = "roots-msg center"; msg.textContent = "Primero toca una letra de abajo."; return; }
+      msg.className = "roots-msg center"; msg.textContent = "Coloca más letras o pulsa Comprobar.";
+      renderBubble();
     }
     function renderTray() {
       tray.innerHTML = "";
-      [...new Set(R.forms.map(f => f.put))].forEach(L => {
+      TRAY.forEach(L => {
         const b = el("button", "tray-letter", esc(L));
         b.onclick = () => {
-          if (sel && sel.elem === b) { sel = null; b.classList.remove("sel"); return; }
+          if (sel && sel.elem === b) { clearSel(); return; }
           tray.querySelectorAll(".tray-letter").forEach(x => x.classList.remove("sel"));
           sel = { letter: L, elem: b }; b.classList.add("sel");
-          msg.className = "roots-msg center";
-          msg.textContent = `Ahora toca un hueco para colocar «${L}».`;
+          msg.className = "roots-msg center"; msg.textContent = `Toca un hueco para colocar «${L}».`;
         };
         tray.appendChild(b);
       });
     }
     function addFound(f) {
-      if (foundCards[f.ar]) return;
-      foundCards[f.ar] = true;
       const c = el("div", "rf-card");
       c.innerHTML = `<div class="ar" dir="rtl" lang="ar">${esc(f.ar)}</div>
         <div class="mid"><span class="fr">${esc(f.fr)}</span><span class="es">${esc(f.es)}</span></div>
         <div class="pat-lbl">${esc(f.pat)}</div>`;
       list.appendChild(c);
     }
-    function placeInSlot(slotName, sl) {
-      if (!sel) { msg.className = "roots-msg center"; msg.textContent = "Primero toca una letra de abajo."; return; }
-      const L = sel.letter;
-      const idx = R.forms.findIndex((f, i) => f.put === L && f.slot === slotName && !found[i]);
-      if (idx >= 0) {
-        const f = R.forms[idx];
-        found[idx] = true;
-        sl.textContent = L; sl.classList.add("filled");
+    function slotsMatch(fs) { return ROOT_SLOTS.every(s => (fs[s] || null) === placed[s]); }
+    function clearBoard() { ROOT_SLOTS.forEach(s => placed[s] = null); clearSel(); renderBubble(); }
+
+    btnClear.onclick = () => { clearBoard(); msg.className = "roots-msg center"; msg.textContent = "Toca una letra y luego un hueco."; };
+    btnCheck.onclick = () => {
+      if (ROOT_SLOTS.every(s => !placed[s])) { msg.className = "roots-msg center"; msg.textContent = "Coloca alguna letra primero."; return; }
+      const f = R.forms.find(f => slotsMatch(f.slots));
+      if (f && !found[f.ar]) {
+        found[f.ar] = true;
         bubble.classList.add("win");
         msg.className = "roots-msg good center";
         msg.innerHTML = `✓ <b dir="rtl" lang="ar">${esc(f.ar)}</b> · <span class="fr">${esc(f.fr)}</span> — ${esc(f.es)}`;
         addFound(f); updateCounter();
-        sel.elem.classList.remove("sel"); sel = null;
         setTimeout(() => {
-          sl.textContent = "+"; sl.classList.remove("filled"); bubble.classList.remove("win");
-          if (!found.every(Boolean)) { msg.className = "roots-msg center"; msg.textContent = "Sigue: toca una letra y un hueco."; }
-        }, 1200);
-        if (found.every(Boolean)) finishRoot();
+          bubble.classList.remove("win"); clearBoard();
+          if (Object.keys(found).length < total) { msg.className = "roots-msg center"; msg.textContent = "¡Sigue! Busca otra palabra."; }
+        }, 900);
+        if (Object.keys(found).length >= total) finishRoot();
+      } else if (f && found[f.ar]) {
+        msg.className = "roots-msg center"; msg.textContent = "Esa ya la tienes 👍";
+        bubble.classList.add("bad-flash"); setTimeout(() => bubble.classList.remove("bad-flash"), 400);
       } else {
-        const already = R.forms.some(f => f.put === L && f.slot === slotName);
-        sl.classList.add("bad"); setTimeout(() => sl.classList.remove("bad"), 500);
-        msg.className = "roots-msg bad center";
-        msg.textContent = already ? "Ya la descubriste 👍" : `Ahí «${L}» no forma palabra. Prueba otro hueco.`;
-        sel.elem.classList.remove("sel"); sel = null;
+        msg.className = "roots-msg bad center"; msg.textContent = "Eso no forma palabra. Prueba otra combinación.";
+        bubble.classList.add("bad-flash"); setTimeout(() => bubble.classList.remove("bad-flash"), 400);
       }
-    }
+    };
+
     function finishRoot() {
       setTimeout(() => {
         root.innerHTML = "";
@@ -810,7 +825,7 @@ const App = (() => {
           ctr.appendChild(again); ctr.appendChild(nb);
         } else ctr.appendChild(again);
         root.appendChild(ctr);
-      }, 1300);
+      }, 1100);
     }
 
     updateCounter(); renderBubble(); renderTray();

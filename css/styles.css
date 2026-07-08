@@ -393,6 +393,9 @@ button { font-family: inherit; cursor: pointer; color: inherit; }
   transition: box-shadow .3s, border-color .3s;
 }
 .roots-bubble.win { border-color: var(--good); box-shadow: 0 0 0 4px rgba(34,197,94,.22); }
+.roots-bubble.bad-flash { border-color: var(--bad); box-shadow: 0 0 0 4px rgba(239,68,68,.2); }
+.roots-actions { display: flex; gap: 10px; justify-content: center; margin-bottom: 14px; }
+.roots-actions .btn { flex: 1; max-width: 150px; padding: 12px; }
 .root-cons { font-size: 34px; font-weight: 800; min-width: 30px; text-align: center; }
 .root-slot {
   width: 36px; height: 36px; border-radius: 50%; border: 2px dashed var(--line);

@@ -5122,37 +5122,80 @@ const PLURALS = [
 })();
 
 /* =========================================================
- *  JUEGO DE RAÍCES — colocar una letra (ا / م) delante, en medio o detrás
- *  slot: front | mid1 (entre 1ª y 2ª) | mid2 (entre 2ª y 3ª) | back
+ *  JUEGO DE RAÍCES — colocar letras (delante / en medio / detrás) para formar palabras
+ *  slot: front (antes de la 1ª) | mid1 (entre 1ª y 2ª) | mid2 (entre 2ª y 3ª) | back (después)
+ *  Cada forma indica qué letra va en qué hueco(s). Se admiten COMBOS de varias letras.
  * ========================================================= */
+const ROOTS_TRAY = ["ا", "م", "و", "ي", "ة", "أ", "ت", "ن"];
 const ROOTS_GAME = [
   {
     root: ["ك", "ت", "ب"], rootf: "k · t · b", meaning: "escribir",
     forms: [
-      { put: "ا", slot: "mid1", ar: "كاتب", fr: "kaateb", es: "escritor", pat: "faa3el · el que hace" },
-      { put: "ا", slot: "mid2", ar: "كتاب", fr: "ketaab", es: "libro", pat: "fi3aal" },
-      { put: "م", slot: "front", ar: "مكتب", fr: "maktab", es: "oficina", pat: "maf3al · lugar" }
+      { slots: { mid1: "ا" }, ar: "كاتب", fr: "kaateb", es: "escritor", pat: "faa3el · el que hace" },
+      { slots: { mid2: "ا" }, ar: "كتاب", fr: "ketaab", es: "libro", pat: "fi3aal" },
+      { slots: { front: "م" }, ar: "مكتب", fr: "maktab", es: "oficina", pat: "maf3al · lugar" },
+      { slots: { front: "م", back: "ة" }, ar: "مكتبة", fr: "maktaba", es: "biblioteca", pat: "maf3ala · lugar" },
+      { slots: { front: "م", mid2: "و" }, ar: "مكتوب", fr: "maktoob", es: "escrito / carta", pat: "maf3uul · participio pasivo" },
+      { slots: { mid1: "ا", back: "ة" }, ar: "كاتبة", fr: "kaatba", es: "escritora", pat: "faa3ela · femenino" }
+    ]
+  },
+  {
+    root: ["د", "ر", "س"], rootf: "d · r · s", meaning: "estudiar",
+    forms: [
+      { slots: { mid1: "ا" }, ar: "دارس", fr: "daares", es: "el que estudia", pat: "faa3el · el que hace" },
+      { slots: { front: "م" }, ar: "مدرس", fr: "mudarres", es: "profesor", pat: "persona (م‑)" },
+      { slots: { front: "م", back: "ة" }, ar: "مدرسة", fr: "madrasa", es: "escuela", pat: "maf3ala · lugar" },
+      { slots: { front: "م", mid2: "و" }, ar: "مدروس", fr: "madroos", es: "estudiado", pat: "maf3uul · participio pasivo" }
     ]
   },
   {
     root: ["ل", "ع", "ب"], rootf: "l · 3 · b", meaning: "jugar",
     forms: [
-      { put: "ا", slot: "mid1", ar: "لاعب", fr: "laa3eb", es: "jugador", pat: "faa3el · el que hace" },
-      { put: "م", slot: "front", ar: "ملعب", fr: "mal3ab", es: "campo / estadio", pat: "maf3al · lugar" }
+      { slots: { mid1: "ا" }, ar: "لاعب", fr: "laa3eb", es: "jugador", pat: "faa3el · el que hace" },
+      { slots: { front: "م" }, ar: "ملعب", fr: "mal3ab", es: "campo / estadio", pat: "maf3al · lugar" },
+      { slots: { front: "م", mid2: "و" }, ar: "ملعوب", fr: "mal3oob", es: "jugado", pat: "maf3uul · participio pasivo" },
+      { slots: { back: "ة" }, ar: "لعبة", fr: "lo3ba", es: "juego / juguete", pat: "fo3la" }
     ]
   },
   {
     root: ["ع", "م", "ل"], rootf: "3 · m · l", meaning: "trabajar / hacer",
     forms: [
-      { put: "ا", slot: "mid1", ar: "عامل", fr: "3aamel", es: "obrero", pat: "faa3el · el que hace" },
-      { put: "م", slot: "front", ar: "معمل", fr: "ma3mal", es: "taller / laboratorio", pat: "maf3al · lugar" }
+      { slots: { mid1: "ا" }, ar: "عامل", fr: "3aamel", es: "obrero", pat: "faa3el · el que hace" },
+      { slots: { front: "م" }, ar: "معمل", fr: "ma3mal", es: "taller / laboratorio", pat: "maf3al · lugar" },
+      { slots: { front: "م", mid2: "و" }, ar: "معمول", fr: "ma3mool", es: "hecho", pat: "maf3uul · participio pasivo" },
+      { slots: { mid2: "ا" }, ar: "عمال", fr: "3ommaal", es: "obreros (plural)", pat: "fo33aal" }
     ]
   },
   {
     root: ["س", "ك", "ن"], rootf: "s · k · n", meaning: "vivir / habitar",
     forms: [
-      { put: "ا", slot: "mid1", ar: "ساكن", fr: "saaken", es: "habitante", pat: "faa3el · el que hace" },
-      { put: "م", slot: "front", ar: "مسكن", fr: "maskan", es: "vivienda", pat: "maf3al · lugar" }
+      { slots: { mid1: "ا" }, ar: "ساكن", fr: "saaken", es: "habitante", pat: "faa3el · el que hace" },
+      { slots: { front: "م" }, ar: "مسكن", fr: "maskan", es: "vivienda", pat: "maf3al · lugar" },
+      { slots: { mid2: "ا" }, ar: "سكان", fr: "sokkaan", es: "habitantes (plural)", pat: "fo33aal" }
+    ]
+  },
+  {
+    root: ["ك", "ب", "ر"], rootf: "k · b · r", meaning: "grande / crecer",
+    forms: [
+      { slots: { mid2: "ي" }, ar: "كبير", fr: "kebiir", es: "grande", pat: "fa3iil · adjetivo" },
+      { slots: { mid2: "ا" }, ar: "كبار", fr: "kobaar", es: "grandes (plural)", pat: "fi3aal" },
+      { slots: { front: "أ" }, ar: "أكبر", fr: "akbar", es: "más grande", pat: "af3al · comparativo" }
+    ]
+  },
+  {
+    root: ["س", "ف", "ر"], rootf: "s · f · r", meaning: "viajar",
+    forms: [
+      { slots: { front: "م", mid1: "ا" }, ar: "مسافر", fr: "msaafer", es: "viajero", pat: "mufaa3el" },
+      { slots: { mid2: "ا", back: "ة" }, ar: "سفارة", fr: "sefaara", es: "embajada", pat: "fi3aala · lugar" }
+    ]
+  },
+  {
+    root: ["ع", "ل", "م"], rootf: "3 · l · m", meaning: "saber / ciencia",
+    forms: [
+      { slots: { mid1: "ا" }, ar: "عالم", fr: "3aalem", es: "sabio / científico", pat: "faa3el · el que hace" },
+      { slots: { front: "م" }, ar: "معلم", fr: "mo3allem", es: "maestro", pat: "persona (م‑)" },
+      { slots: { front: "م", mid2: "و" }, ar: "معلوم", fr: "ma3loom", es: "sabido / conocido", pat: "maf3uul · participio pasivo" },
+      { slots: { mid2: "ا", back: "ة" }, ar: "علامة", fr: "3alaama", es: "señal / marca", pat: "fa3aala" }
     ]
   }
 ];
