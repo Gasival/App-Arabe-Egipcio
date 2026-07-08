@@ -5120,3 +5120,39 @@ const PLURALS = [
   const L = LESSONS.find(l => l.id === "plurales");
   if (L) L.items = PLURALS.map(p => ({ ar: p.sg + " ← " + p.pl, fr: p.sgf + " → " + p.plf, es: p.es }));
 })();
+
+/* =========================================================
+ *  JUEGO DE RAÍCES — colocar una letra (ا / م) delante, en medio o detrás
+ *  slot: front | mid1 (entre 1ª y 2ª) | mid2 (entre 2ª y 3ª) | back
+ * ========================================================= */
+const ROOTS_GAME = [
+  {
+    root: ["ك", "ت", "ب"], rootf: "k · t · b", meaning: "escribir",
+    forms: [
+      { put: "ا", slot: "mid1", ar: "كاتب", fr: "kaateb", es: "escritor", pat: "faa3el · el que hace" },
+      { put: "ا", slot: "mid2", ar: "كتاب", fr: "ketaab", es: "libro", pat: "fi3aal" },
+      { put: "م", slot: "front", ar: "مكتب", fr: "maktab", es: "oficina", pat: "maf3al · lugar" }
+    ]
+  },
+  {
+    root: ["ل", "ع", "ب"], rootf: "l · 3 · b", meaning: "jugar",
+    forms: [
+      { put: "ا", slot: "mid1", ar: "لاعب", fr: "laa3eb", es: "jugador", pat: "faa3el · el que hace" },
+      { put: "م", slot: "front", ar: "ملعب", fr: "mal3ab", es: "campo / estadio", pat: "maf3al · lugar" }
+    ]
+  },
+  {
+    root: ["ع", "م", "ل"], rootf: "3 · m · l", meaning: "trabajar / hacer",
+    forms: [
+      { put: "ا", slot: "mid1", ar: "عامل", fr: "3aamel", es: "obrero", pat: "faa3el · el que hace" },
+      { put: "م", slot: "front", ar: "معمل", fr: "ma3mal", es: "taller / laboratorio", pat: "maf3al · lugar" }
+    ]
+  },
+  {
+    root: ["س", "ك", "ن"], rootf: "s · k · n", meaning: "vivir / habitar",
+    forms: [
+      { put: "ا", slot: "mid1", ar: "ساكن", fr: "saaken", es: "habitante", pat: "faa3el · el que hace" },
+      { put: "م", slot: "front", ar: "مسكن", fr: "maskan", es: "vivienda", pat: "maf3al · lugar" }
+    ]
+  }
+];

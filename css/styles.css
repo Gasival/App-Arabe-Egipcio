@@ -378,6 +378,52 @@ button { font-family: inherit; cursor: pointer; color: inherit; }
 .pat-dual { background: rgba(239,68,68,.12); color: #ff9b9b; border: 1px solid #5a2a30; }
 .g-table-btn { margin-top: 10px; color: var(--teal); }
 
+/* ===== Juego de raíces ===== */
+.roots-head { text-align: center; margin: 6px 0 2px; }
+.roots-title { font-size: 22px; font-weight: 800; }
+.roots-title b { color: var(--gold); font-size: 26px; }
+.roots-mean { color: var(--mut); font-size: 13px; margin-top: 2px; }
+.roots-counter { text-align: center; color: var(--mut); font-size: 13px; margin: 8px 0; }
+.roots-counter b { color: var(--teal); font-size: 17px; }
+.roots-bubble {
+  display: flex; align-items: center; justify-content: center; gap: 5px; flex-wrap: nowrap;
+  background: radial-gradient(circle at 50% 35%, var(--card2), var(--card));
+  border: 2px solid var(--teal-d); border-radius: 70px; padding: 20px 12px;
+  margin: 10px auto 4px; max-width: 420px;
+  transition: box-shadow .3s, border-color .3s;
+}
+.roots-bubble.win { border-color: var(--good); box-shadow: 0 0 0 4px rgba(34,197,94,.22); }
+.root-cons { font-size: 34px; font-weight: 800; min-width: 30px; text-align: center; }
+.root-slot {
+  width: 36px; height: 36px; border-radius: 50%; border: 2px dashed var(--line);
+  background: transparent; color: var(--mut); font-size: 20px; display: grid; place-items: center; flex-shrink: 0;
+}
+.root-slot:active { transform: scale(.9); }
+.root-slot.filled { border-style: solid; border-color: var(--gold); color: var(--gold); background: rgba(246,196,83,.14); }
+.root-slot.bad { border-color: var(--bad); color: var(--bad); animation: shake .4s; }
+@keyframes shake { 0%,100% { transform: translateX(0); } 25% { transform: translateX(-5px); } 75% { transform: translateX(5px); } }
+.roots-msg { min-height: 22px; margin: 6px 0 12px; font-size: 14px; }
+.roots-msg.good { color: var(--good); font-size: 15px; }
+.roots-msg.bad { color: #ff9b9b; }
+.roots-msg .fr { color: var(--gold); }
+.roots-tray { display: flex; gap: 12px; justify-content: center; margin-bottom: 18px; }
+.tray-letter {
+  width: 58px; height: 58px; border-radius: 14px; border: 1px solid var(--line);
+  background: var(--card2); font-size: 30px; font-weight: 800; color: var(--txt);
+}
+.tray-letter:active { transform: scale(.94); }
+.tray-letter.sel { border-color: var(--teal); background: var(--teal-d); color: #eafffb; transform: scale(1.06); }
+.roots-found { display: flex; flex-direction: column; gap: 8px; }
+.rf-card {
+  background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--teal);
+  border-radius: 12px; padding: 10px 14px; display: flex; align-items: center; gap: 12px;
+}
+.rf-card .ar { font-size: 24px; font-weight: 700; direction: rtl; }
+.rf-card .mid { flex: 1; display: flex; flex-direction: column; }
+.rf-card .fr { color: var(--gold); font-size: 13px; direction: ltr; }
+.rf-card .es { color: var(--mut); font-size: 12.5px; }
+.rf-card .pat-lbl { font-size: 10px; color: var(--teal); background: rgba(20,184,166,.12); padding: 3px 8px; border-radius: 20px; white-space: nowrap; }
+
 /* ===== Conjugación ===== */
 .conj-prompt {
   background: linear-gradient(160deg, var(--card2), var(--card));

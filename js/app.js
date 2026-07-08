@@ -290,6 +290,9 @@ const App = (() => {
     g4.appendChild(bigBtn("🧱", "Ordenar frases", "Coloca las palabras", () => reset("builder")));
     g4.appendChild(bigBtn("🔁", "Repaso", "Lo más flojo", () => runReview()));
     root.appendChild(g4);
+    const rb = bigBtn("🌱", "Juego de raíces", "Forma palabras de una raíz", () => reset("roots"));
+    rb.classList.add("solo");
+    root.appendChild(rb);
     root.appendChild(sectionTitle("Elige un ejercicio"));
     root.appendChild(go2("practice"));
   };
@@ -661,6 +664,158 @@ const App = (() => {
     wrap.appendChild(t);
     root.appendChild(wrap);
   };
+
+  /* =========================================================
+   *  JUEGO DE RAÍCES (toca letra → toca hueco)
+   * ========================================================= */
+  const ROOTS = (typeof ROOTS_GAME !== "undefined") ? ROOTS_GAME : [];
+
+  routes.roots = () => {
+    titleEl.querySelector("span").textContent = "Juego de raíces";
+    const hero = el("div", "guide-hero");
+    hero.innerHTML = `<h2>🌱 Juego de raíces</h2>
+      <p>Toca una letra y colócala <b>delante</b>, <b>en medio</b> o <b>detrás</b> de la raíz. Si forma palabra, descubres su significado y su patrón. ¡Encuentra toda la familia!</p>`;
+    root.appendChild(hero);
+    if (!ROOTS.length) { root.appendChild(el("p", "hint center", "No hay raíces cargadas.")); return; }
+    const list = el("div", "list");
+    ROOTS.forEach(R => {
+      const row = el("button", "row");
+      row.innerHTML = `
+        <span class="row-ic">🌱</span>
+        <span class="row-tx"><b><span dir="rtl" lang="ar">${esc(R.root.join(" "))}</span> · ${esc(R.rootf)}</b>
+          <i>raíz «${esc(R.meaning)}» · ${R.forms.length} palabras</i></span>
+        <span class="row-go">›</span>`;
+      row.onclick = () => runRoots(R);
+      list.appendChild(row);
+    });
+    root.appendChild(list);
+  };
+
+  function runRoots(R) {
+    titleEl.querySelector("span").textContent = "Raíz " + R.rootf;
+    root.innerHTML = "";
+    const found = new Array(R.forms.length).fill(false);
+    const total = R.forms.length;
+    let sel = null;
+
+    const head = el("div", "roots-head");
+    head.innerHTML = `<div class="roots-title">🌱 <b dir="rtl" lang="ar">${esc(R.root.join(" "))}</b></div>
+      <div class="roots-mean">raíz «${esc(R.meaning)}» · ${esc(R.rootf)}</div>`;
+    root.appendChild(head);
+
+    const counter = el("div", "roots-counter");
+    root.appendChild(counter);
+    const bubble = el("div", "roots-bubble");
+    root.appendChild(bubble);
+    root.appendChild(el("p", "hint center", "← delante · en medio · detrás →"));
+    const msg = el("div", "roots-msg center", "Toca una letra y luego un hueco.");
+    root.appendChild(msg);
+    const tray = el("div", "roots-tray");
+    root.appendChild(tray);
+    root.appendChild(sectionTitle("Familia descubierta"));
+    const list = el("div", "roots-found");
+    root.appendChild(list);
+    const foundCards = {};
+
+    function updateCounter() {
+      counter.innerHTML = `Descubiertas <b>${found.filter(Boolean).length}</b> / ${total}`;
+    }
+    function renderBubble() {
+      bubble.innerHTML = "";
+      const seq = [
+        { slot: "front" }, { ch: R.root[0] }, { slot: "mid1" },
+        { ch: R.root[1] }, { slot: "mid2" }, { ch: R.root[2] }, { slot: "back" }
+      ];
+      seq.forEach(s => {
+        if (s.ch) { bubble.appendChild(el("span", "root-cons", esc(s.ch))); }
+        else {
+          const sl = el("button", "root-slot", "+");
+          sl.onclick = () => placeInSlot(s.slot, sl);
+          bubble.appendChild(sl);
+        }
+      });
+    }
+    function renderTray() {
+      tray.innerHTML = "";
+      [...new Set(R.forms.map(f => f.put))].forEach(L => {
+        const b = el("button", "tray-letter", esc(L));
+        b.onclick = () => {
+          if (sel && sel.elem === b) { sel = null; b.classList.remove("sel"); return; }
+          tray.querySelectorAll(".tray-letter").forEach(x => x.classList.remove("sel"));
+          sel = { letter: L, elem: b }; b.classList.add("sel");
+          msg.className = "roots-msg center";
+          msg.textContent = `Ahora toca un hueco para colocar «${L}».`;
+        };
+        tray.appendChild(b);
+      });
+    }
+    function addFound(f) {
+      if (foundCards[f.ar]) return;
+      foundCards[f.ar] = true;
+      const c = el("div", "rf-card");
+      c.innerHTML = `<div class="ar" dir="rtl" lang="ar">${esc(f.ar)}</div>
+        <div class="mid"><span class="fr">${esc(f.fr)}</span><span class="es">${esc(f.es)}</span></div>
+        <div class="pat-lbl">${esc(f.pat)}</div>`;
+      list.appendChild(c);
+    }
+    function placeInSlot(slotName, sl) {
+      if (!sel) { msg.className = "roots-msg center"; msg.textContent = "Primero toca una letra de abajo."; return; }
+      const L = sel.letter;
+      const idx = R.forms.findIndex((f, i) => f.put === L && f.slot === slotName && !found[i]);
+      if (idx >= 0) {
+        const f = R.forms[idx];
+        found[idx] = true;
+        sl.textContent = L; sl.classList.add("filled");
+        bubble.classList.add("win");
+        msg.className = "roots-msg good center";
+        msg.innerHTML = `✓ <b dir="rtl" lang="ar">${esc(f.ar)}</b> · <span class="fr">${esc(f.fr)}</span> — ${esc(f.es)}`;
+        addFound(f); updateCounter();
+        sel.elem.classList.remove("sel"); sel = null;
+        setTimeout(() => {
+          sl.textContent = "+"; sl.classList.remove("filled"); bubble.classList.remove("win");
+          if (!found.every(Boolean)) { msg.className = "roots-msg center"; msg.textContent = "Sigue: toca una letra y un hueco."; }
+        }, 1200);
+        if (found.every(Boolean)) finishRoot();
+      } else {
+        const already = R.forms.some(f => f.put === L && f.slot === slotName);
+        sl.classList.add("bad"); setTimeout(() => sl.classList.remove("bad"), 500);
+        msg.className = "roots-msg bad center";
+        msg.textContent = already ? "Ya la descubriste 👍" : `Ahí «${L}» no forma palabra. Prueba otro hueco.`;
+        sel.elem.classList.remove("sel"); sel = null;
+      }
+    }
+    function finishRoot() {
+      setTimeout(() => {
+        root.innerHTML = "";
+        const box = el("div", "results");
+        box.innerHTML = `<div class="res-emoji">🌱</div><h2>¡Familia completa!</h2>
+          <div class="res-score">${total} palabras</div><p>de la raíz ${esc(R.rootf)} «${esc(R.meaning)}»</p>`;
+        root.appendChild(box);
+        const l2 = el("div", "roots-found");
+        R.forms.forEach(f => {
+          const c = el("div", "rf-card");
+          c.innerHTML = `<div class="ar" dir="rtl" lang="ar">${esc(f.ar)}</div>
+            <div class="mid"><span class="fr">${esc(f.fr)}</span><span class="es">${esc(f.es)}</span></div>
+            <div class="pat-lbl">${esc(f.pat)}</div>`;
+          l2.appendChild(c);
+        });
+        root.appendChild(l2);
+        const ctr = el("div", "flash-controls");
+        const again = el("button", "btn ghost wide", "← Otra raíz");
+        again.onclick = () => reset("roots");
+        const nextR = ROOTS[ROOTS.indexOf(R) + 1];
+        if (nextR) {
+          const nb = el("button", "btn primary wide", "Siguiente raíz →");
+          nb.onclick = () => runRoots(nextR);
+          ctr.appendChild(again); ctr.appendChild(nb);
+        } else ctr.appendChild(again);
+        root.appendChild(ctr);
+      }, 1300);
+    }
+
+    updateCounter(); renderBubble(); renderTray();
+  }
+
   const GUIDE = (typeof GRAMMAR_GUIDE !== "undefined")
     ? GRAMMAR_GUIDE
     : [{ group: "Clases", desc: "", ids: GRAMMAR.map(g => g.id) }];
@@ -745,6 +900,12 @@ const App = (() => {
       const pv = el("button", "btn ghost wide g-table-btn", `📋 Ver tabla de plurales (${PLURS.length})`);
       pv.onclick = () => go("plurals");
       root.appendChild(pv);
+    }
+
+    if (id === "raiz" && ROOTS.length) {
+      const rj = el("button", "btn ghost wide g-table-btn", "🌱 Jugar con la raíz");
+      rj.onclick = () => go("roots");
+      root.appendChild(rj);
     }
 
     const i = GRAM_ORDER.indexOf(id);
