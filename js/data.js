@@ -964,6 +964,225 @@ const LESSONS = [
  * ========================================================= */
 const GRAMMAR = [
   {
+    id: "raiz",
+    title: "La raíz y los patrones (الجذر)",
+    icon: "🌱",
+    level: "A2",
+    goal: "Entender la idea más importante del árabe: casi todas las palabras salen de una raíz de 3 consonantes + un molde. Reconocerla te deja adivinar familias enteras de palabras.",
+    intro: "El árabe no se construye como el español. La mayoría de las palabras nacen de una <b>raíz (جذر)</b> de normalmente <b>3 consonantes</b> que lleva el significado base, más un <b>patrón o molde (وزن)</b> de vocales (a veces con prefijos/sufijos) que le da la función. <b>Cambia el molde, no la raíz.</b>",
+    sections: [
+      {
+        h: "La raíz lleva el significado",
+        p: "La raíz <b>ك-ت-ب (k-t-b)</b> tiene que ver con «escribir». Mira su familia de palabras:",
+        table: {
+          cols: ["Palabra", "Franco", "Significado"],
+          rows: [
+            ["<span class='ar' dir='rtl' lang='ar'>كتب</span>", "<span class='fr'>katab</span>", "escribió"],
+            ["<span class='ar' dir='rtl' lang='ar'>بيكتب</span>", "<span class='fr'>biyiktib</span>", "escribe"],
+            ["<span class='ar' dir='rtl' lang='ar'>كاتب</span>", "<span class='fr'>kaateb</span>", "escritor / escribiendo"],
+            ["<span class='ar' dir='rtl' lang='ar'>مكتوب</span>", "<span class='fr'>maktoob</span>", "escrito / carta"],
+            ["<span class='ar' dir='rtl' lang='ar'>كتاب</span>", "<span class='fr'>ketaab</span>", "libro"],
+            ["<span class='ar' dir='rtl' lang='ar'>مكتب</span>", "<span class='fr'>maktab</span>", "oficina / escritorio"],
+            ["<span class='ar' dir='rtl' lang='ar'>مكتبة</span>", "<span class='fr'>maktaba</span>", "biblioteca / librería"]
+          ]
+        },
+        note: "Fíjate: las tres consonantes <b>k-t-b</b> están SIEMPRE y en el mismo orden. Lo que cambia son las vocales y algún prefijo (م‑)."
+      },
+      {
+        h: "El molde da la función",
+        p: "El mismo molde sobre distintas raíces da palabras del mismo «tipo». Molde <b>فاعل (faa3el)</b> = «el que hace»:",
+        table: {
+          cols: ["Raíz", "faa3el", "Significado"],
+          rows: [
+            ["k-t-b", "<span class='fr'>kaateb</span>", "escritor"],
+            ["l-3-b", "<span class='fr'>laa3eb</span>", "jugador"],
+            ["s-k-n", "<span class='fr'>saaken</span>", "habitante / que vive"],
+            ["3-m-l", "<span class='fr'>3aamel</span>", "obrero / que hace"]
+          ]
+        },
+        note: "Si reconoces el molde faa3el, sabes que es «quien hace la acción», aunque no conozcas la palabra."
+      },
+      {
+        h: "Cómo «varía» la raíz",
+        p: "Las consonantes se mantienen; entre ellas se insertan vocales y afijos según el molde. Raíz <b>د-ر-س (d-r-s, «estudiar»)</b>:",
+        table: {
+          cols: ["Palabra", "Franco", "Significado"],
+          rows: [
+            ["<span class='ar' dir='rtl' lang='ar'>درس</span>", "<span class='fr'>daras</span>", "estudió"],
+            ["<span class='ar' dir='rtl' lang='ar'>بيدرس</span>", "<span class='fr'>biyedres</span>", "estudia"],
+            ["<span class='ar' dir='rtl' lang='ar'>درس</span>", "<span class='fr'>dars</span>", "lección"],
+            ["<span class='ar' dir='rtl' lang='ar'>مدرس</span>", "<span class='fr'>mudarres</span>", "profesor"],
+            ["<span class='ar' dir='rtl' lang='ar'>مدرسة</span>", "<span class='fr'>madrasa</span>", "escuela"],
+            ["<span class='ar' dir='rtl' lang='ar'>دروس</span>", "<span class='fr'>doruus</span>", "lecciones"]
+          ]
+        }
+      },
+      {
+        h: "Por qué te importa",
+        p: "Con la raíz entiendes de golpe: la <b>conjugación</b> (misma raíz, distintos moldes por persona y tiempo), los <b>plurales irregulares</b> (reordenan las vocales de la raíz), los <b>participios</b> (molde faa3el)… e incluso puedes <b>adivinar</b> palabras nuevas. Es la llave de todo el idioma.",
+        refs: [{ id: "presente" }, { id: "plural" }, { id: "participios" }]
+      }
+    ],
+    quiz: [
+      { q: "La raíz de una palabra árabe suele tener…", options: ["3 consonantes", "3 vocales", "2 letras", "una sílaba"], answer: 0, note: "La raíz típica es de 3 consonantes." },
+      { q: "¿Qué comparten katab, ketaab, maktab y kaateb?", options: ["la raíz k-t-b", "el mismo molde", "nada", "el significado exacto"], answer: 0, note: "Comparten la raíz k-t-b (escribir)." },
+      { q: "En la raíz, ¿qué se mantiene siempre?", options: ["las consonantes", "las vocales", "los prefijos", "nada"], answer: 0, note: "Las consonantes de la raíz no cambian; sí las vocales." },
+      { q: "El molde «faa3el» (كاتب, لاعب) significa…", options: ["el que hace la acción", "un lugar", "un plural", "un tiempo verbal"], answer: 0, note: "faa3el = «el que hace»." },
+      { q: "«madrasa» y «mudarres» comparten la raíz…", options: ["د-ر-س (d-r-s)", "م-د-ر", "b-t-k", "no comparten"], answer: 0, note: "Ambas vienen de d-r-s (estudiar)." },
+      { q: "Cambiar el molde cambia sobre todo…", options: ["la función gramatical", "el significado base", "la raíz", "nada"], answer: 0, note: "El molde da la función; la raíz da el significado base." },
+      { q: "La raíz de «maktaba» (biblioteca) es…", options: ["k-t-b", "m-k-t", "b-t-k", "m-t-b"], answer: 0, note: "maktaba viene de k-t-b." },
+      { q: "¿Puedes intuir el sentido de una palabra por su raíz?", options: ["Sí, la raíz da el significado base", "No, es imposible", "Solo con vocales", "Solo en plural"], answer: 0, note: "Reconocer la raíz te da el campo de significado." }
+    ]
+  },
+  {
+    id: "definido",
+    title: "Nombre definido e indefinido",
+    icon: "🎯",
+    level: "A2",
+    goal: "Distinguir cuándo un nombre es definido o indefinido — una distinción que decide reglas como si lleva اللي o cómo va la posesión.",
+    intro: "En árabe un nombre es <b>definido</b> («el/la…», algo concreto y conocido) o <b>indefinido</b> («un/una…», algo general). No existe artículo «un/una»: la indefinición es simplemente la <b>ausencia</b> de marcas de definición.",
+    sections: [
+      {
+        h: "Qué hace DEFINIDO a un nombre",
+        p: "Un nombre es definido si tiene una de estas marcas:",
+        table: {
+          cols: ["Marca", "Ejemplo", "Significado"],
+          rows: [
+            ["Artículo الـ", "<span class='ar' dir='rtl' lang='ar'>البيت</span> <span class='fr'>el-beet</span>", "la casa"],
+            ["Sufijo posesivo", "<span class='ar' dir='rtl' lang='ar'>بيتي</span> <span class='fr'>beeti</span>", "mi casa"],
+            ["إضافة (posesión)", "<span class='ar' dir='rtl' lang='ar'>بيت أحمد</span> <span class='fr'>beet a7mad</span>", "la casa de Ahmad"],
+            ["Nombre propio", "<span class='ar' dir='rtl' lang='ar'>أحمد</span> <span class='fr'>a7mad</span>", "Ahmad"],
+            ["Demostrativo", "<span class='ar' dir='rtl' lang='ar'>البيت ده</span> <span class='fr'>el-beet da</span>", "esta casa"]
+          ]
+        }
+      },
+      {
+        h: "Indefinido = sin ninguna marca",
+        p: "Si no lleva nada de lo anterior, es indefinido. No se añade «un/una».",
+        ex: [
+          { ar: "بيت", fr: "beet", es: "una casa / casa" },
+          { ar: "كتاب", fr: "ketaab", es: "un libro" },
+          { ar: "عندي عربية", fr: "3andi 3arabeyya", es: "tengo un coche" }
+        ],
+        note: "«un libro» = ketaab, no «waa7ed ketaab». El número «uno» solo se usa para enfatizar la cantidad."
+      },
+      {
+        h: "Por qué importa",
+        p: "La definición decide varias reglas que ya has visto en la guía:",
+        ex: [
+          { ar: "الراجل اللي جه", fr: "er-raagel elli geh", es: "el hombre que vino (definido → lleva اللي)" },
+          { ar: "راجل جه", fr: "raagel geh", es: "un hombre que vino (indefinido → SIN اللي)" }
+        ],
+        warn: "El relativo <b>اللي</b> solo aparece con antecedente <b>definido</b>. Con uno indefinido, se omite.",
+        refs: [{ id: "articulo" }, { id: "relativo" }, { id: "genitivo" }]
+      }
+    ],
+    quiz: [
+      { q: "«un libro» en árabe =", options: ["ketaab", "waa7ed ketaab", "el-ketaab", "ketaab waa7ed"], answer: 0, note: "No hay «un/una»: solo ketaab." },
+      { q: "¿Qué hace definido a un nombre?", options: ["الـ, posesivo, إضافة, propio o demostrativo", "solo el plural", "nada, siempre es indefinido", "el número uno"], answer: 0, note: "Cualquiera de esas marcas lo define." },
+      { q: "بيتي (mi casa) es…", options: ["definido", "indefinido", "plural", "colectivo"], answer: 0, note: "El sufijo posesivo lo hace definido." },
+      { q: "¿Existe artículo «un/una» en árabe?", options: ["No: indefinido = ausencia de marcas", "Sí, es «waa7ed»", "Sí, es الـ", "Solo en plural"], answer: 0, note: "La indefinición es la falta de marcas." },
+      { q: "«el hombre que vino» lleva اللي porque el antecedente es…", options: ["definido", "indefinido", "plural", "femenino"], answer: 0, note: "اللي pide antecedente definido." },
+      { q: "«un hombre que vino» =", options: ["raagel geh", "raagel elli geh", "er-raagel geh", "el-raagel elli geh"], answer: 0, note: "Indefinido → sin اللي: raagel geh." },
+      { q: "بيت أحمد (la casa de Ahmad) es…", options: ["definido (por la إضافة)", "indefinido", "colectivo", "dual"], answer: 0, note: "La إضافة con nombre propio lo hace definido." },
+      { q: "البيت ده es…", options: ["definido", "indefinido", "un plural", "un verbo"], answer: 0, note: "Artículo + demostrativo → definido." }
+    ]
+  },
+  {
+    id: "resumptivo",
+    title: "El pronombre de recuerdo (resumptivo)",
+    icon: "🔁",
+    level: "B1",
+    goal: "Entender el «pronombre de recuerdo»: un pronombre que retoma un nombre ya mencionado. Aparece en las relativas y en frases con tema destacado.",
+    prereq: ["definido"],
+    intro: "En árabe, cuando un nombre es el <b>objeto</b> de una frase relativa (o el tema del que se habla), se «recuerda» con un <b>pronombre</b> pegado al verbo o a la preposición. En español ese pronombre no se dice; en árabe sí. Es el <b>pronombre de recuerdo (resumptivo)</b>.",
+    sections: [
+      {
+        h: "En la frase relativa",
+        p: "«el libro que leí» → en árabe, literalmente «el libro que <b>lo</b> leí». El ‑u («lo») retoma «el libro».",
+        ex: [
+          { ar: "الكتاب اللي قريته", fr: "el-ketaab elli 2areetu", es: "el libro que leí (lit. que lo leí)" },
+          { ar: "البنت اللي شفتها", fr: "el-bent elli shoftaha", es: "la chica que vi (que la vi)" },
+          { ar: "الأكل اللي عملته", fr: "el-akl elli 3ameltu", es: "la comida que hice (que la hice)" }
+        ],
+        note: "El pronombre concuerda con el nombre: ‑u (masc.), ‑ha (fem.), ‑hom (plural)."
+      },
+      {
+        h: "Con preposición",
+        p: "Si el nombre va con preposición, el pronombre se pega a la preposición.",
+        ex: [
+          { ar: "البيت اللي ساكن فيه", fr: "el-beet elli saaken fiih", es: "la casa en la que vivo (lit. que vivo en-ella)" },
+          { ar: "الراجل اللي بتكلم معاه", fr: "er-raagel elli batkallem ma3aah", es: "el hombre con el que hablo" }
+        ]
+      },
+      {
+        h: "Cuándo NO aparece",
+        p: "Si el nombre es el <b>sujeto</b> de la relativa (el que hace la acción), no hace falta pronombre de recuerdo.",
+        ex: [
+          { ar: "الراجل اللي جه", fr: "er-raagel elli geh", es: "el hombre que vino (él es el sujeto → sin pronombre)" },
+          { ar: "الناس اللي بيشتغلو هنا", fr: "en-naas elli biyeshtaghalu hena", es: "la gente que trabaja aquí" }
+        ],
+        note: "Regla práctica: si en español dirías «que LO/LA/LES…», en árabe hace falta el pronombre; si dirías solo «que…» (sujeto), no.",
+        refs: [{ id: "relativo" }, { id: "objeto" }, { id: "definido" }]
+      }
+    ],
+    quiz: [
+      { q: "«el libro que leí» =", options: ["el-ketaab elli 2areetu", "el-ketaab elli 2areet", "ketaab elli 2areetu", "el-ketaab 2areetu"], answer: 0, note: "Con pronombre de recuerdo ‑u: 2areetu." },
+      { q: "El pronombre de recuerdo retoma…", options: ["un nombre ya mencionado", "un verbo", "una preposición sola", "nada"], answer: 0, note: "«Recuerda» al nombre antecedente." },
+      { q: "«la chica que vi» =", options: ["el-bent elli shoftaha", "el-bent elli shoft", "el-bent elli shoftu", "bent elli shoftaha"], answer: 0, note: "Femenino → ‑ha: shoftaha." },
+      { q: "Concuerda con el nombre; femenino →", options: ["‑ha", "‑u", "‑hom", "‑ak"], answer: 0, note: "‑ha para femenino." },
+      { q: "«la casa en la que vivo» =", options: ["el-beet elli saaken fiih", "el-beet elli saaken", "el-beet elli fiih saaken", "beet elli saaken fiih"], answer: 0, note: "Con preposición: … fiih (en-ella)." },
+      { q: "¿Cuándo NO hace falta el pronombre?", options: ["cuando el nombre es el sujeto de la relativa", "siempre hace falta", "nunca hace falta", "solo en plural"], answer: 0, note: "Si es el sujeto, no se recuerda." },
+      { q: "«el hombre que vino» =", options: ["er-raagel elli geh", "er-raagel elli gehu", "er-raagel elli geh-ha", "raagel elli geh"], answer: 0, note: "Sujeto → sin pronombre: geh." },
+      { q: "Regla práctica: hace falta el pronombre si en español dirías…", options: ["«que LO/LA…»", "«que…» (sujeto)", "«el/la…»", "«y…»"], answer: 0, note: "«que lo/la/les» → pronombre en árabe." }
+    ]
+  },
+  {
+    id: "nominal",
+    title: "La frase nominal (sin «ser»)",
+    icon: "🟰",
+    level: "A2",
+    goal: "Entender que en presente el árabe NO usa el verbo «ser/estar»: se juntan sujeto y predicado directamente.",
+    intro: "En presente, el árabe forma frases <b>sin verbo «ser/estar»</b>. Simplemente pones el <b>tema</b> y lo que dices de él: «ana taaleb» = «yo (soy) estudiante».",
+    sections: [
+      {
+        h: "Sujeto + predicado, sin «ser»",
+        p: "Nada de verbo en presente: se juntan directamente.",
+        ex: [
+          { ar: "أنا طالب", fr: "ana taaleb", es: "(yo) soy estudiante" },
+          { ar: "البيت كبير", fr: "el-beet kebiir", es: "la casa es grande" },
+          { ar: "هو في البيت", fr: "howwa fel-beet", es: "él está en casa" },
+          { ar: "الجو حلو", fr: "el-gaww 7elw", es: "el tiempo está bueno" }
+        ]
+      },
+      {
+        h: "El pasado y el futuro SÍ llevan كان",
+        p: "Solo fuera del presente aparece el verbo <b>كان (kaan)</b> «ser/estar».",
+        ex: [
+          { ar: "كنت تعبان", fr: "kont ta3baan", es: "estaba cansado" },
+          { ar: "هيكون كبير", fr: "haykuun kebiir", es: "será grande" }
+        ],
+        note: "Presente = sin verbo. Pasado → كان (kaan) · futuro → هيكون (haykuun)."
+      },
+      {
+        h: "El tema destacado (topicalización)",
+        p: "A veces se pone un nombre al principio como tema y se comenta con un <b>pronombre de recuerdo</b>:",
+        ex: [
+          { ar: "البيت ده، لونه أحمر", fr: "el-beet da, lonu a7mar", es: "esta casa, su color es rojo" }
+        ],
+        refs: [{ id: "haber" }, { id: "resumptivo" }]
+      }
+    ],
+    quiz: [
+      { q: "«yo soy estudiante» =", options: ["ana taaleb", "ana bakuun taaleb", "ana kont taaleb", "ana biykuun taaleb"], answer: 0, note: "Presente sin «ser»: ana taaleb." },
+      { q: "En presente, el verbo «ser/estar»…", options: ["no se dice", "es «kaan»", "es «biykuun»", "es «yekuun»"], answer: 0, note: "En presente no aparece." },
+      { q: "«la casa es grande» =", options: ["el-beet kebiir", "el-beet biykuun kebiir", "el-beet kaan kebiir", "el-beet howwa kebiir"], answer: 0, note: "Frase nominal: el-beet kebiir." },
+      { q: "«estaba cansado» (pasado) =", options: ["kont ta3baan", "ana ta3baan", "hakuun ta3baan", "bakuun ta3baan"], answer: 0, note: "Pasado → كان: kont ta3baan." },
+      { q: "El pasado de «ser» es…", options: ["كان (kaan)", "بيكون (biykuun)", "هيكون (haykuun)", "no existe"], answer: 0, note: "kaan es el pasado de «ser/estar»." },
+      { q: "«él está en casa» =", options: ["howwa fel-beet", "howwa biykuun fel-beet", "howwa kaan fel-beet", "howwa yekuun fel-beet"], answer: 0, note: "Presente sin verbo: howwa fel-beet." }
+    ]
+  },
+  {
     id: "articulo",
     title: 'El artículo "EL" (الـ)',
     icon: "📌",
@@ -2940,6 +3159,7 @@ const GRAMMAR = [
  *  ÍNDICE DE LA GUÍA — ordena las fichas como una progresión
  * ========================================================= */
 const GRAMMAR_GUIDE = [
+  { group: "0 · Conceptos básicos", desc: "Ideas clave antes de empezar: cómo se forman las palabras y distinciones que rigen toda la gramática.", ids: ["raiz", "definido", "resumptivo", "nominal"] },
   { group: "1 · Fundamentos", desc: "Las piezas para construir cualquier frase.", ids: ["pronombres", "articulo", "demostrativos", "interrogativos", "negacion", "plural", "concordancia"] },
   { group: "2 · El sistema verbal", desc: "Los tiempos y cómo pasar de uno a otro.", ids: ["presente", "pasado", "futuro", "tiempos-repaso", "imperativo", "modales", "pasivo"] },
   { group: "3 · Estructuras clave", desc: "Posesión, existencia, comparación y circunstancias.", ids: ["tener", "haber", "genitivo", "comparativo", "relativo", "cuantificadores", "adverbios", "preposiciones"] },
