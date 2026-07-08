@@ -1852,14 +1852,14 @@ const GRAMMAR = [
       }
     ],
     quiz: [
-      { q: "«no está bien» =", options: ["mesh kwayyes", "ma kwayyessh", "mafiish kwayyes", "ma kwayyes"], answer: 0, note: "mesh niega adjetivos: mesh kwayyes." },
-      { q: "«no escribí» =", options: ["ma katabtesh", "mesh katabt", "mafiish katabt", "mesh katabtesh"], answer: 0, note: "Verbo en pasado → ma…sh: ma katabtesh." },
-      { q: "«no iré» =", options: ["mesh harou7", "ma harou7sh", "ma harou7", "mafiish harou7"], answer: 0, note: "El futuro se niega con mesh: mesh harou7." },
-      { q: "«no hay problema» =", options: ["mafiish mushkila", "mesh mushkila", "ma mushkilash", "wala mushkila"], answer: 0, note: "«no hay» = mafiish." },
-      { q: "«no me gusta» =", options: ["ma ba7ebbesh", "mesh ba7ebb", "mafiish 7obb", "mesh a7ebb"], answer: 0, note: "Verbo en presente → ma…sh: ma ba7ebbesh." },
-      { q: "«no soy yo» =", options: ["mesh ana", "ma anash", "mafiish ana", "ana mesh"], answer: 0, note: "Frase sin verbo → mesh: mesh ana." },
+      { q: "«no está bien» =", options: ["mesh kwayyes", "ma kwayyessh", "mafiish kwayyes", "ma kwayyes"], ar: ["مش كويس", "ما كويسش", "مفيش كويس", "ما كويس"], answer: 0, note: "mesh niega adjetivos: mesh kwayyes." },
+      { q: "«no escribí» =", options: ["ma katabtesh", "mesh katabt", "mafiish katabt", "mesh katabtesh"], ar: ["ما كتبتش", "مش كتبت", "مفيش كتبت", "مش كتبتش"], answer: 0, note: "Verbo en pasado → ma…sh: ma katabtesh." },
+      { q: "«no iré» =", options: ["mesh harou7", "ma harou7sh", "ma harou7", "mafiish harou7"], ar: ["مش هروح", "ما هروحش", "ما هروح", "مفيش هروح"], answer: 0, note: "El futuro se niega con mesh: mesh harou7." },
+      { q: "«no hay problema» =", options: ["mafiish mushkila", "mesh mushkila", "ma mushkilash", "wala mushkila"], ar: ["مفيش مشكلة", "مش مشكلة", "ما مشكلاش", "ولا مشكلة"], answer: 0, note: "«no hay» = mafiish." },
+      { q: "«no me gusta» =", options: ["ma ba7ebbesh", "mesh ba7ebb", "mafiish 7obb", "mesh a7ebb"], ar: ["ما بحبش", "مش بحب", "مفيش حب", "مش أحب"], answer: 0, note: "Verbo en presente → ma…sh: ma ba7ebbesh." },
+      { q: "«no soy yo» =", options: ["mesh ana", "ma anash", "mafiish ana", "ana mesh"], ar: ["مش أنا", "ما أناش", "مفيش أنا", "أنا مش"], answer: 0, note: "Frase sin verbo → mesh: mesh ana." },
       { q: "¿Qué niega «mesh»?", options: ["nombres, adjetivos y el futuro", "solo el pasado", "solo el presente", "los números"], answer: 0, note: "mesh niega lo no-verbal y el futuro; ma…sh niega verbos en pasado/presente." },
-      { q: "«no hay nadie» =", options: ["mafiish 7add", "mesh 7add", "ma 7addsh", "wala 7add"], answer: 0, note: "mafiish 7add = no hay nadie." }
+      { q: "«no hay nadie» =", options: ["mafiish 7add", "mesh 7add", "ma 7addsh", "wala 7add"], ar: ["مفيش حد", "مش حد", "ما حدش", "ولا حد"], answer: 0, note: "mafiish 7add = no hay nadie." }
     ]
   },
 
@@ -1906,14 +1906,14 @@ const GRAMMAR = [
       }
     ],
     quiz: [
-      { q: "«¿cómo te llamas?» (orden egipcio) =", options: ["esmak eh?", "eh esmak?", "ezzaay esmak?", "esmak meen?"], answer: 0, note: "La interrogativa va al final: esmak eh?" },
+      { q: "«¿cómo te llamas?» (orden egipcio) =", options: ["esmak eh?", "eh esmak?", "ezzaay esmak?", "esmak meen?"], ar: ["اسمك إيه؟", "إيه اسمك؟", "إزاي اسمك؟", "اسمك مين؟"], answer: 0, note: "La interrogativa va al final: esmak eh?" },
       { q: "«¿qué haces?» =", options: ["bti3mel eh?", "eh bti3mel?", "bti3mel feen?", "eh bta3mel?"], answer: 0, note: "eh (qué) al final: bti3mel eh?" },
-      { q: "«¿a dónde vas?» =", options: ["raaye7 feen?", "feen raaye7?", "raaye7 emta?", "feen enta?"], answer: 0, note: "feen (dónde) al final: raaye7 feen?" },
-      { q: "«por qué» =", options: ["leeh", "ezzaay", "feen", "emta"], answer: 0, note: "leeh = por qué; ezzaay = cómo." },
-      { q: "«cuándo» =", options: ["emta", "feen", "meen", "kaam"], answer: 0, note: "emta = cuándo." },
-      { q: "«cómo» =", options: ["ezzaay", "leeh", "kaam", "anhi"], answer: 0, note: "ezzaay = cómo." },
+      { q: "«¿a dónde vas?» =", options: ["raaye7 feen?", "feen raaye7?", "raaye7 emta?", "feen enta?"], ar: ["رايح فين؟", "فين رايح؟", "رايح إمتى؟", "فين إنت؟"], answer: 0, note: "feen (dónde) al final: raaye7 feen?" },
+      { q: "«por qué» =", options: ["leeh", "ezzaay", "feen", "emta"], ar: ["ليه", "إزاي", "فين", "إمتى"], answer: 0, note: "leeh = por qué; ezzaay = cómo." },
+      { q: "«cuándo» =", options: ["emta", "feen", "meen", "kaam"], ar: ["إمتى", "فين", "مين", "كام"], answer: 0, note: "emta = cuándo." },
+      { q: "«cómo» =", options: ["ezzaay", "leeh", "kaam", "anhi"], ar: ["إزاي", "ليه", "كام", "أنهي"], answer: 0, note: "ezzaay = cómo." },
       { q: "¿Dónde suele ir la palabra interrogativa?", options: ["al final de la frase", "al principio", "en medio", "da igual"], answer: 0, note: "Regla clave del egipcio: al final." },
-      { q: "«¿cuánto cuesta esto?» =", options: ["da bekaam?", "da kaam?", "bekaam da fiih?", "da feen?"], answer: 0, note: "Precio → bekaam: da bekaam?" }
+      { q: "«¿cuánto cuesta esto?» =", options: ["da bekaam?", "da kaam?", "bekaam da fiih?", "da feen?"], ar: ["ده بكام؟", "ده كام؟", "بكام ده فيه؟", "ده فين؟"], answer: 0, note: "Precio → bekaam: da bekaam?" }
     ]
   },
 
@@ -1955,13 +1955,13 @@ const GRAMMAR = [
       }
     ],
     quiz: [
-      { q: "«este libro» =", options: ["el-ketaab da", "da el-ketaab", "da ketaab", "el-ketaab di"], answer: 0, note: "El demostrativo va DETRÁS del sustantivo definido." },
-      { q: "«esta chica» =", options: ["el-bent di", "di el-bent", "el-bent da", "bent di"], answer: 0, note: "Femenino → di, detrás: el-bent di." },
-      { q: "«esta» (f) =", options: ["di", "da", "dol", "deh"], answer: 0, note: "di = femenino; da = masculino." },
-      { q: "«estos niños» =", options: ["el-3iyaal dol", "dol el-3iyaal", "el-3iyaal da", "3iyaal dol"], answer: 0, note: "Plural → dol, detrás." },
-      { q: "«esto es un libro» =", options: ["da ketaab", "el-ketaab da", "da el-ketaab", "ketaab da"], answer: 0, note: "Sin artículo = predicado: da ketaab." },
+      { q: "«este libro» =", options: ["el-ketaab da", "da el-ketaab", "da ketaab", "el-ketaab di"], ar: ["الكتاب ده", "ده الكتاب", "ده كتاب", "الكتاب دي"], answer: 0, note: "El demostrativo va DETRÁS del sustantivo definido." },
+      { q: "«esta chica» =", options: ["el-bent di", "di el-bent", "el-bent da", "bent di"], ar: ["البنت دي", "دي البنت", "البنت ده", "بنت دي"], answer: 0, note: "Femenino → di, detrás: el-bent di." },
+      { q: "«esta» (f) =", options: ["di", "da", "dol", "deh"], ar: ["دي", "ده", "دول", "ديه"], answer: 0, note: "di = femenino; da = masculino." },
+      { q: "«estos niños» =", options: ["el-3iyaal dol", "dol el-3iyaal", "el-3iyaal da", "3iyaal dol"], ar: ["العيال دول", "دول العيال", "العيال ده", "عيال دول"], answer: 0, note: "Plural → dol, detrás." },
+      { q: "«esto es un libro» =", options: ["da ketaab", "el-ketaab da", "da el-ketaab", "ketaab da"], ar: ["ده كتاب", "الكتاب ده", "ده الكتاب", "كتاب ده"], answer: 0, note: "Sin artículo = predicado: da ketaab." },
       { q: "Con un sustantivo, el demostrativo va…", options: ["detrás", "delante", "en medio", "no importa"], answer: 0, note: "Al contrario que en español: detrás." },
-      { q: "«así / de esta manera» =", options: ["keda", "da", "di", "dol"], answer: 0, note: "keda = así." }
+      { q: "«así / de esta manera» =", options: ["keda", "da", "di", "dol"], ar: ["كده", "ده", "دي", "دول"], answer: 0, note: "keda = así." }
     ]
   },
 

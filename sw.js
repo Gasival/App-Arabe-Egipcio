@@ -1,5 +1,5 @@
 /* Service worker — network-first (siempre fresco online, offline por caché) */
-const CACHE = "masri-v29";
+const CACHE = "masri-v30";
 const ASSETS = [
   "./",
   "./index.html",

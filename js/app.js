@@ -398,6 +398,27 @@ const App = (() => {
     return grid;
   }
 
+  /* Distractores inteligentes: prefiere misma lección + franco parecido (no aleatorio) */
+  function distractItems(it, pool, n) {
+    const fi = normFranco(it.fr);
+    const scored = pool
+      .filter(x => x.ar !== it.ar && x.es !== it.es)
+      .map(x => {
+        let s = 0;
+        if (x.lesson && x.lesson === it.lesson) s += 5;               // mismo tema
+        s += Math.max(0, 7 - levenshtein(fi, normFranco(x.fr)));      // suena parecido
+        return { x, s: s + Math.random() };                          // jitter para variar
+      })
+      .sort((a, b) => b.s - a.s);
+    const out = [], seen = new Set([it.es]);
+    for (const o of scored) {
+      if (seen.has(o.x.es)) continue;
+      out.push(o.x); seen.add(o.x.es);
+      if (out.length >= n) break;
+    }
+    return out;
+  }
+
   function renderChoiceArEs(it, pool, onAnswer) {
     const q = el("div", "qhead");
     q.innerHTML = `<p class="qlabel">¿Qué significa?</p>`;
@@ -409,7 +430,7 @@ const App = (() => {
     root.appendChild(q);
     speak(it.ar);
 
-    const distract = sample(pool.filter(x => x.es !== it.es), 3).map(x => x.es);
+    const distract = distractItems(it, pool, 3).map(x => x.es);
     const opts = shuffle([it.es, ...distract]);
     root.appendChild(choiceGrid(opts, it.es, o => esc(o), ok => { frEl.classList.remove("fr-hidden"); onAnswer(ok); }));
   }
@@ -419,7 +440,7 @@ const App = (() => {
     q.innerHTML = `<p class="qlabel">Elige la palabra en árabe</p><div class="big-es">${esc(it.es)}</div>`;
     root.appendChild(q);
 
-    const distract = sample(pool.filter(x => x.ar !== it.ar), 3);
+    const distract = distractItems(it, pool, 3);
     const opts = shuffle([it, ...distract]);
     const grid = el("div", "options");
     opts.forEach(o => {
@@ -1015,16 +1036,19 @@ const App = (() => {
       q.innerHTML = `<p class="qlabel">Elige la opción correcta</p><div class="g-q">${item.q}</div>`;
       root.appendChild(q);
 
-      const opts = shuffle(item.options.map((o, i) => ({ o, ok: i === item.answer })));
+      const opts = shuffle(item.options.map((o, i) => ({ o, ar: item.ar ? item.ar[i] : null, ok: i === item.answer })));
       const grid = el("div", "options one-col");
       opts.forEach(op => {
-        const b = el("button", "opt", esc(op.o));
+        const b = el("button", "opt" + (op.ar ? " opt-ar" : ""));
+        if (op.ar) b.innerHTML = `<span class="ar" dir="rtl" lang="ar">${esc(op.ar)}</span><span class="fr fr-hidden">${esc(op.o)}</span>`;
+        else b.textContent = op.o;
         b.dataset.ok = op.ok ? "1" : "0";
         b.onclick = () => {
           if (grid.classList.contains("locked")) return;
           grid.classList.add("locked");
           b.classList.add(op.ok ? "good" : "bad");
           if (!op.ok) [...grid.children].find(x => x.dataset.ok === "1")?.classList.add("good");
+          grid.querySelectorAll(".fr-hidden").forEach(x => x.classList.remove("fr-hidden")); // revela franco al responder
           const note = el("div", "g-note " + (op.ok ? "good" : "bad"), (op.ok ? "✓ " : "✗ ") + esc(item.note));
           root.appendChild(note);
           progress.answered++;
