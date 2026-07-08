@@ -138,12 +138,17 @@ const App = (() => {
    * ========================================================= */
   let stack = ["home"];
   const routes = {};
+  // Sub-flujos internos (tests, huecos, resultados…) reemplazan el contenido sin
+  // apilar en el stack. Mientras uno está activo, registran aquí su acción de "atrás"
+  // para que el botón vuelva a la pantalla anterior real y no salte de nivel.
+  let backHandler = null;
 
   function go(route, params) {
     stack.push(JSON.stringify({ route, params }));
     render(route, params);
   }
   function back() {
+    if (backHandler) { const h = backHandler; backHandler = null; h(); return; }
     if (stack.length > 1) {
       stack.pop();
       const prev = stack[stack.length - 1];
@@ -153,9 +158,13 @@ const App = (() => {
   }
   function reset(route) { stack = [route]; render(route, null, true); }
 
+  // Registra una acción de "atrás" para el sub-flujo actual y muestra el botón.
+  function setBackHandler(fn) { backHandler = fn; backBtn.hidden = false; }
+
   function render(route, params, isBack) {
     root.innerHTML = "";
     root.scrollTop = 0;
+    backHandler = null;
     const fn = routes[route] || routes.home;
     backBtn.hidden = stack.length <= 1;
     fn(params || {});
@@ -605,7 +614,7 @@ const App = (() => {
   }
 
   /* ---------- RESULTADOS ---------- */
-  function showResults(score, total, onAgain, unit, isMatch) {
+  function showResults(score, total, onAgain, unit, isMatch, next) {
     root.innerHTML = "";
     const pct = isMatch ? 100 : Math.round((score / total) * 100);
     const emoji = pct >= 80 ? "🎉" : pct >= 50 ? "👍" : "💪";
@@ -617,7 +626,13 @@ const App = (() => {
       <p>${isMatch ? "en " + total + " " + (unit || "intentos") : pct + "% de aciertos"}</p>`;
     root.appendChild(box);
     const ctr = el("div", "flash-controls");
-    const again = el("button", "btn primary wide", "↻ Otra vez");
+    // Botón para avanzar al siguiente apartado (p. ej. siguiente ficha de gramática).
+    if (next && next.fn) {
+      const nx = el("button", "btn primary wide", next.label || "Siguiente ›");
+      nx.onclick = next.fn;
+      ctr.appendChild(nx);
+    }
+    const again = el("button", (next && next.fn ? "btn ghost wide" : "btn primary wide"), "↻ Otra vez");
     const home = el("button", "btn ghost wide", "Inicio");
     again.onclick = onAgain;
     home.onclick = () => reset("home");
@@ -1014,6 +1029,8 @@ const App = (() => {
     const quiz = shuffle(g.quiz);
     let idx = 0, correct = 0;
     titleEl.querySelector("span").textContent = "Gramática · práctica";
+    // Atrás vuelve a la ficha (no a la lista): re-renderiza el tope del stack.
+    setBackHandler(() => render("grammarLesson", { id: g.id }, true));
 
     function finish() {
       progress.sessions++;
@@ -1021,7 +1038,12 @@ const App = (() => {
       const prev = progress.grammar[g.id] || { best: 0 };
       progress.grammar[g.id] = { best: Math.max(prev.best || 0, correct), total: quiz.length };
       saveProgress();
-      showResults(correct, quiz.length, () => runGrammarQuiz(g));
+      const i = GRAM_ORDER.indexOf(g.id);
+      const nextId = (i >= 0 && i < GRAM_ORDER.length - 1) ? GRAM_ORDER[i + 1] : null;
+      const next = nextId
+        ? { label: `Siguiente ficha: ${grammarTitle(nextId)} ›`, fn: () => go("grammarLesson", { id: nextId }) }
+        : null;
+      showResults(correct, quiz.length, () => runGrammarQuiz(g), null, false, next);
     }
     function next() {
       if (idx >= quiz.length) return finish();
@@ -1211,7 +1233,7 @@ const App = (() => {
   const CLOZES = (typeof CLOZE !== "undefined") ? CLOZE : [];
   const DRILLS = (typeof GRAMMAR_DRILLS !== "undefined") ? GRAMMAR_DRILLS : {};
   function runGrammarDrill(g) {
-    runCloze({ title: g.title + " · frases", items: DRILLS[g.id] });
+    runCloze({ title: g.title + " · frases", items: DRILLS[g.id] }, () => render("grammarLesson", { id: g.id }, true));
   }
 
   routes.cloze = () => {
@@ -1233,16 +1255,17 @@ const App = (() => {
         <span class="row-tx"><b>${esc(c.title)} <em class="lvl">${c.level}</em></b>
           <i>${c.items.length} huecos</i></span>
         <span class="row-go">›</span>`;
-      row.onclick = () => runCloze(c);
+      row.onclick = () => runCloze(c, () => render("cloze", null, true));
       list.appendChild(row);
     });
     root.appendChild(list);
   };
 
-  function runCloze(coll) {
+  function runCloze(coll, onBack) {
     const quiz = shuffle(coll.items);
     let idx = 0, correct = 0;
     titleEl.querySelector("span").textContent = coll.title;
+    if (onBack) setBackHandler(onBack);
 
     function finish() {
       progress.sessions++; saveProgress();
