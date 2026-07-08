@@ -2207,21 +2207,21 @@ const GRAMMAR = [
       }
     ],
     quiz: [
-      { q: "Plural de كتاب (libro) =", options: ["kotob", "ketabaat", "kitaab", "ketabiin"], answer: 0, note: "Patrón fu3uul: ketaab → kotob." },
-      { q: "Plural de بنت (chica) =", options: ["banaat", "bentaat", "banaatiin", "benaat"], answer: 0, note: "Irregular: bent → banaat." },
-      { q: "«coches» (de 3arabeyya) =", options: ["3arabeyyaat", "3arabeyyiin", "3araayeb", "3arabaat"], answer: 0, note: "Femenino regular ‑aat: 3arabeyyaat." },
-      { q: "Plural de ولد (niño) =", options: ["awlaad", "weladaat", "awladiin", "wilaad"], answer: 0, note: "Patrón af3aal: walad → awlaad." },
-      { q: "Plural de مدرس (profesor) =", options: ["mudarrisiin", "mudarrisaat", "madaares", "mudarresa"], answer: 0, note: "Persona → ‑iin: mudarrisiin." },
-      { q: "Plural de بيت (casa) =", options: ["beyuut", "beetaat", "abyaat", "beyutiin"], answer: 0, note: "Patrón fu3uul: beet → beyuut." },
+      { q: "Plural de كتاب (libro) =", options: ["kotob", "ketabaat", "kitaab", "ketabiin"], ar: ["كتب", "كتابات", "كتاب", "كتابين"], answer: 0, note: "Patrón fu3uul: ketaab → kotob." },
+      { q: "Plural de بنت (chica) =", options: ["banaat", "bentaat", "banaatiin", "benaat"], ar: ["بنات", "بنتات", "بناتين", "بينات"], answer: 0, note: "Irregular: bent → banaat." },
+      { q: "«coches» (de 3arabeyya) =", options: ["3arabeyyaat", "3arabeyyiin", "3araayeb", "3arabaat"], ar: ["عربيات", "عربيين", "عرايب", "عربات"], answer: 0, note: "Femenino regular ‑aat: 3arabeyyaat." },
+      { q: "Plural de ولد (niño) =", options: ["awlaad", "weladaat", "awladiin", "wilaad"], ar: ["أولاد", "ولدات", "أولادين", "ولاد"], answer: 0, note: "Patrón af3aal: walad → awlaad." },
+      { q: "Plural de مدرس (profesor) =", options: ["mudarrisiin", "mudarrisaat", "madaares", "mudarresa"], ar: ["مدرسين", "مدرسات", "مدارس", "مدرسة"], answer: 0, note: "Persona → ‑iin: mudarrisiin." },
+      { q: "Plural de بيت (casa) =", options: ["beyuut", "beetaat", "abyaat", "beyutiin"], ar: ["بيوت", "بيتات", "أبيات", "بيوتين"], answer: 0, note: "Patrón fu3uul: beet → beyuut." },
       { q: "Plural de يوم (día) =", options: ["ayyaam", "yomaat", "ayaam", "yowuum"], answer: 0, note: "Patrón af3aal: yoom → ayyaam." },
-      { q: "Plural de لون (color) =", options: ["alwaan", "lonaat", "alwaaniin", "leween"], answer: 0, note: "Patrón af3aal: loon → alwaan." },
-      { q: "Plural de كلب (perro) =", options: ["kilaab", "kalbaat", "kloob", "aklaab"], answer: 0, note: "Patrón fi3aal: kalb → kilaab." },
-      { q: "Plural de مكتب (oficina) =", options: ["makaateb", "maktabaat", "makatiib", "maktabiin"], answer: 0, note: "Palabra larga → mafaa3el: makaateb." },
-      { q: "Plural de مفتاح (llave) =", options: ["mafatii7", "moftaa7aat", "mafaate7", "maftu7iin"], answer: 0, note: "mafaa3iil: moftaa7 → mafatii7." },
+      { q: "Plural de لون (color) =", options: ["alwaan", "lonaat", "alwaaniin", "leween"], ar: ["ألوان", "لونات", "ألوانين", "ليوين"], answer: 0, note: "Patrón af3aal: loon → alwaan." },
+      { q: "Plural de كلب (perro) =", options: ["kilaab", "kalbaat", "kloob", "aklaab"], ar: ["كلاب", "كلبات", "كلوب", "أكلاب"], answer: 0, note: "Patrón fi3aal: kalb → kilaab." },
+      { q: "Plural de مكتب (oficina) =", options: ["makaateb", "maktabaat", "makatiib", "maktabiin"], ar: ["مكاتب", "مكتبات", "مكاتيب", "مكتبين"], answer: 0, note: "Palabra larga → mafaa3el: makaateb." },
+      { q: "Plural de مفتاح (llave) =", options: ["mafatii7", "moftaa7aat", "mafaate7", "maftu7iin"], ar: ["مفاتيح", "مفتاحات", "مفاتح", "مفتوحين"], answer: 0, note: "mafaa3iil: moftaa7 → mafatii7." },
       { q: "Plural de ست (señora) =", options: ["settaat", "sittiin", "asaat", "setaat"], answer: 0, note: "Irregular frecuente: sett → settaat." },
       { q: "Los plurales de cosas concuerdan en…", options: ["femenino singular", "masculino plural", "masculino singular", "femenino plural"], answer: 0, note: "Cosas en plural → adjetivo femenino singular." },
-      { q: "«los libros son caros» =", options: ["el-kotob ghalya", "el-kotob ghalyiin", "el-kotob ghaali", "el-kotob ghalyaat"], answer: 0, note: "Cosas → femenino singular: ghalya." },
-      { q: "«hombres» (de raagel) =", options: ["riggaala", "raagliin", "rigaalaat", "ruggaal"], answer: 0, note: "fi3aal irregular: raagel → riggaala." }
+      { q: "«los libros son caros» =", options: ["el-kotob ghalya", "el-kotob ghalyiin", "el-kotob ghaali", "el-kotob ghalyaat"], ar: ["الكتب غالية", "الكتب غاليين", "الكتب غالي", "الكتب غاليات"], answer: 0, note: "Cosas → femenino singular: ghalya." },
+      { q: "«hombres» (de raagel) =", options: ["riggaala", "raagliin", "rigaalaat", "ruggaal"], ar: ["رجالة", "راجلين", "رجالات", "رجال"], answer: 0, note: "fi3aal irregular: raagel → riggaala." }
     ]
   },
 
@@ -2314,13 +2314,13 @@ const GRAMMAR = [
       }
     ],
     quiz: [
-      { q: "Comparativo de كبير (grande) =", options: ["akbar", "kebiir", "akbeer", "kbaar"], answer: 0, note: "Patrón af3al: kebiir → akbar." },
+      { q: "Comparativo de كبير (grande) =", options: ["akbar", "kebiir", "akbeer", "kbaar"], ar: ["أكبر", "كبير", "أكبير", "كبار"], answer: 0, note: "Patrón af3al: kebiir → akbar." },
       { q: "«mejor» (de kwayyes) =", options: ["a7san", "akwas", "kwayyes awi", "a7ssan"], answer: 0, note: "Irregular útil: kwayyes → a7san." },
-      { q: "«más grande que» =", options: ["akbar men", "akbar fi", "akbar le", "akbar 3an"], answer: 0, note: "«que» = من (men)." },
-      { q: "«más pequeño» (de soghayyar) =", options: ["asghar", "soghayyar aktar", "asghaar", "soghar"], answer: 0, note: "soghayyar → asghar." },
-      { q: "«la ciudad más grande» =", options: ["akbar madiina", "madiina akbar", "el-madiina akbar", "madiina el-akbar"], answer: 0, note: "Superlativo = af3al + nombre: akbar madiina." },
-      { q: "«soy más alto que tú» =", options: ["ana atwal mennak", "ana tawiil mennak", "ana atwal fiik", "ana atwal 3annak"], answer: 0, note: "atwal + men + ‑ak = atwal mennak." },
-      { q: "«lo mejor» =", options: ["a7san 7aaga", "7aaga a7san", "el-7aaga a7san", "a7san el-7aaga"], answer: 0, note: "af3al + nombre: a7san 7aaga." }
+      { q: "«más grande que» =", options: ["akbar men", "akbar fi", "akbar le", "akbar 3an"], ar: ["أكبر من", "أكبر في", "أكبر لـ", "أكبر عن"], answer: 0, note: "«que» = من (men)." },
+      { q: "«más pequeño» (de soghayyar) =", options: ["asghar", "soghayyar aktar", "asghaar", "soghar"], ar: ["أصغر", "صغير أكتر", "أصغار", "صغر"], answer: 0, note: "soghayyar → asghar." },
+      { q: "«la ciudad más grande» =", options: ["akbar madiina", "madiina akbar", "el-madiina akbar", "madiina el-akbar"], ar: ["أكبر مدينة", "مدينة أكبر", "المدينة أكبر", "مدينة الأكبر"], answer: 0, note: "Superlativo = af3al + nombre: akbar madiina." },
+      { q: "«soy más alto que tú» =", options: ["ana atwal mennak", "ana tawiil mennak", "ana atwal fiik", "ana atwal 3annak"], ar: ["أنا أطول منك", "أنا طويل منك", "أنا أطول فيك", "أنا أطول عنك"], answer: 0, note: "atwal + men + ‑ak = atwal mennak." },
+      { q: "«lo mejor» =", options: ["a7san 7aaga", "7aaga a7san", "el-7aaga a7san", "a7san el-7aaga"], ar: ["أحسن حاجة", "حاجة أحسن", "الحاجة أحسن", "أحسن الحاجة"], answer: 0, note: "af3al + nombre: a7san 7aaga." }
     ]
   },
 
@@ -2689,15 +2689,15 @@ const GRAMMAR = [
       }
     ],
     quiz: [
-      { q: "«¿qué hora es?» =", options: ["es-saa3a kaam?", "kaam es-saa3a?", "es-saa3a feen?", "kaam saa3a?"], answer: 0, note: "Interrogativo al final: es-saa3a kaam?" },
-      { q: "«y media» =", options: ["we-noss", "we-rob3", "we-telt", "illa noss"], answer: 0, note: "noss = mitad." },
+      { q: "«¿qué hora es?» =", options: ["es-saa3a kaam?", "kaam es-saa3a?", "es-saa3a feen?", "kaam saa3a?"], ar: ["الساعة كام؟", "كام الساعة؟", "الساعة فين؟", "كام ساعة؟"], answer: 0, note: "Interrogativo al final: es-saa3a kaam?" },
+      { q: "«y media» =", options: ["we-noss", "we-rob3", "we-telt", "illa noss"], ar: ["ونص", "وربع", "وتلت", "إلا نص"], answer: 0, note: "noss = mitad." },
       { q: "El «tercio» (telt) equivale a…", options: ["20 minutos", "30 minutos", "15 minutos", "10 minutos"], answer: 0, note: "telt = un tercio de hora = 20 min." },
-      { q: "«las 3 y media» =", options: ["es-saa3a talaata we-noss", "es-saa3a talaata we-rob3", "es-saa3a talaata illa noss", "es-saa3a talaata we-telt"], answer: 0, note: "talaata we-noss." },
-      { q: "Para restar minutos se usa…", options: ["illa (menos)", "we (y)", "naa2es", "min"], answer: 0, note: "illa = menos; we = y." },
-      { q: "«las 5 menos 20» =", options: ["khamsa illa telt", "khamsa illa noss", "khamsa we-telt", "khamsa illa rob3"], answer: 0, note: "menos 20 = illa telt." },
-      { q: "«por la noche» =", options: ["bel-leel", "es-sob7", "ed-dohr", "ba3d ed-dohr"], answer: 0, note: "bel-leel = de noche." },
-      { q: "«y cuarto» =", options: ["we-rob3", "we-telt", "illa rob3", "we-noss"], answer: 0, note: "rob3 = cuarto." },
-      { q: "«las 2 y cuarto» =", options: ["itneen we-rob3", "itneen illa rob3", "itneen we-telt", "itneen we-noss"], answer: 0, note: "itneen we-rob3." }
+      { q: "«las 3 y media» =", options: ["es-saa3a talaata we-noss", "es-saa3a talaata we-rob3", "es-saa3a talaata illa noss", "es-saa3a talaata we-telt"], ar: ["الساعة تلاتة ونص", "الساعة تلاتة وربع", "الساعة تلاتة إلا نص", "الساعة تلاتة وتلت"], answer: 0, note: "talaata we-noss." },
+      { q: "Para restar minutos se usa…", options: ["illa (menos)", "we (y)", "naa2es", "min"], ar: ["إلا", "و", "ناقص", "من"], answer: 0, note: "illa = menos; we = y." },
+      { q: "«las 5 menos 20» =", options: ["khamsa illa telt", "khamsa illa noss", "khamsa we-telt", "khamsa illa rob3"], ar: ["خمسة إلا تلت", "خمسة إلا نص", "خمسة وتلت", "خمسة إلا ربع"], answer: 0, note: "menos 20 = illa telt." },
+      { q: "«por la noche» =", options: ["bel-leel", "es-sob7", "ed-dohr", "ba3d ed-dohr"], ar: ["بالليل", "الصبح", "الضهر", "بعد الضهر"], answer: 0, note: "bel-leel = de noche." },
+      { q: "«y cuarto» =", options: ["we-rob3", "we-telt", "illa rob3", "we-noss"], ar: ["وربع", "وتلت", "إلا ربع", "ونص"], answer: 0, note: "rob3 = cuarto." },
+      { q: "«las 2 y cuarto» =", options: ["itneen we-rob3", "itneen illa rob3", "itneen we-telt", "itneen we-noss"], ar: ["اتنين وربع", "اتنين إلا ربع", "اتنين وتلت", "اتنين ونص"], answer: 0, note: "itneen we-rob3." }
     ]
   },
 
@@ -3010,13 +3010,13 @@ const GRAMMAR = [
       }
     ],
     quiz: [
-      { q: "«primero» =", options: ["awwel", "waa7ed", "aakher", "taani"], answer: 0, note: "1º = awwel (va delante)." },
-      { q: "«segundo» =", options: ["taani", "itneen", "taalet", "saades"], answer: 0, note: "2º = taani." },
-      { q: "«tercero» =", options: ["taalet", "talaata", "raabe3", "taase3"], answer: 0, note: "3º = taalet." },
-      { q: "«la primera vez» =", options: ["awwel marra", "el-marra el-awwel", "marra awwel", "el-marra awwel"], answer: 0, note: "awwel va DELANTE: awwel marra." },
-      { q: "«la segunda vez» =", options: ["el-marra et-tanya", "el-marra taani", "tanya marra", "et-tanya marra"], answer: 0, note: "Detrás y en femenino: et-tanya." },
-      { q: "«último» =", options: ["aakher", "3aasher", "awwel", "taase3"], answer: 0, note: "aakher = último; 3aasher = décimo." },
-      { q: "«décimo» =", options: ["3aasher", "3ashara", "taase3", "3aashra"], answer: 0, note: "10º = 3aasher." }
+      { q: "«primero» =", options: ["awwel", "waa7ed", "aakher", "taani"], ar: ["أول", "واحد", "آخر", "تاني"], answer: 0, note: "1º = awwel (va delante)." },
+      { q: "«segundo» =", options: ["taani", "itneen", "taalet", "saades"], ar: ["تاني", "اتنين", "تالت", "سادس"], answer: 0, note: "2º = taani." },
+      { q: "«tercero» =", options: ["taalet", "talaata", "raabe3", "taase3"], ar: ["تالت", "تلاتة", "رابع", "تاسع"], answer: 0, note: "3º = taalet." },
+      { q: "«la primera vez» =", options: ["awwel marra", "el-marra el-awwel", "marra awwel", "el-marra awwel"], ar: ["أول مرة", "المرة الأول", "مرة أول", "المرة أول"], answer: 0, note: "awwel va DELANTE: awwel marra." },
+      { q: "«la segunda vez» =", options: ["el-marra et-tanya", "el-marra taani", "tanya marra", "et-tanya marra"], ar: ["المرة التانية", "المرة تاني", "تانية مرة", "التانية مرة"], answer: 0, note: "Detrás y en femenino: et-tanya." },
+      { q: "«último» =", options: ["aakher", "3aasher", "awwel", "taase3"], ar: ["آخر", "عاشر", "أول", "تاسع"], answer: 0, note: "aakher = último; 3aasher = décimo." },
+      { q: "«décimo» =", options: ["3aasher", "3ashara", "taase3", "3aashra"], ar: ["عاشر", "عشرة", "تاسع", "عاشرة"], answer: 0, note: "10º = 3aasher." }
     ]
   },
 
@@ -3124,14 +3124,14 @@ const GRAMMAR = [
       }
     ],
     quiz: [
-      { q: "«cada día» =", options: ["kol yoom", "kol el-yoom", "ba3d yoom", "kaam yoom"], answer: 0, note: "kol + indefinido = cada: kol yoom." },
-      { q: "«todo el día» =", options: ["kol el-yoom", "kol yoom", "noss el-yoom", "mo3zam yoom"], answer: 0, note: "kol + definido = todo: kol el-yoom." },
+      { q: "«cada día» =", options: ["kol yoom", "kol el-yoom", "ba3d yoom", "kaam yoom"], ar: ["كل يوم", "كل اليوم", "بعض يوم", "كام يوم"], answer: 0, note: "kol + indefinido = cada: kol yoom." },
+      { q: "«todo el día» =", options: ["kol el-yoom", "kol yoom", "noss el-yoom", "mo3zam yoom"], ar: ["كل اليوم", "كل يوم", "نص اليوم", "معظم يوم"], answer: 0, note: "kol + definido = todo: kol el-yoom." },
       { q: "kol + nombre indefinido singular significa…", options: ["cada", "todo", "algunos", "medio"], answer: 0, note: "kol yoom = cada día." },
-      { q: "«algunas personas» =", options: ["ba3d en-naas", "kol en-naas", "shwayyet naas", "kaam naas"], answer: 0, note: "ba3d = algunos." },
-      { q: "«un poco de agua» =", options: ["shwayyet mayya", "keteer mayya", "kol mayya", "ba3d mayya"], answer: 0, note: "shwayya = un poco." },
-      { q: "«la mayor parte del tiempo» =", options: ["mo3zam el-wa2t", "kol el-wa2t", "noss el-wa2t", "shwayyet wa2t"], answer: 0, note: "mo3zam = la mayoría." },
-      { q: "«nada» =", options: ["wala 7aaga", "kol 7aaga", "shwayya", "ba3d 7aaga"], answer: 0, note: "wala 7aaga = nada." },
-      { q: "«unos días» (unos cuantos) =", options: ["kaam yoom", "kol yoom", "ba3d yoom", "noss yoom"], answer: 0, note: "kaam + singular = unos cuantos." }
+      { q: "«algunas personas» =", options: ["ba3d en-naas", "kol en-naas", "shwayyet naas", "kaam naas"], ar: ["بعض الناس", "كل الناس", "شوية ناس", "كام ناس"], answer: 0, note: "ba3d = algunos." },
+      { q: "«un poco de agua» =", options: ["shwayyet mayya", "keteer mayya", "kol mayya", "ba3d mayya"], ar: ["شوية مية", "كتير مية", "كل مية", "بعض مية"], answer: 0, note: "shwayya = un poco." },
+      { q: "«la mayor parte del tiempo» =", options: ["mo3zam el-wa2t", "kol el-wa2t", "noss el-wa2t", "shwayyet wa2t"], ar: ["معظم الوقت", "كل الوقت", "نص الوقت", "شوية وقت"], answer: 0, note: "mo3zam = la mayoría." },
+      { q: "«nada» =", options: ["wala 7aaga", "kol 7aaga", "shwayya", "ba3d 7aaga"], ar: ["ولا حاجة", "كل حاجة", "شوية", "بعض حاجة"], answer: 0, note: "wala 7aaga = nada." },
+      { q: "«unos días» (unos cuantos) =", options: ["kaam yoom", "kol yoom", "ba3d yoom", "noss yoom"], ar: ["كام يوم", "كل يوم", "بعض يوم", "نص يوم"], answer: 0, note: "kaam + singular = unos cuantos." }
     ]
   },
 
